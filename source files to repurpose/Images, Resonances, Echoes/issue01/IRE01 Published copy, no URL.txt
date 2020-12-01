@@ -1,0 +1,71 @@
+# IRE01 Published copy, no URL
+
+
+Images - reflections on taking and making pictures
+
+Sometimes an image leads you to think about physics, and sometimes it's recursive reflection. Here it's recursive: road signs and physics both use concise graphic languages, where connections and context are all important in sense making.
+
+Rendering diagrams more intelligible in physics also needs you to contextualise: to wrap the diagram in the physics narrative. This, for example, is only likely to mean something in its original context.
+
+
+In the context of a physics lesson, stripped of context (always a warning flag) you might see a mass on a spring:
+
+
+Perhaps with someone desperately trying to keep their balance:
+
+
+At the least it's a warning that icons and other symbols are never self- documenting, and competence in constructing a meaning depends both on prior experiences and on an act of interpretation.
+
+Often widening the point of view provides enough context to make sense of any element in the language.
+
+Maybe it's also a metaphor for working at multiple zoom levels, or levels of abstraction, or micro- vs macro- descriptions (either spatial or temporal) – thinking about reading this image could take you in any one of these directions.
+
+Learning is associative, connective and contextual, not "logical".
+
+More reading
+
+A read of almost any good philosopher of science is bracing, as is a deep dive into the historical genesis of any topic. For a more focussed theoretical approach, I'd recommend thinking about multimodal communication: there is a summary and further references here.
+
+Resonances – connecting teaching physics
+
+This 'resonances' section will always be concerned with getting a storyline in physics as accessible and precise as possible – so a good didactic transposition. Given the section title, waves is as good a starting point as any.
+
+So if we’re teaching about waves, then I suppose we’d like children be able to represent and reason about disparate phenomena using ideas that are distinctively wave-like. Starting that "light is a wave" or "sound is a wave" gets off on the wrong foot, conflating theoretical description with phenomenon. Better to have front-of-mind a clear idea of a wave transposed from its natural rather algebraic realm into a form that is not diluted to the point of being a classificatory label for certain kinds of phenomena. To be teaching the idea of a wave is to capture the essence inherent in y = A sin(ωt-kx). Is that possible pre-16? Reading current UK GCSE criteria show that this is at least not widely attempted, and a web and literature search also yielded meagre pickings.
+
+But such a treatment could be possible, especially if you combine the representational power of the computer with a simple acting out of the essence.
+
+You'll need both the ideas of superposition and of the transmission of information. What might serve as experiential resources with affordances that provide credible and fruitful learning pathways to these two ideas?
+
+Steps might be a useful prototype for the superposition facet of waves as they necessarily entangle time and space with the idea of the speed of progression. And one can be more-or-less in-or-out of step, which serves as a fruitful precursor to the idea of phase. Add the idea of varying amplitude, and so of varying contribution from a path or source and a learning pathway to superposition becomes conceivable.
+
+A second building block is the idea of a mimic, or more demotically, a "copy-cat". Information is copied from one location to another. Just as I can mimic the action of another(here is the "acting-out"), so I can imagine a detector mimicking the action of a source after a delay (”do like me, but later”), providing the resources to build the idea
+
+An interactive for thinking about steps
+
+of a wave on top of well-established source-medium-detector model used in introducing seeing and hearing.
+
+An interactive for exploring mimicry
+
+That's just a start: perhaps you can see how to build on these starter blocks. A wave is simply a set of mimics, each with a delay depending on their position relative to the source). If not, more in the next newsletter.
+
+Beside this pair the traditional distinction between longitudinal and transverse remains much less important: only distinguishing two sub-genre, and not serving to distinguish the genre from others.
+
+More reading
+
+Here is a suggestion, written for teachers, that presents a framework for creating effective narratives in the classroom.
+
+Ogborn 1996 Explaining Science In The Classroom Open University Press
+
+Echoes - celebrations of things known
+
+Charge flowing through real cells is impeded: material that has a resistance has to be traversed. There was a something of a ritual of doing this with a resistor in series with a dry cell– but fruit and vegetable cells provide so many more hooks, and just provide a more interesting context.
+
+Try real cells with real resistance: internal resistance of fruit and vegetable cells
+
+Two advantages:
+
+You can easily point out the distance that the charged particles have to move through the cell, and even vary this distance, thereby altering the internal resistance in a natural way.
+You can show that this internal resistance reduces the power provided by the cell because the potential difference falls as soon as there is current in the cell.
+Try cucumber, citrus fruits, kiwi fruit, pineapple, potato, together with 30 mm square zinc and copper sheet for electrodes, separated by about 5 mm of plant material.
+
+Enjoy: build batteries, explore the maximum power theorem, always giving appropriate salience to power dissipated in the body of the cell, connected to the movement of the charge through the plant material.

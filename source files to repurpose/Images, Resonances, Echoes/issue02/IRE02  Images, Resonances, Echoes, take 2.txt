@@ -1,0 +1,35 @@
+# IRE02: Images, Resonances, Echoes, take 2
+
+### Images
+How do you draw yours?
+Circuit diagrams are amongst the most abstract representations used in elementary physics teaching. How best to support reasoning with them, and indeed, what kinds of reasoning do you want to support. Or, more succinctly, how do you answer the question "Why are we doing this, miss?"
+Collection of images of circuits
+I suggest a good reason for the importance of circuits is that it gives insight into switching power, which is what we use circuits at all scales for in the everyday lived-in world. You may have other reasons, which will lead you to different conclusions. 
+Components, other than wires and switches, are vertical.
+
+And how do you draw them? Freehand, using pre-made symbols in a drawing package, photocopying?
+
+	- circuit diagrams, drawn. Reasons.
+- Utilise PENCIL
+	Marginal gains vs tripwires.
+
+### Resonances
+
+
+Constraints and compensation, linked to the circuits starter
+
+
+
+
+### Echoes
+-
+In IRE01 I suggested that you could and probably should introduce the idea of a wave using delayed mimicry as the essence, as this enabled you to capture the essence of the idea of a wave without algebra. 
+Link button
+The next stage in the development was suggested, but not made explicit. After some suggested that this would be welcome, here is an echo from that impact–a delayed response.
+Replace the single mimic with a chain of mimics, evenly spaced. The delay for each mimic as it copies the movements of its neighbour will be identical. Therefore, each mimic will be delayed with respect to the source depending on its distance from the source. Begins to appear much like a wave.
+Link
+To get the full sine wave, just vibrate the source continuously.
+Link
+As longitudinal waves share this essence,  smal change leads to:
+Link
+Probably you'd want to show non-sinusoidal waves as well, probably as transverse waves, to maximise the chances of children seeing a difference. Again, a small change is all that's needed, altering the vibrations of the source. The mimicry goes as before, unless you want to change the speed of propagation, in which case just alter the delay before a mimic copies it's neighbour.

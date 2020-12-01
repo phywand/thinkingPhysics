@@ -1,0 +1,121 @@
+Images, Resonances, Echoes, take 04
+Ian Lawrence
+Mar 31	
+2
+Images - Climate change, models, focussing on feedback.
+
+Some of the more pressing and worrying images of our time concern climate change, and what the future holds.
+
+Since I wrote that we now have Covid-19, so no apocalyptic image of climate change is needed here. But the reactions of at least some nations are clearly in response to models. How people react to predictive models has acquired added significance. I hope you are al keeping safe and hope to reach you again on the other side of all this – whatever that looks like. However, it seems likely that a critical and informed appreciation of modelling is only going to become more important.
+
+This climate forecasting is all about predictions based on data and patterns, therefore "thinking like a physicist" ought to be able to make a significant contribution. So maybe, just maybe, you might be able to offer some insight into climate models. And you'd need some precision in representing the essential patterns, both in reasoning and in the outputs, without getting bogged down in numbers or arithmetic, if you're to communicate the essence of a contribution. So, here is a bit of a preamble sketching out essential patterns in reasoning, shared with mathematics, and how one might represent these.
+
+Firstly a constraint relationship, also used in IRE02.
+
+constraint in a circuit
+
+Then a compensation relationship, again used in IRE02.
+
+compensation in a circuit
+
+Constraint and compensation relationships are deeply intertwined: inspecting the algebraic representations of either is not sufficient to tell them apart. However, the ways in which we reason about physical quantities makes the distinction useful(compare the reasoning done with I=V/R with that done by P=IV).
+
+constraint
+
+compensation
+
+Both constraint and compensation relationships are atemporal, true at an instant: that's the significance of the assertion of equality that lies at the core of these relationships. Both describe possibilities and impossibilities – they formalise empirical or theoretical connections between physical quantities but don't predict how those quantities evolve over time. For that, you need a different class of relationship: an accumulation relationship.
+
+Here is a simple accumulation relationship, where the value of the acceleration leads to accumulations in the value of velocity.
+
+acceleration-velocity
+
+The relationship seems simple enough: just repeated addition. But (as is quite often the case with elegant mathematical expressions) the words seem very convoluted. It may well be that "acceleration accumulates velocity" or, even more vernacular turns of phrase such as "acceleration tells velocity how to change", alongside simple graphical representations of the relationship, will work better in the classrooms you know.
+
+In elementary physics, it turns out that there are rather few of these accumulation relationships.
+
+velocity accumulates displacement
+
+Acceleration accumulates velocity
+
+Force accumulates momentum
+
+Power accumulates energy
+
+Activity accumulates number
+
+Current accumulates charge
+
+Kinematics presents a case where two such accumulations are linked, which could be useful patterns for climate models.
+
+Acceleration-velocity-displacement
+
+With appropriate treatment of the tautological connections between these quantities, children could be well-prepared to engage with simple climate models. At the moment neither biology nor chemistry offers such a rich set of resources for such understanding.
+
+As regular, repeated addition underlies every accumulation relationship, the clock simply ticks away in the background, measuring out the progress of the process. As climate change models seek to predict future states from the current state, to chart possible processes, these kinds of relationships play a central role.
+
+Feedback is a further crucial component of climate models: the accumulation is affected by the current value of a quantity. Again, there are simple examples in physics to draw on, such as terminal speed and cooling curves. Or temptation could prove too much, resulting in a full-blown simple harmonic oscillator.
+
+Simple Harmonic motion
+
+The resources are there to support an exploration of pre-built models, with the structure of the model explicit. What's more challenging is to see how such models might be constructed live in classrooms by teachers or children. There is still work to be done to provide suitable building blocks for models (with fruitful constraints on the assembly of such blocks).
+
+More reading
+
+Johnson-Laird, P.N.(1983): Mental Models, Cambridge University Press.
+
+Lawrence, I. (2004). Modelling simply, without algebra: beyond the spreadsheet. Physics Education, 39(3), 281-288.
+
+Susskind,L & Hrabovsky,G. (2014)Classical Mechanics: The Theoretical Minimum, Penguin
+
+https://en.wikipedia.org/wiki/Method_of_Fluxions
+
+Resonances - resonance as "lock and key", for a photon
+
+Giving a convincing theoretical account of resonance in classical terms is hard. Earlier I suggested the idea of a wave needed serious attention if we're to convey the theoretical essence (IRE01 & IRE02) at the time we first introduce phenomena and seek to give an account of them in terms of waves.
+
+Such an account, rooted as it is in the idea of a vibrator, could be extended to deal with resonance, combining driving forces with restoring forces in a mechanical model to account for resonance. Numerical modelling packages such as Modellus (in Advancing Physics) and the Dynamical Modelling System (in Revised Nuffield A level Physics) and even spreadsheets have been used to generate more or less intelligible models. But it is a hard and involved process.
+
+Maybe there is a better way, starting with photons rather than waves. Interactions with matter are then one of two types: a threshold effect, or a lock and key effect. Either a photon shifts more than enough energy ("threshold") or the photon shifts more-or-less the right amount of energy("lock and key"). Which is appropriate depends on the material and the process. Two examples: Photo-emission is a threshold effect; selective absorption a "lock and key" effect.
+
+Perhaps, given the origins of the idea of the photon, it should not be surprising that approaching the interactions of radiation with matter by thinking about photons offers such hope.
+
+Key and Lock
+
+In fact, perhaps the whole of optics could be better approached through photons rather than via a slightly rickety confection of ray models and wave properties, but that's probably a sufficiently challenging thought that I'll come back to it in a short while, and give it space over a few newsletters.
+
+More reading
+
+The Modellus resonance model is available on:
+
+Lawrence, I., Whitehouse, M. (eds) (2000) Advancing Physics AS CD. Institute of Physics Publishing, Bristol.
+
+Echoes – discussions about mental models
+
+Teaching is necessarily about "working on the minds of others". So a proper concern is with their mental models. These can be explored through the use of discussions about instances, through diagnostic questions, through approaches such as predict-observe-explain.in general these explorations are highly inferential, requiring several steps of reasoning to get from the data to the possible mental model. Here, for example, there is deliberate ambiguity in what's presented about the children's reasoning, whilst seeking to elicit reactions to that reasoning.
+
+The moon in Yorkshire
+
+Maybe there is something to be gained by making the reasoning we're hoping to explore more explicit: trying to picture the mental models more directly. And since it's thinking in physics we're hoping to explore, diagrams will play their part. This owes more a little to Philip Pullman's idea of the daemons, as personal entities which you can have conversations with. Personal mental models have some of the same characteristics they have an internal logic of their own, that plays out, but they are also both malleable and adaptable. So as a first stab we might simply enhance discussions about instances, depicting the mental models more explicitly.
+
+Variations of force with buoyancy
+
+This might be extended, to allow interaction, to further provoke discussion.
+
+Deciding how force varies with buoyancy
+
+Such variations on a theme of "discussions about instances" are rooted in research practices, but perhaps drawing more on the explicit mental models tradition.
+
+More reading
+
+Pullman, P: His Dark Materials.
+
+Johnson-Laird, P.N.(1983): Mental Models, Cambridge University Press.
+
+Osborne and Freyberg(1985): Learning in Science: : The Implications of Children’s Science. Heinemann.
+
+White, R., & Gunstone R. (1992). Probing understanding. The Falmer Press.
+
+Driver, R. (1983). The Pupil as Scientist? Open University Press.
+
+Tytler, R. and Prain, V. and Hubber, P. and Waldrip, B.(2013): Constructing Representations to Learn in Science. SensePublishers.

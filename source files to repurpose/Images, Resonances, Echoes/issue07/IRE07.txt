@@ -1,0 +1,79 @@
+IRE07
+# Images, Resonances, Echoes, take 7
+
+A little compensation in real-life now: after energy, a little brevity. Hope you're all keeping well, corporeally and otherwise.
+
+## Images, Maxwell and after
+
+Visit Edinburgh on a sunny day, and you may come across this statue to a "man who changed everything". He made seminal contributions to colour vision, orbital mathematics, colour photography, the kinetic theory of gases,  control theory, thermodynamics and electromagnetism.
+
+Image
+
+There was a particularly interesting shift between his 1862 and 1864 on electromagnetism. One which left his peers a little confused, perhaps because the explanatory basis was so different. He changed from elaborate mechanical models of electromagnetism (spinning cells) to an account based on relating quantities (building on Lagrange's work in mechanics), with no mechanistic underpinnings. This change of model was a crucial shift affecting how physics developed: arguably changing what physics by changing the nature of the explanations acceptable as fundamental.
+
+As the presentation of much of the physics taught in schools bridges the 19th-20th century divide, and Maxwell is considered by many to be the 19th-century physicist who most influenced the shape of 20th-century physics this shift deserves pedagogic attention.
+
+I think this change should affect how we teach electric circuits, as circuits are well-suited to be being the prototype for thinking about all kinds of different systems-based explanations. In these, aim for an account being complete and intelligible without representing a necessary abstraction or simple smoothing-out of underlying casual mechanical processes. There are topics where reductionism is fruitful: electrical circuits is not one of them.
+
+### More reading
+- https://en.wikipedia.org/wiki/James_Clerk_Maxwell
+
+## Resonances, teaching electric circuits after Maxwell
+
+So it's rope loops all the way, for those students without algebraic fluency. Because a workable didactical transposition of a system-led approach for a tactile audience, pre-quantitative reasoning students exists and works. And maybe even for those with algebraic fluency, to support their physical intuition, as you can engage psychological primitives, and act-out your understanding to develop predictions.
+
+PID:
+Loop to rope to circuit 
+https://slowthinkingphysics.net/IRERepresentCircuitsLoopsPID
+
+mappings for the loops
+https://slowthinkingphysics.net/IREMappingsRopeElectricLoopsPID
+
+simple circuit
+https://slowthinkingphysics.net/IRERopeLoopSimpleVaryPID
+
+parallel connections
+https://slowthinkingphysics.net/IREParallelRopePredictsCurrentpdPID
+
+series connections
+https://slowthinkingphysics.net/IRESeriesRopePredictsCurrentpdPID
+
+Loops are the essential elements, rope loops a useful tool to think with, relating different parts of the system while requiring system-level thinking to make sense of the whole loop. You cannot make sense of part of it, without the whole: sequential thinking lends support to many wrong-track ways of thinking about circuits.
+
+### More reading
+- Controlling – starting to think about electric circuits
+: https://slowthinkingphysics.net/catchingPhysics/Cg01.html
+- Supporting Physics Teaching: https://spark.iop.org/collections/build-and-model-electrical-loops-physics-narrative
+- Spark misconceptions: https://spark.iop.org/misconceptions?f%5B0%5D=search__misconceptions__domain%3A446
+
+## Echoes, A national grid and switching power
+
+Electrical circuits are pervasive, so there is a reliance on the technologies enabled by electric loops. Electrical loops are everywhere because of the controllability of power switching by these loops. So an additional facet to emphasise in teaching electrical circuits is this switching.
+
+
+Parallel connections and power
+https://slowthinkingphysics.net/IREParallelRopePredictsElectricalPowerPID
+
+Series connections and power
+https://slowthinkingphysics.net/IRESeriesRopePredictsElectricPowerPID
+
+Then there are two clear supporting reasons to draw on when faced with the question, "Why are we doing this, miss?". Prepare, to frame the possible answers to such enquiries. Just in case the national curriculum in your country has not provided a clear rationale.
+
+### More reading
+- IRE02, on drawing circuit diagrams
+https://physicswanderer.substack.com/p/images-resonances-echoes-take-2
+- IRE02, on constraints
+-https://physicswanderer.substack.com/p/images-resonances-echoes-take-2
+- IRE06, on energy and power
+-https://physicswanderer.substack.com/p/images-resonances-echoes-take-6
+
+
+---
+
+http://slowthinkingphysics.net/IRESeriesRopePredictsCurrentpdPID
+http://slowthinkingphysics.net/IRESeriesRopePredictsElectricPowerPID
+http://slowthinkingphysics.net/IRERopeLoopSimpleVaryPID
+http://slowthinkingphysics.net/IRERepresentCircuitsLoopsPID
+http://slowthinkingphysics.net/IREParallelRopePredictsCurrentPID
+http://slowthinkingphysics.net/IREParallelRopePredictsElectricalPowerPID
+http://slowthinkingphysics.net/IREMappingsRopeElectricLoopsPID

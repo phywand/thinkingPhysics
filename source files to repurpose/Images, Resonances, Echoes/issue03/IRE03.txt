@@ -1,0 +1,63 @@
+IRE03
+# Images, Resonances, Echoes, take 3
+
+## Images
+- Multi step arguments, unpacked, the graphical language, metaphysics
+Many driving factors encourage pushing ever onward(I've experienced nerves, classroom management strategies, statement packed specifications). Yet, in encouraging a critical response to knowledge, you'll need to make rather a lot explicit and so open to comment and inspection. Otherwise , there is little to get a grip on. But continually shifting perspective to point out the structure of the argument can get wearing, particularly if talk has to carry all of the burden (the channel gets congested: bandwidth overload). Here is a moderate suggestion for using diagrams to represent the structure of the argument. There is a hope that used often enough it'll available as a resource to support discussion without having to be explicitly injected into the word-stream.
+
+Start with distinguishing between the physical and the conceptual, choosing a defensible boundary: I'd suggest that every useful step of an argument can be put in one of these two buckets.
+Physical – green: tangible, identifiably and uncontroversially a part of the lived-in world, with only a little structuring.
+Conceptual - a part of the imagined world of physics: precise entities interact in defined ways.
+
+InsertGraphic of snapshot
+
+InsertButton
+physical and conceptual steps
+MSphysicalconceptual}
+
+Next consider the kinds of transitions from step to step. You might get away with as few as four. SupportingPhysicsTeaching showed that this can be done with intervene, evolve, redescribe, step 
+
+Add graphic of snapshot
+
+InsertButton
+four kinds of transitions between steps
+MSfourtransitions
+
+A moderate number is better(to support familiarity and therefore easy recognition), but this schema may be too parsimonious for you.
+
+[explain these four]
+
+And embedded in the distinctions is a view of what doing physics is: that too needs to be defensible, but as philosophies of physics differ don't expect a unique set to be self-evident. Maybe, for our purposes, the most important criterion is whether your particular schema is heuristically useful, or not.
+
+You can combine these
+
+Such diagrams can be hand drawn, but might better
+
+- [ ] install link to rep finder, just for SVG...
+
+- [ ] write PID with checkboxes to remove the content, leaving the structure 
+
+### More reading
+'Hidden moves' : Joe Reddish(*ref?)
+Multimodal communication
+Scott McCloud
+Ogborn _"see it my way"
+
+## Resonances
+Providing an account of why things float or sink
+- Holes in water sequence, ending as pss?
+You could wrap all of these together, as a sequence of panes, with guides to link panes. Not to replace teaching, but maybe a resource for a real flipped classroom?- a physics narrative theme, always with big ideas link
+- Theoretically (insights and references from research): productive insights - summary of POV and application to physics education
+
+### More reading
+Scott McCloud infinite canvas link
+Flipped classroom
+
+## Echoes
+- microwave decay (experiment)...through textbooks
+- final reverb for waves, the story spaces
+- Anecdote, added to cumulative timeline
+- Maybe an experiment, but always with a what's so great about it section 
+- Best practice pointed to(favourite experiment, things to try in the classroom, tips, etc)
+
+### More reading

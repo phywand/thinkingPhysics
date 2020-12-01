@@ -1,0 +1,49 @@
+IRE04
+# Images, Resonances, Echoes, take 04
+
+### Images
+
+- Climate change image, leading to models, especially feedback.
+
+Some of the more pressing and worrying images of our time concern climate change, and what the future holds.
+![]()
+This is all about predictions, something that "thinking like a physicist" ought to be able to make a significant contribution to. So maybe, just maybe, we might be able to offer some insight into climate models. And we'd need some precision in representing the essential patterns, both in reasoning, and in the outputs, without getting bogged down in numbers or arithmetic, if we're to communicate the essence of a contribution. So, here is a bit of a preamble sketching out a couple of essential patterns in reasoning, shared with mathematics, and how one might represent these.
+
+Firstly a constraint relationship, also used in IRE02.
+
+InsertLink
+
+Then a compensation relationship, again used in IRE02.
+
+InsertLink
+
+Both constraint and accumulation relationships are atemporal, true at an instant: that's the significance of the assertion of equality that lies at the core.s
+
+
+### More reading
+Mental Models
+VnR phys Ed piece, and SSR.
+
+### Resonances
+
+- resonance as lock and key, drawing on photons, contrasted with full resonance model?
+- 
+Giving a convincing theoretical account of resonance in classical terms is hard. Earlier I suggested the idea of a wave needed serious attention if we're to convey the theoretical essence (IRE01 & IRE02) at the time we first introduce phenomena and seek to give an account of them in terms of waves.
+
+### More reading
+
+### Echoes
+
+- Droid / menton debate about holes in water
+
+Teaching is necessarily about"working on the minds of others". So a proper concern is with their mental models. These can be explored through the use of discussions about instances, through diagnostic questions, through approaches such as predict-observe-explain.in general these explorations are highly inferential, requiring several steps of reasoning to get from the data to the possible mental model. Here, for example, there is deliberate ambiguity in what's presented about the children's reasoning, whilst seeking to elicit reactions to that reasoning.
+[The moon in Yorkshire]()
+Maybe  there is something to be gained by making the reasoning we're hoping to explore more explicit: trying to picture the mental models more directly. And since it's thinking in physics we're hoping to explore, diagrams will play their part. This owes more a little to Philip Pullman's idea of the daemons, as personal entities which you can have conversations with. Personal mental models have some of the same characteristics they have an internal logic of their own, that plays out, but they are also both malleable and adaptable. So as a first stab we might simply enhance a discussions about instances, 
+
+### More reading
+Philip Pullman
+Johnson-Laird
+Osborne and Freyberg
+White and Gunstone
+Tytler eg Al
+Ben on diagrams.

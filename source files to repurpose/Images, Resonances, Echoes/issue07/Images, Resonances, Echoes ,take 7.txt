@@ -1,0 +1,94 @@
+#  Images, Resonances, Echoes 07 on relationships 
+
+## a distinction that makes a difference - use you can make of distinctions between different classes of relationships 
+
+- Foundational, primitives, shape the thinking 
+- derivative, compound, convenience functions or assistive
+
+In (Venn diagram)
+- Accumulations
+- constraints
+- compensation
+- [ ] list all relationships....
+Constraints vs compensation 
+(Scrubbing out detail, distorting what is there
+- woman who used brill pad to clean up Italian church wall painting
+- Apple iOS cameras smoothing out skin
+- Karlsruhe physics seeing momentum as a flow
+
+Maybe compensation is appropriate when the product or area is physically meaningful (need to work on this))
+
+# modelling noodling
+
+Are all linear constraint relationships QuoteThis{really} compensated quantities? Is that a helpful unification? And if so, for children?
+
+It becomes a didactical question as to how to present relationships . As classical mechanics is about dynamic evolution it's best to exploit this when you can. Physics is all about what happens next: from this state, do I know enough rules to figure out the next state?
+
+But the equations of one state are not like this: they are constraint equations. All you can do is to explore (im)possibilities. It's here that you need to intervene whilst the model is running to explore possibilities.
+
+How many of rate relationships in elementary physics are simply tautologies?
+
+Finding the scope of the applicability of relationships is often all important, and distinguishes mathematical tautology from physical tautology.
+
+This is all about the scope of applicability.A good example is relationship between density mass and volume—this only applies provided the gravitational field is not so large that the density varies.More examples will be needed to make the point in general and convincingly.
+
+Mathematics and physics both share a common pattern of reasoning, from which mutual interactions arise. It is not the case for one rules the other.
+
+Maybe one facet of a modeling tool is simply to allow you to explore the consequence if combining known relationships, so using large building blocks?
+
+About doing simple things elegantly, with pedagogic transparency.
+
+Can you build explorable systems so you can drill down:
+
+* in a graphical environment?
+* in a textual environment?
+
+# Diagrams, geometry, and constraints - more protothoughts
+
+There are a few successful examples of quantitative reasoning with diagrams, for example the AVOW diagrams in reasoning about resistive circuits. However these seem to be rather special cases, and there is no general pattern here —apart from reasoning with graphs. The graph is not generally treated explicitly as a geometrical diagram, with geometrical reasoning applied, at least in teaching physics. However I think that the success of the AVOW approach suggests that dealing with constraints relationships by geometry might be fruitful.
+
+Constraints could be re-presented as geometrical relations. But this immediately raises questions. - With what ease can you go between theses different representations? - Is there a core of geometrical reasoning competence which can be leveraged? - If there are more than three terms on the equation, what happens to the geometrical representation? - If it is necessarily the case that number of dimensions of figure = (number of variables-1) to allow for use of gradient and area / volume, then there could be some visualisation difficulties. (Also, added complexity: you’d need to think which gradient— this interpretation could hinder, not help.)
+
+Two hard patterns of thinking are proportion and compensation—in two dimensional space these can be re-imagined as gradients and areas. Compensation is more general. In that proportion is necessarily binary, whereas compensation can be multi-variate. So is compensation a generalised version of proportion.
+
+Newton thought geometrically— this appears to be a source of inspiration, until you try and read the Principia.
+
+# relationships in physics; accumulation |constraint(compensation)
+
+I think the division of all fundamental relationships into constraint and accumulation is rather important, not just from an ontological POV (cf Susskind, L. The Theoretical Minimum) but also from a pedagogical POV (Viennot, L. on linear causal reasoning).
+
+That there is a subset of constraints that can usefully be referred to as compensations is an insight to wear lightly, just as some knowledgeable individuals wear their knowledge lightly, whilst others ram their insights down your throat, resulting in intellectual gagging. Teachers are here to help, so let’s go with the necessary ‘lightness of touch’.
+
+It’s a meta-pattern, there to assist with making better use of patterns in reasoning. Or, perhaps, a deep analogy: certain relationships are alike in a particular way.
+
+I’ll probably bang on about this for a while since I don’t think it’s sufficiently prominent at the moment, and I expect, done well, it’ll help children to see just why relationships are so cherished by physicists(cf Bais, S. Equations: Icons of Knowledge), and how they help us get a grip on the lived-in world.
+
+So for a while, it’ll probably appear more salient than I finally intend.
+
+In the case of reasoning about energy and power, I’ve already stated that I think a bit of explicitness around compensation (you can’t get something for nothing, demotically labelled as a “trade-off”) and constraining (restricting possibilities in a phase space – awaiting felicitous didactic transposition!) could help to make reasoning with the idea of energy less of an outlier.
+
+In both cases, I’m hoping to co-opt our facility for reasoning with geometric objects ( cf AVOW diagrams).
+
+This seems to heading towards a couple of sequence pieces on slowthinkingphysics.net/, and maybe sections in the newsletter Images, Resources, Echoes at physicswanderer.substack.com. Sooner or later….
+
+# reasoning with areas  
+  
+## Not good for comparing values  
+  
+* As humans rubbish at comparing areas  
+* Research evidence here ?
+  
+## Good for reasoning about units, by comparison with units of area  
+  
+* J/C &times; C/s  
+  
+## Legitimate square counting when calculating non-regular areas  
+  
+## Best restricted to scalar quantities  
+  
+## Compensation – always useful?  
+  
+* Always about comparison of two areas (because compensated quantities are always multiplicative),  
+* even if not a rectangle - but then always, in practice, triangular?  
+
+---
