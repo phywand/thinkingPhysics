@@ -1,0 +1,16 @@
+WebTitle{Signalling with vibrations(Exposition)}
+
+StepHeader{Signals enable information to move from source to detector}
+
+InsertGraphic{RaSignalProcessDiagramINSC}
+
+Signals communicate information, and the need to get that information over long distances and through adverse conditions has led to the use of a number of different solutions to the carrier problem. Carriers have ranged from running humans, through somewhat swifter carrier pigeons, to using the carrier that travels at the ultimate speed SymbolEndash light and other members of its electromagnetic family.
+
+Just shouting loudly only gets the information so far, and cannot shift a message very rapidly. There is  a limit to both the number of words a second that can be crammed into a shouted message, and still have the message be intelligible, and to how long it takes that message, once set on its way, to arrive at its destination. This trip time to destination is rather simply calculated, once we have chosen the kind of vibration.﻿
+
+Coding information using a vibration brings in new ideas (you must encode the information somehow) and the choices you make will determine how much information can be delivered by each second of the vibration. It will not determine how long that second of vibration (the carrier) takes to travel from source to detector. The signal is a physical manifestation of the information that needs transmitting; the carrier is the vibration that is modified to enable that transmission to occur.
+
+Smoke signals use light but are digital: either there is smoke or there is not. Sender and receiver will need a shared code for the communication to work. For analogue signals one can think of having different brightnesses of light transmitted and that the brightness of the light could be made to follow the changes in the loudness of speech. In that way the speech could be encoded in the light signal. As light signals can often travel farther than sound, one problem of communication is solved. This is a possible solution, but light is obstructed by clouds, snow, fog, rain, trees and tall buildings. So this could work if we had a good pipe down which to send the light (e.g. an optical fibre). For fixed point to fixed point communication, where there is lots of information to be sent (e.g. changing pictures as well as changing sound), this is the preferred solution. However, the sender of the signal does not always know where the recipient will be, leading to the common use of electromagnetic waves to make a signal widely available. Here a frequency is chosen that is not blocked by rain, snow and buildings: radio and television frequencies are used to broadcast signals.
+
+Each station has its own frequency that a radio or television can tune in to: the signal for that station is transmitted only at that frequency. This frequency is the carrier frequency: the charged particles in the transmitter vibrate at this frequency when there is no signal. The signal then modifies this vibration. Vibrations are characterised by amplitude and frequency, so the two straightforward possibilities are to allow the signal to alter the amplitude, or alter the frequency, but not by too much in either case, if the communication is to be successful.
+

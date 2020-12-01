@@ -1,0 +1,50 @@
+FileName: RWCSelectionNamingStores
+
+WebTitle{On choosing a selection of stores}
+
+Here is the physics: QuoteThis{Energy is energy and a calculated quantity which is conserved, but which can be dissipated}.
+
+On the way to being able to do such calculations, and appreciate the implications of conservation and dissipation it is possible to develop quantitative descriptions to assist the transition from the physical descriptions to the energy calculations.  This helps focus on noticing changes in certain facets of the physical world and using them as clues to suspect that there might be calculable changes which might yield insightful energy descriptions.
+
+StepHeader{Just a milestone, not an endpoint in itself}
+
+Developing a description in terms of stores is a suggestion for a milestone on an imagined learning journey[1] culminating in such calculations. That some might not complete the journey, and that many of these will be functioning voting citizens adds implications about the consequences of wise choices. 
+
+So the slogan QuoteThis{energy is found in stores} is only a start, albeit a useful one because it lays a foundational principle for the didactical transposition of the idea of energy. You then need to consider the uses to which your representations of energy will be put, and design them accordingly. In this, discussion about depleting energy resources to power our warm houses, cook our food, and satiate our predilection for rushing about is a non-trivial consideration. That provides a framework for making choices. Ally this to a concern to develop a parsimonious and elegant description,  that segue smoothly into later formal as a supplementary considersation to this essential citizenship role. In addition to this pair, other significant constraints should include: an unwillingness to incorporate too many spelling challenges; a similar unwillingness to rely on too many special unexplicated words (QuoteThis{system} is a prime candidate here);  laying too many tripwires for other topic areas (as energy really is a unifying idea, poor choices here will have effects elsewhere);  how suggestions will be interpreted by current practitioners. In all of these, there will be choices to be made, and such choices ought to be based on explicit reasons.
+
+StepHeader{The eightfold way}
+
+SPT settled on eight stores and four pathways. Here I'll discuss some reasoning behind the selection and naming of the eight stores. Neither the names or the graphical representations are QuoteThis{to-be-learnt}, rather they are equal partners in enabling the constructing insightful energy descriptions: both words and diagrams stand for the idea that there is a recognisable physical change which could result in a calculation of a change in energy.
+
+At the time that SPT was constructed the terms QuoteThis{sound energy}, QuoteThis{light energy} and QuoteThis{electrical energy} were in common use, and often led to descriptions which were not recognisably a didactical transposition of how the idea of energy is used in the sciences. Similarly chains of energy QuoteThis{forms} were commonplace, again not representing practice in the sciences at all well. And there were a lot of word games in play, not least in mark schemes for public exams.
+
+So this suggestion focusses on eight stores, each of which is mapped onto one or more calculations.
+
+The  physical changes you look for and the calculations you can do are shown in the SPT PN thread of episode 02 of the En topic.
+
+InsertGraphic{EnEnegyStoresFillEmptyIdentifyIPSC}
+
+The elastic store functions as a kind of prototype, due to its physicality, the manipulability of the physical conditions associated with changes in the energy in the store, and its evident stability as a store. Simply put, stretch a rubber band, hook it up at that stretched length, and leave it there (as you cannot do with the unhelpful trio of light / sound  and electric, met above). Later relax the band a bit, and you can get a job done. Not any job, but one constrained by how much relaxing you have allowed in the band. Energy shifted from a store is therefore a constraint on what can happen: some things are impossible if depleting he energy in the the store does not shift enough energy. Plus EqualityAssertion{energy}{FractionBlock{1}{2}QuantitySymbol{k}QuantitySuper{x}{2}} is a calculation that lies not too far in the future, in a learning journey. I avoided elastic potential energy, on the grounds that any qualifying adjective for energy diminishes the force of the unity of energy, and on the grounds of eliminating unnecessary words (bye-bye QuoteThis{potential}).
+
+You could choose to stretch the QuoteThis{spring of the earth} otherwise known as gravity, and make similar points about being able to hook it up (maybe by storing water in a reservoir and leave it there). You might choose to call this a gravistatic store, but simplicity won out over pedantry here (allocating SPAG marks never was a fav activity, and was never much about the ideas). Being able to identify a change in the separation of two massive objects, and associate this change with a change in the energy in the store, making a link to the separations of the ends of the spring in the comparable elastic store, is a key teaching move.
+
+Since the energy stored in the band is now the energy stored in the field, your thoughts might move on towards electrostatic stores and magnetostatic stores. Or even further, to field potential stores, covering all three. Or it might not. The idea of a field potential store was considered briefly, then rejected largely on the grounds of too much abstraction, too soon.
+
+So why not electrostatic and magnetostatic – after all in principle you can think of separate calculations corresponding to filling or emptying each store? Well, for starters, the word QuoteThis{electrostatic} is just too likely to be simplified,  it’s just temptingly close to QuoteThis{electric}, which had an unfortunate history of practice in the topic(as alluded to above). And, if you use  ‘electrostatic’, then you really ought to go for QuoteThis{gravistatic} to match, which is just ugly. Then there is also the issue potential collateral damage. You might lead others astray in representing electric circuits, particularly because of the way in which a gravistatic analogy is often used to introduce a  potential difference.  But this analogy is not with an electrostatic situation,  so again the electrostatic is deprecated because of the potential conflation of ideas. Finally, one just cannot feel  electrostatic forces as a result of separated charges directly, as you can with separated masses and gravity, leading to the need for multi-step explanations to link changes in the energy in that store to the physical changes.
+
+QuoteThis{Magnetostatic} has the benefit of being able to associate physical experiences of forces when separating magnets with changes in the energy store, but this does not map onto calculations that will be done any time soon. So this could be a contender, but is hobbled by its necessary association with electrostatic, where the multiple reasons why this might not be sound suggestion are not enough to offset the advantages of the physical experiences associated with magnetostatic.
+
+But that we can enable children to feel QuoteThis{magnetic springs} in action, and that there is a close connection between the electric and the magnetic, and to be made in short order in conventional curricula, suggests that there is value in describing a compound store, the electromagnetic. This decision is further buttressed by the unification of the electric and the magnetic fields, not something we have yet managed to do with the gravitational, which is a further point against the QuoteThis{field potential} store. 
+
+Again, using the elastic store as a metaphor one can think of chemical springs, where atoms are rearranged so as to store more of less energy, and nuclear springs, where it is the nucleons	that are similarly re-arranged.
+
+Which leaves the vibrational store, standing in for calculations of GroupBlock{FractionBlock{1}{2}QuantitySymbol{k}QuantitySuper{A}{2}}. The interplay of energy changes associated with changes in movement and with changes in position are essential to the energy calculation and the nature of a vibrating object: taking a snapshot and calculating wreaks a fatal distortion of what it is to be a vibrating object. It is not something that happens occasionally to be in such a physical situation that you can calculate the energy that’s been shifted to a gravity or elastic or electricmagnetic store, and at other times fortuitously you can calculate a change in an energy store. That’s also true, after all, of a large number of processes which are not vibrators. Apart from the utility in the discussion of the depletion of resources, such a store provides a useful starting point for a discussion of waves, and the ways in which they might fill or empty stores.
+
+StepHeader{Pre-calcuation}
+
+Apart from representing the calculations to come, so laying the groundwork for thinking about constraints – about what cannot happen – there is some semi-quantitative reasoning that is of immense value in thinking about depleting resources and in planning for sustainability which typically appears too early on in curricula for calculations to be possible. Whatever the choice of stores, this should encourage and enable such discussion, linking the real choices to be made to the energy descriptions. 
+
+StepHeader{A note about imagined learning sequences}
+ 
+
+[1] I like this description of QuoteThis{imagined learning sequences}, although others would call this a didactical pathway. In any case, it is an invitation to try a QuoteThis{teaching experiment}, to persevere with implementing the line of thinking in your classroom, because it is well-enough supported by plausible reasons that you can see a local adaption, based on the shared explicit principles, might give you and your children a better chance of making sense of a connected set of ideas in the sciences.

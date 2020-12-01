@@ -1,0 +1,82 @@
+
+<html>
+<head lang="en">
+  <script>
+    var link="catchingphysicspml/Kf02.md";
+  </script>
+    <meta charset="UTF-8">
+    <title>pml live document writing</title>
+    <style type="text/css" media="screen">
+        .container{ width: 100%; padding:0; margin: 0; display: flex;}
+
+        #content{
+            width: 100%;
+            position: absolute;
+            right: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="__support/PMLSupportCP.css" type="text/css">
+    <script src="__support/jquery-3.2.1.js"></script>
+    <script src="__support/xregexp-all.js"></script>
+    <script src="__support/marked.min.js"></script>
+    <script src="__support/pmlparser.js"></script>
+    <script src="__support/DocShow.js"></script>
+    <script>
+
+
+        function init()
+        {
+            var reqObj=new XMLHttpRequest();
+            reqObj.open("GET",link,false);
+            reqObj.onload=function()
+            {
+                if(reqObj.status==200||reqObj.status==0)
+                {
+                    Main.start(reqObj.responseText);
+                }
+            };
+            reqObj.send();
+
+        }
+
+    </script>
+</head>
+<body onload="init();">
+    <div class="container">
+
+        <div id="content">
+        </div>
+    </div>
+</body>
+<script>
+ function checkAnswer(){
+
+ if (document.getElementById('optionA').checked) {
+  var theselection = document.getElementById('optionA').value;
+}
+if (document.getElementById('optionB').checked) {
+  var theselection = document.getElementById('optionB').value;
+}
+if (document.getElementById('optionC').checked) {
+  var theselection = document.getElementById('optionC').value;
+}
+if (document.getElementById('optionD').checked) {
+  var theselection = document.getElementById('optionD').value;
+}
+if (document.getElementById('optionE').checked) {
+  var theselection = document.getElementById('optionE').value;
+}
+
+var theanswer = document.getElementById('theanswer').innerHTML
+
+
+if (theselection==theanswer){
+ document.getElementById('showanswer').innerHTML="You are correct: the answer is "+theanswer;
+} else{
+document.getElementById('showanswer').innerHTML="Sadly not, the answer is not " +theselection;
+}
+
+}
+ </script>
+</html>
+

@@ -1,0 +1,242 @@
+{
+"ElectricCircuits01":{
+	"findloop": {
+			"title": "Where’s the loop?",
+			"kind": "teacher-led discussion",
+			"duration": 15,
+			"profile": [4,4,2,3,1,4,3,4,2],
+			"descriptor": "Draw on prior experiences (both curricular and not) to establish that loops are everywhere in electrical technology. Images and circuits on the benchtop and appliances all serve to stimulate discussion. At this stage, it's useful to concentrate on circuits where power transmission is more important than transmitting information.",
+			"link":"https://slowthinkingphysics.net/ESLActivityfindloop.html"
+			},
+	"howloopworks": {
+		"title": "How the loop works",
+		"kind": "small group discussion",
+		"duration": 20,
+		"profile": [3,4,2,3,3,2,4,1,4],
+		"descriptor": "Use a discussion starter to run a small group discussion exploring children's ideas about how electrical loops work. Use the intelligence gathered to challenge the unhelpful ideas and build on the useful ideas in the remainder of the sequence.",
+		"link":"https://slowthinkingphysics.net/ESLActivityloopscan.html"
+		},
+	"loopscan": {
+		"title": "What loops can do",
+		"kind": "teacher-led discussion",
+		"duration": 15,
+		"profile": [3,3,2,3,2,3,3,3,3],
+		"descriptor": "Use a few well-chosen examples of loops at all scales to establish the common purpose of the loops, identifying what is running-down and where power is doing something we want.",
+		"link":"https://slowthinkingphysics.net/ESLActivityhowloopworks.html"
+		},
+	"drawingloops": {
+		"title": "Drawing loops",
+		"kind": "teacher exposition",
+		"duration": 10,
+		"profile": [1,4,1,2,0,2,1,2,3],
+		"descriptor": "Work with the class to explore the representation of loops, including the canonical representation of a circuit diagram. Establish your conventions for drawing the loops, sharing reasons for those conventions.",
+		"link":"https://slowthinkingphysics.net/ESLActivitydrawingloops.html"
+		}
+	},
+"ElectricCircuits02":{
+	"focussing": {
+		"title": "Focusing in on the idea of a loop",
+		"kind": "teacher-led discussion",
+		"duration": 10,
+		"profile": [2,4,1,3,2,4,1,4,1],
+		"descriptor": "Use this to reactivate the idea of a loop connecting something QuoteThis{running-down} and something else warming-up or glowing, or some other result that we want. Prepare a collection of prepared images and artefacts to support the discussion.",
+		"link":"https://slowthinkingphysics.net/ESLActivityfocussing.html"
+		},
+	"ropeloop": {
+		"title": "Introducing the rope loop",
+		"kind": "teacher demonstration",
+		"duration": 15,
+		"profile": [2,4,1,4,3,4,3,4,2],
+		"descriptor": "This is an interactive teacher-led discussion using a rope loop to make predictions about electrical loops. First, draw out the active parts of the electrical loops. Then relate what's QuoteThis{running-down} in the electrical loop to the action of the QuoteThis{battery hand}, and relate what's QuoteThis{warming} (or other useful tasks, glowing, moving etc.) to the action of the QuoteThis{resistor hand}. Vary the pull of one hand and how hard the other hand grabs and draw out predictions for an electrical loop.",
+		"link":"https://slowthinkingphysics.net/ESLActivityropeloop.html"
+		},
+	"modelbuild": {
+		"title": "Build and model two circuits",
+		"kind": "small group practical",
+		"duration": 25,
+		"profile": [2,4,0,4,4,4,4,4,3],
+		"descriptor": "Children build two electrical loops and notice what's happening in each. Then model each with a rope loop, taking it in turns to act out the parts and to describe what's happening. Some groups could then predict changes in the model loop related to changes they've made in the rope loop. Still with only two things in the loop at this stage.",
+		"link":"https://slowthinkingphysics.net/ESLActivitymodelbuild.html"
+		},
+	"introduceresistance": {
+		"title": "Introducing resistance",
+		"kind": "teacher exposition",
+		"duration": 10,
+		"profile": [2,4,3,3,1,3,2,3,2],
+		"descriptor": "Introduce the idea of resistance as the equivalent of the grab on the rope. As you do so, insert what are obviously more resistive elements into an electrical loop. There should also be some obvious effect on the amount of glowing or other effect. A pair of children can act as a useful prop, modelling the rope loop. Discussions could help translate your actions from the electrical back into the rope model.",
+		"link":"https://slowthinkingphysics.net/ESLActivityintroduceresistance.html"
+		}
+	},
+"ElectricCircuits03":{
+	"bigcircuit": {
+		"title": "The big circuit",
+		"kind": "teacher demonstration",
+		"duration": 10,
+		"profile": [2,4,2,3,2,4,2,3,3],
+		"descriptor": "Use a simple circuit running right around the classroom, linking a power supply and a bulb, to reinforce the behaviour of the whole loop as a system.",
+		"link":"https://slowthinkingphysics.net/ESLActivitybigcircuit.html"
+		},
+	"ropewarming": {
+		"title": "Trade-offs in ways of warming with a rope",
+		"kind": "small group practical",
+		"duration": 20,
+		"profile": [2,4,1,3,2,4,1,4,1],
+		"descriptor": "Working with rope loops, challenging groups to find different ways of doing more warming of the QuoteThis{bulb hand}, and different ways to achieve the same warming.",
+		"link":"https://slowthinkingphysics.net/ESLActivityropewarming.html"
+		},
+	"predictglowing": {
+		"title": "Predictions about glowing",
+		"kind": "small group practical",
+		"duration": 20,
+		"profile": [3,4,2,3,4,4,4,2,4],
+		"descriptor": "Children build circuits with bulbs of different brightnesses, using the rope loop to model these circuits. Use a simple, informal system of units for the voltage of power supplies and the resistance of bulbs to set a ranking challenge based on the rope loop model.",
+		"link":"https://slowthinkingphysics.net/ESLActivitypredictglowing.html"
+		},
+	"differentdevices": {
+		"title": "Different devices",
+		"kind": "teacher demonstration",
+		"duration": 10,
+		"profile": [4,4,3,1,0,3,1,2,2],
+		"descriptor": "Show different devices doing different jobs to flatten the battery. Compare each one to the simple circuit containing a glowing lamp, and model each with a rope loop.",
+		"link":"https://slowthinkingphysics.net/ESLActivitydifferentdevices.html"
+		}
+	},
+"ElectricCircuits04":{
+	"onetotwo": {
+		"title": "One to two loops",
+		"kind": "teacher demonstration",
+		"duration": 15,
+		"profile": [2,4,1,4,1,4,2,3,2],
+		"descriptor": "Start from to separate rope loops, which later turn out to have been driven by the same hands, as an introduction to describing circuits with parallel connections as multiple loops.",
+		"link":"https://slowthinkingphysics.net/ESLActivityonetotwo.html"
+		},
+	"build2loops": {
+		"title": "Model and build two loops",
+		"kind": "small group practical",
+		"duration": 25,
+		"profile": [2,4,1,4,4,4,4,3,4],
+		"descriptor": "Children work with two rope loops of a different colour to make predictions. Then test these predictions with circuit loops made with different coloured wires. So, build and test simple circuits with parallel connections.",
+		"link":"https://slowthinkingphysics.net/ESLActivitybuild2loops.html"
+		},
+	"consequencestradeoffs": {
+		"title": "Consequences and tradeoffs",
+		"kind": "teacher demonstration",
+		"duration": 20,
+		"profile": [2,3,3,3,1,3,3,2,3],
+		"descriptor": "Demonstrate loops with parallel connections and use discussions drawing on the previous experiment to emphasise that there is a trade-off. You don't get QuoteThis{something for nothing} as the battery is running-down more quickly when driving current through two loops.",
+		"link":"https://slowthinkingphysics.net/ESLActivityconsequencestradeoffs.html"
+		}
+	},
+"ElectricCircuits05":{
+	"whatweknow": {
+		"title": "What we know",
+		"kind": "teacher-led discussion",
+		"duration": 10,
+		"profile": [2,4,1,3,1,4,4,2,4],
+		"descriptor": "Review and summarise the knowledge and competences you've developed for the children ahead of putting them to work in the design tasks.",
+		"link":"https://slowthinkingphysics.net/ESLActivitywhatweknow.html"
+		},
+	"designtasks": {
+		"title": "Design tasks",
+		"kind": "small group practical",
+		"duration": 40,
+		"profile": [4,4,0,4,4,2,4,2,4],
+		"descriptor": "Set a series of challenges where the solutions are simple circuits. Encourage thinking in terms of loops to solve the problems. Expect a  written record of the (tested) solutions. Testing means demonstrating the suitability of a suggestion by building a working circuit.",
+		"link":"https://slowthinkingphysics.net/ESLActivitydesigntasks.html"
+		},
+	"designsolutions": {
+		"title": "Design solutions",
+		"kind": "group presentations",
+		"duration": 10,
+		"profile": [4,4,0,1,4,0,4,0,4],
+		"descriptor": "Use the resources the children have prepared to arrange for a few groups to present their solutions to the class. All should have some display materials, which children might display for a few days, perhaps with a commenting system provided.",
+		"link":"https://slowthinkingphysics.net/ESLActivitydesignsolutions.html"
+		}
+	},
+"ElectricCircuits06":{
+	"modelseries": {
+		"title": "Circuit and model: series connections",
+		"kind": "teacher demonstration",
+		"duration": 15,
+		"profile": [3,4,1,3,1,4,2,3,2],
+		"descriptor": "Introduce a circuit with two bulbs in series, showing how to model this with a rope loop. Make predictions, based on experiences with the rope loop, about the relative brightness of the bulbs.",
+		"link":"https://slowthinkingphysics.net/ESLActivitymodelseries.html"
+		},
+	"controllingglowing": {
+		"title": "Controlling glowing",
+		"kind": "small group practical",
+		"duration": 35,
+		"profile": [1,4,1,3,4,2,4,2,4],
+		"descriptor": "Children model circuits with series connections, using the rope loop to predict the brightness of suitably labelled bulbs. Then build the circuits to test their predictions.",
+		"link":"https://slowthinkingphysics.net/ESLActivitycontrollingglowing.html"
+		},
+	"ropesrules": {
+		"title": "Ropes rules",
+		"kind": "teacher-led discussion",
+		"duration": 10,
+		"profile": [2,4,1,4,1,3,4,4,3],
+		"descriptor": "A whole-class discussion, with rope loops to hand, summarising how children can model electrical circuits with series or parallel connections using the rope loop.",
+		"link":"https://slowthinkingphysics.net/ESLActivityropesrules.html"
+		}
+},
+"ElectricCircuits07":{
+	"hellometers": {
+		"title": "Hello meters",
+		"kind": "teacher demonstration",
+		"duration": 10,
+		"profile": [2,2,1,4,2,3,1,3,1],
+		"descriptor": "Show how to measure current and voltage with meters. Relate this to what's happening in the rope loop. You can introduce a more sophisticated description of the measured quantities here, if liked, without making it central to how children reason with loops.",
+		"link":"https://slowthinkingphysics.net/ESLActivityhellometers.html"
+		},
+	"measurecalculate": {
+		"title": "Measurements and calculations",
+		"kind": "teacher demonstration",
+		"duration": 15,
+		"profile": [1,3,0,3,0,4,0,2,0],
+		"descriptor": "Show how to combine the electrical measurements of current and voltage (measured physical quantities) to figure out power and resistance(calculated physical quantities). Relate both measured and calculated quantities to the rope loop model.",
+		"link":"https://slowthinkingphysics.net/ESLActivitymodelseries.html"
+		},
+	"buildmeasurecalculate": {
+		"title": "Build, measure, calculate",
+		"kind": "small group practical",
+		"duration": 35,
+		"profile": [1,2,3,2,4,2,4,1,3],
+		"descriptor": "Children build electrical circuits, make measurements and do calculations with appropriate support.",
+		"link":"https://slowthinkingphysics.net/ESLActivitymeasurecalculate.html"
+		}
+	},
+"ElectricCircuits08":{
+	"mainloopreal": {
+		"title": "The mains loop in real life",
+		"kind": "teacher-led discussion",
+		"duration": 10,
+		"profile": [2,4,1,3,2,4,1,4,1],
+		"descriptor": "Use images and diagrams and some appliances to relate domestic circuits to the laboratory work on loops, both electrical and rope.",
+		"link":"https://slowthinkingphysics.net/ESLActivitymainloopreal.html"
+		},
+	"twoloopsafety": {
+		"title": "Two loop safety",
+		"kind": "teacher demonstration",
+		"duration": 25,
+		"profile": [4,3,2,3,2,4,1,4,1],
+		"descriptor": "Use a demonstration circuit to explain how fuses make appliances safe, drawing on an analysis based on parallel connections, so on two loops.",
+		"link":"https://spark.iop.org/earthing-demonstration"
+		},
+	"tradeoffspowerloops": {
+		"title": "Trade-offs and power in loops",
+		"kind": "teacher-led discussion",
+		"duration": 10,
+		"profile": [2,4,1,3,2,4,1,4,1],
+		"descriptor": "Considers how you can control power in loops and the consequences for mains circuits.",
+		"link":"https://slowthinkingphysics.net/ESLActivitytradeoffspowerloops.html"
+		},
+	"wrapuploops": {
+		"title": "Wrapping up the loops",
+		"kind": "teacher-led discussion",
+		"duration": 10,
+		"profile": [2,4,1,3,2,4,1,4,1],
+		"descriptor": "Summarises what children have learnt, connecting thinking with the  rope loop to what happens on the lab bench.",
+		"link":"https://slowthinkingphysics.net/ESLActivitywrapuploops.html"
+		}
+}
+}
