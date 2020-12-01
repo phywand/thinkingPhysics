@@ -3,36 +3,31 @@
 
 @font-face {
 	font-family: 'romanFont';
-	src: url('ComicNeue-Angular-Light.ttf');
+	src: url('Jost-300-Light.ttf'); 
 	format('truetype');
 		}
-@font-face {
-	font-family: 'italicFont';
-	src: url('ComicNeue-Angular-Light-Oblique.ttf');
-	format('truetype');
-		}
-
+		
 @font-face {
 	font-family: 'titleFont';
-	src: url('ComicNeue-Angular-Bold.ttf');
+	src: url('Jost-700-Bold.ttf'); 
 	format('truetype');
-		}
+}
 
 @font-face {
 	font-family: 'comicFont';
-	src: url('fonts/BackIssuesBB_reg.ttf');
+	src: url('BackIssuesBB_reg.ttf'); 
 	format('truetype');
 }
 
 @font-face {
 	font-family: 'speechFont';
-	src: url('fonts/SF_Cartoonist_Hand.ttf');
+	src: url('SF_Cartoonist_Hand.ttf'); 
 	format('truetype');
 }
 
 @font-face {
 	font-family: 'handFont';
-	src: url('fonts/SF_Cartoonist_Hand.ttf');
+	src: url('SF_Cartoonist_Hand.ttf'); 
 	format('truetype');
 }
 
@@ -48,7 +43,7 @@ q 								{ quotes: "‘" "’" "“" "”"; }
 q.double {quotes: "“" "”";}
 q.single {quotes: "‘" "’";}
 img 							{ height : auto; display:block; }
-.thecontent 				{ background:#ffffff; color: #003366; font-family: romanFont, sans-serif; font-size:16px; padding-left:20px; padding-right:20 px; width:90%; max-width:900px; margin-left:10 px; }
+.thecontent 				{ background:#ffffff; color: #003366; font-family: romanFont, sans-serif; font-size:16px; padding-left:20px; padding-right:20 px; max-width: 800 px; margin-left:10 px; }
 a								{ outline:none; text-decoration:none;}
 
 /*.content {margin-left:50px;}*/
@@ -68,7 +63,11 @@ a img 							{ border : 1px solid #37697C; }
 
 .PurposeHeader, .PrepareHeader, .WhatHappensHeader, .WrongTrack, .RightLines, .Thinking, .TeacherTip, .TeacherAttribute
 								{ display:block; margin:6px 0;}
-
+.chunkheader{
+font-family: titleFont;
+font-size: 1.5em;
+color: #003366;
+ }
 
 .Thinking   					{ display:inline-block; background:#88a0a5; padding-left:10px; padding-right:10px; line-height:46px; color:#fff; margin-bottom:30px !important; border:1px solid #647e83; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;  -o-border-radius:5px;  -ms-border-radius:5px; position:relative; width:80%;}
 .Thinking:after					{ position:absolute; width:44px; height:18px; content:url(cssGraphics/thinking.svg); bottom:-9px; left:1%;}
@@ -162,13 +161,17 @@ a img 							{ border : 1px solid #37697C; }
 
 
 /* link button css*/
-.internallinkPN, .internallinkTL, .internallinkTA, .printablelink, .internallink, .externallink { padding:8px 10px !important; color:#003366 !important; font-size:14px; font-weight:normal !important; background:#fff !important; box-shadow:none !important; border-radius:10px !important; -moz-border-radius:10px !important; -webkit-border-radius:10px !important; -o-border-radius:10px !important; -ms-border-radius:10px !important;}
+.EEFButtonModelling, .internallinkPN, .internallinkTL, .internallinkTA, .printablelink, .internallink, .externallink, .activitylinkheader { padding:8px 10px !important; color:#003366 !important; font-size:14px; font-weight:normal !important; background:#fff !important; box-shadow:none !important; border-radius:10px !important; -moz-border-radius:10px !important; -webkit-border-radius:10px !important; -o-border-radius:10px !important; -ms-border-radius:10px !important;}
 .internallinkPN{ border:3px solid #a4cdf3;}
 .internallinkPN:hover{ background:#a4cdf3;}
 .internallinkTL{ border:3px solid #f4c8a5;}
 .internallinkTL:hover{ background:#f4c8a5;}
 .internallinkTA{ border:3px solid #a2e2a0;}
 .internallinkTA:hover{ background:#a2e2a0;}
+
+
+.activitylinkheader { border:3px solid #a2e2a0; width:80%}
+.activitylinkheader:hover{ background:#a2e2a0;}
 
 .internallink{ border:3px solid #5388A5;}
 .internallink:hover{ background:#5388A5; color:#FFFFFF;}
@@ -232,11 +235,11 @@ left: -12px;
 
 /*teacher dialogue*/
 
-.teacherone 		{ padding:12px 15px; width:80%; margin-bottom:10px; color:#003366; font-size:16px; font-family:romanFont; position:relative; line-height:16px; background:#d6ebfd; border:1px solid #9bccf6; border-radius:5px; -moz-border-radius:5px; -ms-border-radius:5px; -o-border-radius:5px; -webkit-border-radius:5px;}
+.teacherone 		{ padding:12px 15px; width:80%; margin-bottom:10px; color:#003366; font-size:16px; font-family: 'Open Sans'; position:relative; line-height:16px; background:#d6ebfd; border:1px solid #9bccf6; border-radius:5px; -moz-border-radius:5px; -ms-border-radius:5px; -o-border-radius:5px; -webkit-border-radius:5px;}
 .teacherone:after{ content:url(cssGraphics/speechbubble1.png); width:14px; height:27px; position:absolute; bottom:-26px; left:1%; margin:0 4px;}
-.teachertwo 		{ padding:12px 15px; width:85%; margin-bottom:10px; float:right; color:#003366; font-size:16px; font-family:romanFont; position:relative; line-height:16px; background:#ccf6ff; border:1px solid #9bccf6; border-radius:5px; -moz-border-radius:5px; -ms-border-radius:5px; -o-border-radius:5px; -webkit-border-radius:5px;}
+.teachertwo 		{ padding:12px 15px; width:85%; margin-bottom:10px; float:right; color:#003366; font-size:16px; font-family: 'Open Sans'; position:relative; line-height:16px; background:#ccf6ff; border:1px solid #9bccf6; border-radius:5px; -moz-border-radius:5px; -ms-border-radius:5px; -o-border-radius:5px; -webkit-border-radius:5px;}
 .teachertwo:after{ content:url(cssGraphics/speechbubble2.png); width:14px; height:27px; position:absolute; bottom:-26px; right:1%; margin:0 4px;}
-.teacherthree 	{ padding:12px 15px; margin-left:12%; width:68%; color:#003366; font-size:16px; font-family:romanFont; position:relative; line-height:16px; background:#bfdffb; border:1px solid #80c1fa; border-radius:5px; -moz-border-radius:5px; -ms-border-radius:5px; -o-border-radius:5px; -webkit-border-radius:5px;}
+.teacherthree 	{ padding:12px 15px; margin-left:12%; width:68%; color:#003366; font-size:16px; font-family: 'Open Sans'; position:relative; line-height:16px; background:#bfdffb; border:1px solid #80c1fa; border-radius:5px; -moz-border-radius:5px; -ms-border-radius:5px; -o-border-radius:5px; -webkit-border-radius:5px;}
 .teacherthree:after{ content:url(cssGraphics/speechbubble3.png); width:14px; height:27px; position:absolute; bottom:-26px; left:50%; margin:0 4px;}
 
 /*Added to do coaching session blocks 2016-11-22*/
@@ -260,3 +263,144 @@ left: -12px;
 .SPTactivityHeader:after { position:absolute; content: ""; bottom:-7px; left:44.85%; -moz-transform: scale(0.98); border-width: 8px 21px 0; border-style: solid; border-color: #88a0a5 transparent; display: block; width: 0; }
 
 .SPTactivityHeader:before { content: ""; position: absolute; bottom: -8px; left:44.7%; border-width: 8px 22px 0; border-style: solid; border-color: #42676f transparent; display: block; width: 0;}
+
+.SessionBlockData{
+position:relative;
+left:0px;
+}
+
+.LessonBlock{
+line-height:0.8em;
+}
+
+.LessonBlockHeader{
+font-family: titleFont;
+font-size: 1.0em;
+color: #003366;
+}
+
+.facetscore{
+position:absolute;
+left:320px;
+vertical-align: -20px;
+}
+
+.summaryscore{
+position:absolute;
+left:155px;
+}
+
+.activityheader{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-right: 16px;
+}
+
+.activityclock{
+    flex-basis: 40px;
+    flex-shrink: 1;
+}
+
+.activitytitle{
+    margin-right: 20px;
+    margin-left: 20px;
+    background:#88a0a5;
+    font-family: RomanFont;
+    font:#fff !important;
+    flex-grow:8;
+    flex-shrink: 16;
+    background:#88a0a5;
+    padding-left:12px;
+/*    padding-right:12px;*/
+    line-height:46px;
+    color:#fff;
+    font-size:14px;
+    font-weight: bold;
+    border:1px solid #42676f;
+    border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;  -o-border-radius:5px;  -ms-border-radius:5px;
+}
+
+.activitylink, .PiperLink{
+    flex-basis: 160px;
+    flex-shrink: 1;
+    align-self: left;
+}
+
+.PiperLink{
+    flex-basis: 160px;
+    flex-shrink: 1;
+    align-self: left;
+    align-self: center;
+}
+
+.pipercomment{
+/*    padding-left: 100px;*/
+    padding-right: 10px;
+    flex-shrink: 8;
+}
+
+
+.eefconnect, .PiperBlock{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-right: 16px;
+}
+
+
+.eefcomment{
+    padding-left: 60px;
+    padding-right: 10px;
+/*    color:#724385;*/
+    flex-shrink: 8;
+}
+
+.eeflink{
+    flex-basis: 160px;
+    align-self: left;
+    flex-shrink: 1;
+}
+
+.EEFButtonPreconceptions,.EEFButtonSelfRegulation, .EEFButtonModelling, .EEFButtonMemory, .EEFButtonPracticalWork,.EEFButtonLanguageScience, .EEFButtonFeedback, .EEFToolkit{ padding:8px 10px !important; font-size:14px; font-weight:normal !important; box-shadow:none !important; border-radius:10px !important; -moz-border-radius:10px !important; -webkit-border-radius:10px !important; -o-border-radius:10px !important; -ms-border-radius:10px !important; display: block; width:140px;}
+
+.EEFButtonPreconceptions{  background-color:#D84345 !important;color:#fff !important;}
+.EEFButtonPreconceptions:hover{ background:#2A952F !important;}
+
+.EEFButtonSelfRegulation{  background-color:#DF5D41 !important;color:#fff !important;}
+.EEFButtonSelfRegulation:hover{ background:#2A952F !important;}
+
+.EEFButtonModelling{  background-color:#EA8F43 !important;color:#fff !important;}
+.EEFButtonModelling:hover{ background:#2A952F !important;}
+
+.EEFButtonMemory{  background-color:#7DBB61 !important;color:#fff !important;}
+.EEFButtonMemory:hover{ background:#2A952F !important;}
+
+.EEFButtonPracticalWork{  background-color:#3C9AC6 !important;color:#fff !important;}
+.EEFButtonPracticalWork:hover{ background:#2A952F !important;}
+
+.EEFButtonLanguageScience{  background-color:#3B5491 !important;color:#fff !important;}
+.EEFButtonLanguageScience:hover{ background:#2A952F !important;}
+
+.EEFButtonFeedback{  background-color:#724385 !important;color:#fff !important;}
+.EEFButtonFeedback:hover{ background:#2A952F !important;}
+
+.EEFToolkit{  background-color:#877A71 !important;color:#fff !important;}
+.EEFToolkit:hover{ background:#2A952F !important;}
+
+.IoPLinkButton{ padding:8px 10px !important; font-size:14px; font-weight:normal !important; box-shadow:none !important; border-radius:10px !important; -moz-border-radius:10px !important; -webkit-border-radius:10px !important; -o-border-radius:10px !important; -ms-border-radius:10px !important; display: block; width:140px;}
+
+.IoPLinkButton{  background-color:#88a0a5 !important;color:#fff !important;}
+.IoPLinkButton:hover{ background:#2A952F !important;}
+
+.actvitydescriptor{
+    font-size: 1em;
+    color: #003366;
+    margin-left: 0px;
+    margin-right: 170px;
+    margin-top: 12px;
+}
