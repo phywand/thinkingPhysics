@@ -1,0 +1,218 @@
+
+@font-face {
+	font-family: 'hintFont';
+	src: url('Jost-400-Book.ttf'); 
+	format('truetype');
+		}
+		
+@font-face {
+	font-family: 'titleFont';
+	src: url('Jost-700-Bold.ttf'); 
+	format('truetype');
+		}
+		
+.test
+{
+    background: #46caa6;
+}
+div > iframe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+.hint-block
+{
+    position: fixed;
+    top:40%;
+    left:25%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: white;
+    font-family: hintFont, sans-serif;
+    text-align: left;
+    padding: 20px;
+    width:300px;
+    height: 100px;
+    z-index: 10;
+}
+.hint-title
+{
+    /*padding: 20px;*/
+    font-family: titleFont, sans-serif;
+    font-size: 25px;
+    /*font-weight: bold;*/
+    z-index: 10;
+}
+.instruction
+{
+    font-size: 18px;
+    z-index: 10;
+}
+
+/*
+impress css
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    min-height: 740px;
+
+    background: rgb(215, 215, 215);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
+    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+}
+
+b, strong { font-weight: bold }
+i, em { font-style: italic }
+
+a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0 0.1em;
+    background: rgba(255,255,255,0.5);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+    border-radius: 0.2em;
+
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+a:hover,
+a:focus {
+    background: rgba(255,255,255,1);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
+}
+
+.step {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+    font-family: 'PT Serif', georgia, serif;
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0.15;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.impress-enabled .step.active { opacity: 1 }
+#overview { display: none }
+
+.impress-on-overview .step {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.impress-enabled          { pointer-events: auto }
+.impress-enabled #impress { pointer-events: auto }
+.pane-list{
+    display: none;
+    padding: 5px;
+    border-radius:3px;
+    background: #555;
+    margin-top: 45px;
+
+}
+.pane-list a{
+    text-shadow:none;
+    background: none;
+}
+.pane-list li{
+    color:#fff;
+    padding:5px;
+    border-bottom: 1px solid #222;
+}
+.pane-list li:last-child{
+    border-bottom: none;
+}
+.pane-list li:hover{
+    color:#ccc;
+}
+.pane_nav:hover .pane-list{
+    display:block;
+}
+.pane_nav{
+    position:fixed;
+    right:20px;
+    cursor:pointer;
+    
+}
+.pane_nav .gear{
+    padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border-radius: 0px 0px 3px 3px;
+    background: #555;
+    float: right;
+}
+
+

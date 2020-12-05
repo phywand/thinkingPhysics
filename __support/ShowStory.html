@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title id="title"></title><!-- Title will be taken form the .md file-->
+    <link href="physicsStorySpace.css" rel="stylesheet" />
+    <script src="StorySpace.js"></script>
+    <script src="xregexp-all.js"></script>
+
+</head>
+<body>
+<div class="hint-block" id="hint-block" >
+    <div class="hint-title" id="hint-title"><!-- Title will be taken form the .md file-->
+
+    </div>
+    <div class="instruction" id="mobile-hint"><!-- Hint for mobile devices.Id must be mobile-hint.-->
+        Swipe right or left to navigate through panes</br>
+        Swipe up or swipe down or tap top or bottom to show overvieiw</br> 
+        Click off a pane on the background first if you seem to be 'stuck'
+    </div>
+    <div class="instruction" id="browser-hint"><!-- Hint for desktop browsers devices.Id must be browser-hint.-->
+      Use a spacebar or arrow keys to navigate, or number keys 0-9</br>
+      Click off a pane on the background first if you seem to be 'stuck'
+    </div>
+</div>
+<div id="impress">
+    <!--
+        Here is where the step panes and transition steps will be displayed
+    -->
+</div>
+<div class="pane_nav">
+    <div class="gear">
+       <img src="cssGraphics/PSMenuIcon.png" width="40px" height="30px"/>
+    </div>
+    <ul class="pane-list">
+    </ul>
+</div>
+<script>
+
+
+    /*
+    The below function must be called to load .md file and generate step panes and transition steps.
+
+    The first parameter in the function is ' transition properties' object which has properties
+    --> size        :   indicates the size (width or height) of transition step in pixels.
+    --> offset      :   indicates the gap between transition step and step pane.
+    --> data_scale  :   indicates the expansion of transition step when it is highlighted.
+    --> data_z      :   indicates the z value of transition step when highlighted.
+
+    the second parameter is 'overview properties' object which has
+    --> overview_data_scale :   used to manupulate the size of the overview. The larger the number the smaller the overview looks.
+    --> overview_data_ease  :   ease of the overview zoom-in and zoom-out. default value is 'ease-in-out'
+     */
+
+
+    Main.init({size:50,offset:20,data_scale:'1.2',data_z:'0'},{overview_data_scale:'5',overview_data_ease:'ease-in-out'});
+   
+        
+</script>
+<!-- here follows minified impressjs -->
+<script>
+!function(a,b){"use strict";var c=function(){var b=a.createElement("dummy").style,c="Webkit Moz O ms Khtml".split(" "),d={};return function(a){if("undefined"==typeof d[a]){var e=a.charAt(0).toUpperCase()+a.substr(1),f=(a+" "+c.join(e+" ")+e).split(" ");d[a]=null;for(var g in f)if(void 0!==b[f[g]]){d[a]=f[g];break}}return d[a]}}(),d=function(a){return[].slice.call(a)},e=function(a,b){var d,e;for(d in b)b.hasOwnProperty(d)&&(e=c(d),null!==e&&(a.style[e]=b[d]));return a},f=function(a,b){return isNaN(a)?b||0:Number(a)},g=function(b){return a.getElementById(b)},h=function(b,c){return c=c||a,c.querySelector(b)},i=function(b,c){return c=c||a,d(c.querySelectorAll(b))},j=function(b,c,d){var e=a.createEvent("CustomEvent");e.initCustomEvent(c,!0,!0,d),b.dispatchEvent(e)},k=function(a){return" translate3d("+a.x+"px,"+a.y+"px,"+a.z+"px)"},l=function(a,b){var c=" rotateX("+a.x+"deg) ",d=" rotateY("+a.y+"deg) ",e=" rotateZ("+a.z+"deg) ";return b?e+d+c:c+d+e},m=function(a){return" scale("+a+")"},n=function(a){return" perspective("+a+"px) "},o=function(){return g(b.location.hash.replace(/^#\/?/,""))},p=function(a){var c=b.innerHeight/a.height,d=b.innerWidth/a.width,e=c>d?d:c;return a.maxScale&&e>a.maxScale&&(e=a.maxScale),a.minScale&&e<a.minScale&&(e=a.minScale),e},q=a.body,s=(navigator.userAgent.toLowerCase(),null!==c("perspective")&&q.classList&&q.dataset);s?(q.classList.remove("impress-not-supported"),q.classList.add("impress-supported")):q.className+=" impress-not-supported ";var t={},u={width:1024,height:768,maxScale:1,minScale:0,perspective:1e3,transitionDuration:1e3},v=function(){return!1},w=b.impress=function(c){if(!s)return{init:v,goto:v,prev:v,next:v};if(c=c||"impress",t["impress-root-"+c])return t["impress-root-"+c];var r={},w=null,x=null,y=null,z=null,A=null,B=g(c),C=a.createElement("div"),D=!1,E=null,F=function(a){E!==a&&(j(a,"impress:stepenter"),E=a)},G=function(a){E===a&&(j(a,"impress:stepleave"),E=null)},H=function(a,b){var c=a.dataset,d={translate:{x:f(c.x),y:f(c.y),z:f(c.z)},rotate:{x:f(c.rotateX),y:f(c.rotateY),z:f(c.rotateZ||c.rotate)},scale:f(c.scale,1),el:a,ease:c.ease};a.id||(a.id="step-"+(b+1)),r["impress-"+a.id]=d,e(a,{position:"absolute",transform:"translate(-50%,-50%)"+k(d.translate)+l(d.rotate)+m(d.scale),transformStyle:"preserve-3d"})},I=function(){if(!D){var b=h("meta[name='viewport']")||a.createElement("meta");b.content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no",b.parentNode!==a.head&&(b.name="viewport",a.head.appendChild(b));var g=B.dataset;z={width:f(g.width,u.width),height:f(g.height,u.height),maxScale:f(g.maxScale,u.maxScale),minScale:f(g.minScale,u.minScale),perspective:f(g.perspective,u.perspective),transitionDuration:f(g.transitionDuration,u.transitionDuration)},A=p(z),d(B.childNodes).forEach(function(a){C.appendChild(a)}),B.appendChild(C),a.documentElement.style.height="100%",e(q,{height:"100%",overflow:"hidden"});var k={position:"absolute",transformOrigin:"top left",transition:"all 0s ease-in-out",transformStyle:"preserve-3d"};e(B,k),e(B,{top:"50%",left:"50%",transform:n(z.perspective/A)+m(A)}),e(C,k),q.classList.remove("impress-disabled"),q.classList.add("impress-enabled"),y=i(".step",B),y.forEach(H),x={translate:{x:0,y:0,z:0},rotate:{x:0,y:0,z:0},scale:1},D=!0,j(B,"impress:init",{api:t["impress-root-"+c]})}},J=function(a){return"number"==typeof a?a=a<0?y[y.length+a]:y[a]:"string"==typeof a&&(a=g(a)),a&&a.id&&r["impress-"+a.id]?a:null},K=null,L=function(a,c){if(!D||!(a=J(a)))return!1;b.scrollTo(0,0);var d=r["impress-"+a.id];w&&(w.classList.remove("active"),q.classList.remove("impress-on-"+w.id)),a.classList.add("active"),q.classList.add("impress-on-"+a.id);var g={rotate:{x:-d.rotate.x,y:-d.rotate.y,z:-d.rotate.z},translate:{x:-d.translate.x,y:-d.translate.y,z:-d.translate.z},scale:1/d.scale,ease:d.ease},h=g.scale>=x.scale;c=f(c,z.transitionDuration);var i=c/2;a===w&&(A=p(z));var j=g.scale*A;w&&w!==a&&G(w),e(B,{transform:n(z.perspective/j)+m(j),transitionDuration:c+"ms",transitionDelay:(h?i:0)+"ms"}),C.style.transitionTimingFunction="ease-in-out";var o={transform:l(g.rotate,!0)+k(g.translate),mozTransform:l(g.rotate,!0)+k(g.translate),transitionDuration:c+"ms",transitionDelay:(h?0:i)+"ms"};return void 0!=g.ease&&(C.style.transitionTimingFunction=g.ease),e(C,o),(x.scale===g.scale||x.rotate.x===g.rotate.x&&x.rotate.y===g.rotate.y&&x.rotate.z===g.rotate.z&&x.translate.x===g.translate.x&&x.translate.y===g.translate.y&&x.translate.z===g.translate.z)&&(i=0),x=g,w=a,b.clearTimeout(K),K=b.setTimeout(function(){F(w)},c+i),a},M=function(){var a=y.indexOf(w)-1;return a=a>=0?y[a]:y[y.length-1],L(a)},N=function(){var a=y.indexOf(w)+1;return a=a<y.length?y[a]:y[0],L(a)};return B.addEventListener("impress:init",function(){y.forEach(function(a){a.classList.add("future")}),B.addEventListener("impress:stepenter",function(a){a.target.classList.remove("past"),a.target.classList.remove("future"),a.target.classList.add("present")},!1),B.addEventListener("impress:stepleave",function(a){a.target.classList.remove("present"),a.target.classList.add("past")},!1)},!1),B.addEventListener("impress:init",function(){var a="";B.addEventListener("impress:stepenter",function(c){b.location.hash=a="#/"+c.target.id},!1),b.addEventListener("hashchange",function(){b.location.hash!==a&&L(o())},!1),L(o()||y[0],0)},!1),q.classList.add("impress-disabled"),t["impress-root-"+c]={init:I,goto:L,next:N,prev:M}};w.supported=s}(document,window),function(a,b){"use strict";var c=function(a,b){var c=null;return function(){var d=this,e=arguments;clearTimeout(c),c=setTimeout(function(){a.apply(d,e)},b)}};a.addEventListener("impress:init",function(d){var e=d.detail.api;a.addEventListener("keydown",function(a){(9===a.keyCode||a.keyCode>=32&&a.keyCode<=34||a.keyCode>=37&&a.keyCode<=40)&&a.preventDefault()},!1),a.addEventListener("keyup",function(a){if(!(a.shiftKey||a.altKey||a.ctrlKey||a.metaKey)&&(9===a.keyCode||a.keyCode>=32&&a.keyCode<=34||a.keyCode>=37&&a.keyCode<=40)){switch(a.keyCode){case 33:case 37:case 38:e.prev();break;case 9:case 32:case 34:case 39:case 40:e.next()}a.preventDefault()}},!1),a.addEventListener("click",function(b){for(var c=b.target;"A"!==c.tagName&&c!==a.documentElement;)c=c.parentNode;if("A"===c.tagName){var d=c.getAttribute("href");d&&"#"===d[0]&&(c=a.getElementById(d.slice(1)))}e.goto(c)&&(b.stopImmediatePropagation(),b.preventDefault())},!1),a.addEventListener("click",function(b){for(var c=b.target;(!c.classList.contains("step")||c.classList.contains("active"))&&c!==a.documentElement;)c=c.parentNode;e.goto(c)&&b.preventDefault()},!1),a.addEventListener("touchend",function(a){if(1===a.touches.length){var c=a.touches[0].clientX,d=.3*b.innerWidth,f=null;c<d?f=e.prev():c>b.innerWidth-d&&(f=e.next()),f&&a.preventDefault()}},!1),b.addEventListener("resize",c(function(){e.goto(a.querySelector(".step.active"),500)},250),!1)},!1)}(document,window);
+</script>
+<script>impress().init();</script>
+<script>var api=impress();api.init();
+    document.addEventListener( "keyup", function( event ) {
+
+            if ( event.shiftKey || event.altKey || event.ctrlKey || event.metaKey ) {
+                return;
+            }
+
+            if ( event.keyCode === 27 ||
+               ( event.keyCode >= 96 && event.keyCode <= 105 ) ||
+               ( event.keyCode >= 48 && event.keyCode <= 57 ) ) {
+                if(event.keyCode === 27 || event.keyCode === 96|| event.keyCode === 48)
+                {
+                    api.goto("overview");
+                }
+                else if(event.keyCode >= 97 && event.keyCode <= 105)
+                {
+                    if(Main.element_ids[event.keyCode-97])
+                    {
+                        api.goto(Main.element_ids[event.keyCode-97]);
+                    }
+                    
+                }
+                else if(event.keyCode >= 49 && event.keyCode <= 57)
+                {
+                    if(Main.element_ids[event.keyCode-49])
+                    {
+                        api.goto(Main.element_ids[event.keyCode-49]);
+                    }
+                }
+
+                event.preventDefault();
+            }
+        }, false );
+        
+    var startX,
+        startY,
+        distX,
+        distY,
+        threshold = 150, 
+        allowedTime = 200, 
+        elapsedTime,
+        startTime
+ 
+    
+ 
+    document.addEventListener('touchstart', function(e){
+        var touchobj = e.changedTouches[0];
+        distY = 0;
+        distX=0;
+        startX = touchobj.pageX;
+        startY = touchobj.pageY;
+        startTime = new Date().getTime(); 
+        return false;
+    }, false)
+ 
+    document.addEventListener('touchmove', function(e){
+        return false;
+    }, false)
+ 
+    document.addEventListener('touchend', function(e){
+        var touchobj = e.changedTouches[0];
+        
+        distY = touchobj.pageY - startY ;
+        distX = touchobj.pageX - startX ;
+        elapsedTime = new Date().getTime() - startTime;
+        if(elapsedTime <= allowedTime && (Math.abs(distY) >= threshold || Math.abs(distX) >= threshold))
+        {
+            if(Math.abs(distY) >= 100)
+            {
+                result = api.goto("overview");
+            }
+            else if(Math.abs(distX) >= 100)
+            {
+                if(distX<0)
+                {
+                    result = api.next();
+                }
+                else
+                {
+                    result = api.prev();
+                }
+                
+            }
+        }
+        else
+        {
+           if(e.changedTouches[ 0 ])
+           {
+                var y = e.changedTouches[ 0 ].clientY,
+                height = window.innerHeight * 0.3,
+                result = null;
+                if ( y < height ) {
+                    result = api.goto("overview");
+                } else if ( y > window.innerHeight - height ) {
+                    result = api.goto("overview");
+                }
+           }
+           
+        }
+        return false;
+        
+    }, false);
+
+</script>
+</body>
+</html>
