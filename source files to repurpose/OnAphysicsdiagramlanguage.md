@@ -110,7 +110,7 @@ The physics story space lays out an alternating series of panes and transitions 
 
 A complete physics story space, in overview mode, showing the entire multi-step argument. Four panes show the Steps and Three linking panes are populated by guides, rendering the moves between panes explicit. 
 
-InsertGraphic{NgWildBrewDescriptionGuidedPSS}
+InsertGraphic{TPTeWildBrewDescriptionGuidedPSS}
 
 As you navigate, notice how each active pane reveals the context, locating this step amongst many, with a menu to allow navigation between panes.
 
