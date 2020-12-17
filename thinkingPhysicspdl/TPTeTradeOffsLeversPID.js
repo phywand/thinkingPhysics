@@ -1,4 +1,4 @@
-// {TPTeTradeOffsLevers}{640}{600}
+// {TPTeTradeOffsLeversPID}{640}{600}
 
 const magnitudes = [];
 let values = [];
