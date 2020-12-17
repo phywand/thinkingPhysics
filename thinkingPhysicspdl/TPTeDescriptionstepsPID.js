@@ -1,4 +1,4 @@
-// {TPTeDescriptionLevels}{800}{550}
+// {TeDescriptionstepsPID}{800}{550}
 
 // where to find things in the ideaBoxes array
 
@@ -18,10 +18,38 @@ var cornerRound = 5;
 var textOffset = 4;
 
 var ideasBoxes = [
-  [0, "lived in world: the everyday", 220, 130, 120, 120],
-  [1, "physical description: noticing and quantifying", 390, 300, 120, 120],
-  [2, "physical description: causal mechanisms", 560 + 170, 300, 120, 120],
-  [3, "energy description", 560, 470, 120, 120],
+  [
+    0,
+    "lived in world: describe the process in everyday terms\n(step 1)",
+    210,
+    130,
+    120,
+    120,
+  ],
+  [
+    1,
+    "physical description: noticing and quantifying\n(step 2)",
+    370,
+    300,
+    120,
+    120,
+  ],
+  [
+    2,
+    "Identify insights: apply to process\nand to physical description\n(step 4)",
+    720,
+    215,
+    120,
+    290,
+  ],
+  [
+    3,
+    "energy description: use clues from the physical\n(step 3)",
+    530,
+    470,
+    120,
+    120,
+  ],
   [4, "level one", 80, 130, 120, 40],
   [5, "level two", 80, 300, 120, 40],
   [6, "level three", 80, 470, 120, 40],
@@ -29,14 +57,17 @@ var ideasBoxes = [
 var ideaLinks = [
   [0, 1, 16],
   [1, 3, 16],
+  [3, 2, 16],
+  [0, 2, 8],
   [1, 2, 8],
 ];
 
 function preload() {
-  romanFont = loadFont("../__support/Jost-600-Semi.ttf");
-  chatterFont = loadFont("../__support/SF_Cartoonist_Hand.ttf");
+  romanFont = loadFont("../__support/Jost-300-Light.ttf");
+  italicFont = loadFont("../__support/Jost-300-LightItalic.ttf");
   titleFont = loadFont("../__support/Jost-700-Bold.ttf");
 }
+
 function setup() {
   createCanvas(800, 550);
   noStroke();
@@ -64,7 +95,7 @@ function draw() {
     );
   }
 
-  titleBold("Three levels of description");
+  titleBold("four steps across three levels");
 }
 
 function drawCoreIdeaBox(boxText, xpos, ypos, boxWidth, boxHeight) {

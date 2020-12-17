@@ -1,0 +1,10 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "node __thinkingPhysicsBuildScript.js"
+    }
+  },
+  "identifier" : "B16228CC-34DC-4052-8CC2-9DD0D821F0A2",
+  "openLogOnRun" : "fail"
+}

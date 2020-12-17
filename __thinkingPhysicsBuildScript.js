@@ -12,7 +12,7 @@ var prevbutton;
 var nextbutton;
 var thisindex;
 
-var inputPath = "/Users/ian/_repo/thinkingPhysics/catchingphysicspml";
+var inputPath = "/Users/ian/_repo/thinkingPhysics/thinkingphysicspml";
 var outputPath = "/Users/ian/_repo/thinkingPhysics/thinkingPhysicsToUpload/";
 
 var parseErrors = [];
@@ -129,7 +129,7 @@ function contentsprocess(fileContents, thisfilename) {
     wipeFTitle = "FileName: " + identifier;
   }
 
-  webTitle = /WebTitle{(.*)}/.exec(fileContents)[1];
+  webTitle = /# WebTitle{(.*)}/.exec(fileContents)[1];
   wipeHTitle = /WebTitle{(.*)}/.exec(fileContents)[0];
 
   //delete metadata from file contents
@@ -163,7 +163,7 @@ function contentsprocess(fileContents, thisfilename) {
     frame = frame.replace("TOC", thisindex);
     frame =
       frame +
-      "<p> This is a peice of thinking about how physics is learnt.</p><p>Find other stories from <a href='https://slowthinkingphysics.net/STPFrontMatter/thinkingPhysics.html'>here</a></p>.";
+      "<p> This is a piece of thinking about how physics is learnt.</p><p>Find other stories from <a href='https://slowthinkingphysics.net/STPFrontMatter/thinkingPhysics.html'>here</a></p>.";
     // 			add buttons here for every topic except the current one
   }
 
