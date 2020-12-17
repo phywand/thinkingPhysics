@@ -334,19 +334,19 @@ function pmlparsecatchingphysics(text) {
   text = XRegExp.replace(
     text,
     /InsertGraphic{(.*?)PID}{(.*?)}{(.*?)}/,
-    '<iframe  src="catchingphysicsToUpload/$1PID" class="iframe" scrolling="no" style="border: 0" width = "$2" height = "$3"></iframe>\n',
+    '<iframe  src="../$1PID" class="iframe" scrolling="no" style="border: 0" width = "$2" height = "$3"></iframe>\n',
     "all"
   ); //processes PID (one of two pdl graphic types supported)
   text = XRegExp.replace(
     text,
     /InsertGraphic{(.*?)DIP}{(.*?)}{(.*?)}/,
-    '<iframe  src="catchingphysicsToUpload/$1PID" class="iframe" scrolling="no" style="border: 0" width = "$2" height = "$3"></iframe>\n',
+    '<iframe  src="../$1DIP" class="iframe" scrolling="no" style="border: 0" width = "$2" height = "$3"></iframe>\n',
     "all"
   ); //processes DIP (one of two pdl graphic types supported)
   text = XRegExp.replace(
     text,
-    /InsertGraphic{(.*?)PSS}{(.*?)}{(.*?)}/,
-    '<iframe  src="http://supportingphysicsteaching.net/SPTGraphics/ShowStory.html?file=http://supportingphysicsteaching.net/SPTGraphics/$1PSS.md" class="iframe" scrolling="no" style="border: 0" width = "$2" height = "$3"></iframe>\n',
+    /InsertGraphic{(.*?)PSS}/,
+    '<iframe  src="../$1PSS" class="iframe" scrolling="no" style="border: 0" width = "800" height = "600"></iframe>\n',
     "all"
   ); //processes PSS (Story space embed)
 
