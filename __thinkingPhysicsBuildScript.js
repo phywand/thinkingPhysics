@@ -116,7 +116,7 @@ function processpml(value) {
 
 function contentsprocess(fileContents, thisfilename) {
   var frame =
-    '<!DOCTYPE html>\n<html>\n<head lang="en">\n<meta charset="UTF-8">\n<title>PAGETITLE</title>\n<link rel="stylesheet" href="../__support/PMLSupportTP.css"type="text/css">\n</head>\n<body>\n<div class="pagetitle">WEBTITLE</div>\n<div class="thecontent">DOCUMENTCONTENT</div>\n\n </br>PREVBUTTON NEXTBUTTON </body>\n</html>';
+    '<!DOCTYPE html>\n<html>\n<head lang="en">\n<meta charset="UTF-8">\n<title>PAGETITLE</title>\n<link rel="stylesheet" href="../__support/PMLSupportTP.css"type="text/css">\n</head>\n<body>\n<div class="pagetitle">WEBTITLE</div>\n<div class="thecontent">DOCUMENTCONTENT</div>\n\n </br>PREVBUTTON NEXTBUTTON </body></div>\n</html>';
 
   //process metadata
 

@@ -25,7 +25,7 @@
 
 		}
 body {padding: 0; margin: 0;}
-p{font-family: Jost-300-Light;color: #003366;font-size: 16px;}
+p{font-family: romanFont;color: #003366;font-size: 16px;}
 
 q.double {quotes: """ """;}
 q.single {quotes: "'" "'";}
