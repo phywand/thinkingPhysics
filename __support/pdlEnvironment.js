@@ -8053,6 +8053,90 @@ beginShape();
    endShape();
    pop();
    }
+
+function mentonDroidShuffle(droidid, xloc, yloc) {
+  stroke(droidid);
+  noFill();
+  discoursedroid(6, xloc, yloc, true, false, droidid, 2);
+  var bubblewidth = 0;
+  const verticaloffset = 24;
+  const marginwidth = 25;
+  var bubbleheight = statements.length * verticaloffset;
+  textFont(chatterFont, 16);
+  for (var i = 0; i < statements.length; i++) {
+    if (textWidth(statements[i]) + 3 * marginwidth > bubblewidth) {
+      var bubblewidth = textWidth(statements[i]) + 3 * marginwidth;
+    }
+  }
+  var cursorinbox =
+    mouseX > xloc - 30 - marginwidth &&
+    mouseX < xloc - 30 - marginwidth + bubblewidth - 15 &&
+    mouseY < yloc - 28 &&
+    mouseY > yloc - 28 - bubbleheight;
+  if (cursorinbox) {
+    cursor(HAND);
+    statementid = floor((mouseY - yloc + bubbleheight + 28) / verticaloffset);
+    up = mouseX - xloc + marginwidth + 30 < bubblewidth / 2;
+    down = mouseX - xloc + marginwidth + 30 > bubblewidth / 2;
+  } else {
+    cursor(ARROW);
+  }
+
+  mentonbubbleTR("", xloc, yloc, bubblewidth, bubbleheight);
+
+  //draw triangles
+  fill(cideaGreen);
+  if (up && statementid != 0) {
+    triangle(
+      10,
+      statementid * verticaloffset + 16,
+      20,
+      statementid * verticaloffset + 16,
+      15,
+      statementid * verticaloffset + 8
+    );
+  }
+  if (down && statementid != statements.length - 1) {
+    triangle(
+      bubblewidth - 10,
+      statementid * verticaloffset + 12,
+      bubblewidth - 20,
+      statementid * verticaloffset + 12,
+      bubblewidth - 15,
+      statementid * verticaloffset + 20
+    );
+  }
+
+  if (actionup && actionstatementid != 0) {
+    statements.move(actionstatementid, actionstatementid - 1);
+  }
+  actionup = false;
+  if (actiondown && actionstatementid != statements.length - 1) {
+    statements.move(actionstatementid + 1, actionstatementid); //move down if not the last
+  }
+  actiondown = false;
+
+  for (var i = 0; i < statements.length; i++) {
+    fill(clabeltext);
+    text(
+      statements[i],
+      4 + marginwidth,
+      4 + verticaloffset / 2 + i * verticaloffset,
+      bubblewidth
+    );
+  }
+}
+
+function mouseReleased() {
+  actionup = up;
+  actiondown = down;
+  actionstatementid = statementid;
+}
+
+Array.prototype.move = function (from, to) {
+  this.splice(to, 0, this.splice(from, 1)[0]);
+};
+
 // graphic annotations
 //people
 
