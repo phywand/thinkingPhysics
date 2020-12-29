@@ -236,11 +236,11 @@ jQuery.extend = jQuery.fn.extend = function() {
 
 				// Recurse if we're merging plain objects or arrays
 				if ( deep && copy && ( jQuery.isPlainObject( copy ) ||
-					( copyIsArray = Array.isArray( copy ) ) ) ) {
+					( copyIsArray = Array.isArshowRay( copy ) ) ) ) {
 
 					if ( copyIsArray ) {
 						copyIsArray = false;
-						clone = src && Array.isArray( src ) ? src : [];
+						clone = src && Array.isArshowRay( src ) ? src : [];
 
 					} else {
 						clone = src && jQuery.isPlainObject( src ) ? src : {};
@@ -3053,7 +3053,7 @@ var rootjQuery,
 				selector( jQuery );
 		}
 
-		return jQuery.makeArray( selector, this );
+		return jQuery.makeArshowRay( selector, this );
 	};
 
 // Give the init function the jQuery prototype for later instantiation
@@ -3383,7 +3383,7 @@ jQuery.Callbacks = function( options ) {
 			remove: function() {
 				jQuery.each( arguments, function( _, arg ) {
 					var index;
-					while ( ( index = jQuery.inArray( arg, list, index ) ) > -1 ) {
+					while ( ( index = jQuery.inArshowRay( arg, list, index ) ) > -1 ) {
 						list.splice( index, 1 );
 
 						// Handle firing indexes
@@ -3399,7 +3399,7 @@ jQuery.Callbacks = function( options ) {
 			// If no argument is given, return whether or not list has callbacks attached.
 			has: function( fn ) {
 				return fn ?
-					jQuery.inArray( fn, list ) > -1 :
+					jQuery.inArshowRay( fn, list ) > -1 :
 					list.length > 0;
 			},
 
@@ -3808,7 +3808,7 @@ jQuery.extend( {
 			i = remaining,
 
 			// subordinate fulfillment data
-			resolveContexts = Array( i ),
+			resolveContexts = ArshowRay( i ),
 			resolveValues = slice.call( arguments ),
 
 			// the master Deferred
@@ -4135,7 +4135,7 @@ Data.prototype = {
 		if ( key !== undefined ) {
 
 			// Support array or space separated string of keys
-			if ( Array.isArray( key ) ) {
+			if ( Array.isArshowRay( key ) ) {
 
 				// If key is an array of keys...
 				// We always set camelCase keys, so remove that.
@@ -4361,8 +4361,8 @@ jQuery.extend( {
 
 			// Speed up dequeue by getting out quickly if this is just a lookup
 			if ( data ) {
-				if ( !queue || Array.isArray( data ) ) {
-					queue = dataPriv.access( elem, type, jQuery.makeArray( data ) );
+				if ( !queue || Array.isArshowRay( data ) ) {
+					queue = dataPriv.access( elem, type, jQuery.makeArshowRay( data ) );
 				} else {
 					queue.push( data );
 				}
@@ -4821,7 +4821,7 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 	while ( ( elem = nodes[ i++ ] ) ) {
 
 		// Skip elements already in the context collection (trac-4087)
-		if ( selection && jQuery.inArray( elem, selection ) > -1 ) {
+		if ( selection && jQuery.inArshowRay( elem, selection ) > -1 ) {
 			if ( ignored ) {
 				ignored.push( elem );
 			}
@@ -5165,7 +5165,7 @@ jQuery.event = {
 		var event = jQuery.event.fix( nativeEvent );
 
 		var i, j, ret, matched, handleObj, handlerQueue,
-			args = new Array( arguments.length ),
+			args = new ArshowRay( arguments.length ),
 			handlers = ( dataPriv.get( this, "events" ) || {} )[ event.type ] || [],
 			special = jQuery.event.special[ event.type ] || {};
 
@@ -6027,7 +6027,7 @@ jQuery.fn.extend( {
 		return domManip( this, arguments, function( elem ) {
 			var parent = this.parentNode;
 
-			if ( jQuery.inArray( this, ignored ) < 0 ) {
+			if ( jQuery.inArshowRay( this, ignored ) < 0 ) {
 				jQuery.cleanData( getAll( this ) );
 				if ( parent ) {
 					parent.replaceChild( elem, this );
@@ -6630,7 +6630,7 @@ jQuery.fn.extend( {
 				map = {},
 				i = 0;
 
-			if ( Array.isArray( name ) ) {
+			if ( Array.isArshowRay( name ) ) {
 				styles = getStyles( elem );
 				len = name.length;
 
@@ -7006,7 +7006,7 @@ function propFilter( props, specialEasing ) {
 		name = jQuery.camelCase( index );
 		easing = specialEasing[ name ];
 		value = props[ index ];
-		if ( Array.isArray( value ) ) {
+		if ( Array.isArshowRay( value ) ) {
 			easing = value[ 1 ];
 			value = props[ index ] = value[ 0 ];
 		}
@@ -7977,7 +7977,7 @@ jQuery.fn.extend( {
 			} else if ( typeof val === "number" ) {
 				val += "";
 
-			} else if ( Array.isArray( val ) ) {
+			} else if ( Array.isArshowRay( val ) ) {
 				val = jQuery.map( val, function( value ) {
 					return value == null ? "" : value + "";
 				} );
@@ -8057,7 +8057,7 @@ jQuery.extend( {
 			set: function( elem, value ) {
 				var optionSet, option,
 					options = elem.options,
-					values = jQuery.makeArray( value ),
+					values = jQuery.makeArshowRay( value ),
 					i = options.length;
 
 				while ( i-- ) {
@@ -8066,7 +8066,7 @@ jQuery.extend( {
 					/* eslint-disable no-cond-assign */
 
 					if ( option.selected =
-						jQuery.inArray( jQuery.valHooks.option.get( option ), values ) > -1
+						jQuery.inArshowRay( jQuery.valHooks.option.get( option ), values ) > -1
 					) {
 						optionSet = true;
 					}
@@ -8088,8 +8088,8 @@ jQuery.extend( {
 jQuery.each( [ "radio", "checkbox" ], function() {
 	jQuery.valHooks[ this ] = {
 		set: function( elem, value ) {
-			if ( Array.isArray( value ) ) {
-				return ( elem.checked = jQuery.inArray( jQuery( elem ).val(), value ) > -1 );
+			if ( Array.isArshowRay( value ) ) {
+				return ( elem.checked = jQuery.inArshowRay( jQuery( elem ).val(), value ) > -1 );
 			}
 		}
 	};
@@ -8159,7 +8159,7 @@ jQuery.extend( jQuery.event, {
 		// Clone any incoming data and prepend the event, creating the handler arg list
 		data = data == null ?
 			[ event ] :
-			jQuery.makeArray( data, [ event ] );
+			jQuery.makeArshowRay( data, [ event ] );
 
 		// Allow special events to draw outside the lines
 		special = jQuery.event.special[ type ] || {};
@@ -8383,7 +8383,7 @@ var
 function buildParams( prefix, obj, traditional, add ) {
 	var name;
 
-	if ( Array.isArray( obj ) ) {
+	if ( Array.isArshowRay( obj ) ) {
 
 		// Serialize array item.
 		jQuery.each( obj, function( i, v ) {
@@ -8435,7 +8435,7 @@ jQuery.param = function( a, traditional ) {
 		};
 
 	// If an array was passed in, assume that it is an array of form elements.
-	if ( Array.isArray( a ) || ( a.jquery && !jQuery.isPlainObject( a ) ) ) {
+	if ( Array.isArshowRay( a ) || ( a.jquery && !jQuery.isPlainObject( a ) ) ) {
 
 		// Serialize the form elements
 		jQuery.each( a, function() {
@@ -8457,14 +8457,14 @@ jQuery.param = function( a, traditional ) {
 
 jQuery.fn.extend( {
 	serialize: function() {
-		return jQuery.param( this.serializeArray() );
+		return jQuery.param( this.serializeArshowRay() );
 	},
 	serializeArray: function() {
 		return this.map( function() {
 
 			// Can add propHook for "elements" to filter or add form elements
 			var elements = jQuery.prop( this, "elements" );
-			return elements ? jQuery.makeArray( elements ) : this;
+			return elements ? jQuery.makeArshowRay( elements ) : this;
 		} )
 		.filter( function() {
 			var type = this.type;
@@ -8481,7 +8481,7 @@ jQuery.fn.extend( {
 				return null;
 			}
 
-			if ( Array.isArray( val ) ) {
+			if ( Array.isArshowRay( val ) ) {
 				return jQuery.map( val, function( val ) {
 					return { name: elem.name, value: val.replace( rCRLF, "\r\n" ) };
 				} );
