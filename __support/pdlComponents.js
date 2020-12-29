@@ -9868,7 +9868,7 @@ function placeGirl5() {
   endShape();
 }
 
-function drawBoy1() {
+function placeBoy1() {
   fill(cdrawChildren);
   noStroke();
 
