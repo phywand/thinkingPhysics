@@ -1,4 +1,4 @@
-// filename: MNTeachingKinematicsWhatIfPID
+// {FMSequencingEnergyWhatIfPID}{300}{200}
 var mentonrep = new Scribble();
 function preload() {
   chatterFont = loadFont("../__support/SF_Cartoonist_Hand.ttf");
@@ -10,11 +10,11 @@ function setup() {
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
 
   push();
-  mentondroid(
-    cideaBlue,
+  placeMentonDroid(
+    CBOD1,
     0,
     60,
     75,
@@ -26,8 +26,8 @@ function draw() {
   pop();
 
   push();
-  mentondroid(
-    cideaGreen,
+  placeMentonDroid(
+    CBOD2,
     5,
     240,
     132,

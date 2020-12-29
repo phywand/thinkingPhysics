@@ -1,4 +1,4 @@
-// filename: MNTeachingPhotonsWhatIfPID
+// {FMSequencingPhotonsWhatIfPID}{300}{200}
 var mentonrep = new Scribble();
 function preload() {
     chatterFont= loadFont("../__support/SF_Cartoonist_Hand.ttf");
@@ -10,14 +10,14 @@ function setup(){
    }
 
 function draw() {
-    background(cWhite);
-    
+    background(CWHITE);
+
     push();
-		mentondroid(cideaBlue,4,80,80,"What if...we could unify optics using photons?",180,45,"R");
+		placeMentonDroid(CBOD3,4,80,80,"What if...we could unify optics using photons?",180,45,"R");
 	pop();
-	
+
 	push();
-		mentondroid(cideaGreen,3,230,130,"Surely that couldn't work, could it?",140,45,"L");
+		placeMentonDroid(CBOD1,3,230,130,"Surely that couldn't work, could it?",140,45,"L");
 	pop();
 }
 
