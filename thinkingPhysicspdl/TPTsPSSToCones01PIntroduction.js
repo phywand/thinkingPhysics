@@ -12,9 +12,9 @@ function setup(){
 	noLoop()
 }
 function draw() {
-	background(cWhite);
+	background(CWHITE);
 	
-	justWords("The speed of light is the universal speed. No influence from an event can be a apart of my past unless it could have reached me. Similarly I can only affect locations in the future where enough time has passed for the influence to reach that space. This universal speed has consequences for the structure of space-time: it is made of cones.","topchattercommentL",90,150,466);
+	justplaceWords("The speed of light is the universal speed. No influence from an event can be a apart of my past unless it could have reached me. Similarly I can only affect locations in the future where enough time has passed for the influence to reach that space. This universal speed has consequences for the structure of space-time: it is made of cones.","topchattercommentL",90,150,466);
 	image(guide,20,100);
 
 

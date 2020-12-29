@@ -46,7 +46,7 @@ EEFToolkitCollaborationLink{}
 
 ActivitySynopsis{03}{Ropes rules}{10}{teacher-led discussion}{https://slowthinkingphysics.net/ESLActivityropesrules.html}{A whole-class discussion, with rope loops to hand, summarising how children can model electrical circuits with series or parallel connections using the rope loop.}
 
-EEFFeedbackLink{Use intelligence gathered during the build and test activity to shape the discussion, providing directed formative feedback.}
+EEFplaceFeedbackLink{Use intelligence gathered during the build and test activity to shape the discussion, providing directed formative feedback.}
 
 EEFSelfRegulationLink{Encourage students to see the patterns amongst the different loops.}
 

@@ -13,20 +13,20 @@ function preload() {
 }
 function setup() {
   createCanvas(800, 620);
-  activitySet = new SliderDivider(40, 500, 100, 15, 0, [0.7], false);
-  numberSet = new SliderDivider(200, 500, 100, 15, 4, [0.2], false);
-  qualitySet = new SliderDivider(500, 500, 100, 15, 1, [0.5], false);
+  activitySet = new createSliderDivider(40, 500, 100, 15, 0, [0.7], false);
+  numberSet = new createSliderDivider(200, 500, 100, 15, 4, [0.2], false);
+  qualitySet = new createSliderDivider(500, 500, 100, 15, 1, [0.5], false);
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
 
   numberSet.draw();
-  words("set number of absorbers in beam", 230, 510);
+  placeWords("set number of absorbers in beam", 230, 510);
   activitySet.draw();
-  words("set activity", 70, 510);
+  placeWords("set activity", 70, 510);
   qualitySet.draw();
-  words("set absorber quality", 530, 510);
+  placeWords("set absorber quality", 530, 510);
 
   var numberofabsorbers = (numberSet.getValue() * 5).toFixed(0);
   var activity = activitySet.getValue() * 12;
@@ -36,41 +36,41 @@ function draw() {
 
   push();
   translate(80, 200);
-  transducer(clight, 0);
+  drawTransducer(CLIGHT, 0);
   // translate(641,0);
-  // 		transducer(cBlack, 180);
+  // 		drawTransducer(CBLACK, 180);
   pop();
 
   push();
   translate(150, 200);
   for (i = 1; i <= numberofabsorbers; i++) {
-    absorber(quality, 60, 80);
+    drawdrawAbsorber(quality, 60, 80);
     translate(120, 0);
     push();
     translate(-30, 180);
-    power(activity * pow(fracabs, i));
+    showPower(activity * pow(fracabs, i));
     push();
     translate(0, 100);
-    quantity(activity * pow(fracabs, i) * 0.8, cactivity, "");
+    showQuantity(activity * pow(fracabs, i) * 0.8, CACTIVITY, "");
     pop();
 
     var dissipatedpower =
       activity * pow(fracabs, i - 1) - activity * pow(fracabs, i);
     var nowpower = activity * pow(fracabs, i);
-    translate(-60, -activity * pow(fracabs, i) * pxscale);
-    power(dissipatedpower);
+    translate(-60, -activity * pow(fracabs, i) * PXSCALE);
+    showPower(dissipatedpower);
     pop();
   }
   translate(0, -80);
   for (i = 0; i < 5 - numberofabsorbers; i++) {
-    absorber(quality, 60, 80);
+    drawdrawAbsorber(quality, 60, 80);
     translate(120, 0);
     push();
     translate(-30, 260);
-    power(nowpower);
+    showPower(nowpower);
     push();
     translate(0, 100);
-    quantity(nowpower * 0.8, cactivity, "");
+    showQuantity(nowpower * 0.8, CACTIVITY, "");
     pop();
     pop();
   }
@@ -81,10 +81,10 @@ function draw() {
     translate(120, 380);
     for (i = 0; i < 5; i++) {
       translate(120, 0);
-      power(activity);
+      showPower(activity);
       push();
       translate(0, 100);
-      quantity(activity * 0.8, cactivity, "");
+      showQuantity(activity * 0.8, CACTIVITY, "");
       pop();
     }
     pop();
@@ -92,12 +92,12 @@ function draw() {
 
   push();
   translate(122, 380);
-  power(activity);
+  showPower(activity);
   translate(0, 100);
-  quantity(activity * 0.8, cactivity, "");
+  showQuantity(activity * 0.8, CACTIVITY, "");
   pop();
 
-  titleBold("Power and number of photons detectable in a beam");
+  placeTitleBold("Power and number of photons detectable in a beam");
 }
 
 function mousePressed() {

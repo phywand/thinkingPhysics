@@ -1,4 +1,4 @@
-FileName: RWCEnergyStores
+FileName: RWCenergyStores
 
 WebTitle{Reasoning about stores—reasoning with stores}
 

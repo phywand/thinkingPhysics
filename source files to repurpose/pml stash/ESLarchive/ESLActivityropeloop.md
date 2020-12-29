@@ -21,7 +21,7 @@ ListEquipmentEnd
 
 StepHeader{Happens}
 
-To introduce the rope loop, keep things very simple SymbolEmdash the equivalent of one battery(the teacher) and one bulb(a student). The teacher starts to move the loop of rope round by pulling, hand over hand.
+To introduce the rope loop, keep things very simple SymbolEmdash the equivalent of one drawdrawBattery(the teacher) and one drawdrawBulb(a student). The teacher starts to move the loop of rope round by pulling, hand over hand.
 The student varies their grabbing of the rope, which changes the flow of the rope.
 
 The informal schema to exploit is

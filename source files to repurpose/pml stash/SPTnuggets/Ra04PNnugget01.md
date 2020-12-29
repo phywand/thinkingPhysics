@@ -1,4 +1,4 @@
-WebTitle{Arriving photons change the absorber(Introduction)}
+WebTitle{Arriving photons change the drawdrawAbsorber(Introduction)}
 
 StepHeader{Arriving photons fill a store, drip by drip}
 

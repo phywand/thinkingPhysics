@@ -20,21 +20,21 @@ function preload() {
 function setup() {
   createCanvas(800, 600);
   const yloc = 550;
-  controllers[0] = new controlPuck();
+  controllers[0] = new CreateControlPuck();
   controllers[0].create(sourceLocX, yloc);
-  controllers[1] = new controlStripHorizontal();
+  controllers[1] = new CreateControlStripHorizontal();
   controllers[1].create(waypointLocX, yloc);
-  controllers[2] = new controlPuck();
+  controllers[2] = new CreateControlPuck();
   controllers[2].create(detectorLocX, yloc);
 
-  hidebutton = new checkButton(582 + 40, 60, "delete central path", false);
+  hidebutton = new CreateCheckButton(582 + 40, 60, "delete central path", false);
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
   push();
   translate(width / 2, waypointLocY);
-  reflector("good", 90, 700);
+  drawReflector("good", 90, 700);
   pop();
 
   hidebutton.drawButton();
@@ -96,57 +96,57 @@ function draw() {
 
   push();
   translate(sourcelocation.x, sourcelocation.y);
-  transducer(clight, degrees(sourcetowaypoint.heading()));
+  drawTransducer(CLIGHT, degrees(sourcetowaypoint.heading()));
   pop();
 
   push();
   translate(detectorlocation.x, detectorlocation.y);
-  transducer(cBlack, degrees(waypointtodetector.heading()) - 180);
+  drawTransducer(CBLACK, degrees(waypointtodetector.heading()) - 180);
   pop();
 
   if (hidebutton.buttonisChecked == false) {
-    pathC(
+    showPathC(
       sourcelocation.x,
       sourcelocation.y,
       waypointlocation.x,
       waypointlocation.y,
-      cconcyan
+      CCONCYAN
     );
-    pathC(
+    showPathC(
       detectorlocation.x,
       detectorlocation.y,
       waypointlocation.x,
       waypointlocation.y,
-      cconcyan
+      CCONCYAN
     );
   }
-  pathC(
+  showPathC(
     sourcelocation.x,
     sourcelocation.y,
     waypointlocationL.x,
     waypointlocationL.y,
-    cconorange
+    CCONORANGE
   );
-  pathC(
+  showPathC(
     sourcelocation.x,
     sourcelocation.y,
     waypointlocationR.x,
     waypointlocationR.y,
-    cconpink
+    CCONPINK
   );
-  pathC(
+  showPathC(
     detectorlocation.x,
     detectorlocation.y,
     waypointlocationR.x,
     waypointlocationR.y,
-    cconpink
+    CCONPINK
   );
-  pathC(
+  showPathC(
     detectorlocation.x,
     detectorlocation.y,
     waypointlocationL.x,
     waypointlocationL.y,
-    cconorange
+    CCONORANGE
   );
 
   var triptime = sourcetowaypoint.mag() + waypointtodetector.mag();
@@ -157,10 +157,10 @@ function draw() {
   if (hidebutton.buttonisChecked == false) {
     push();
     translate(waypointlocation.x, waypointlocation.y);
-    waypoint(cconcyan);
+    drawWaypoint(CCONCYAN);
     push();
     translate(0, 40);
-    durationpov(triptime, maxtime, cconcyan);
+    showDurationPoV(triptime, maxtime, CCONCYAN);
     pop();
 
     pop();
@@ -168,20 +168,20 @@ function draw() {
 
   push();
   translate(waypointlocationL.x, waypointlocationL.y);
-  waypoint(cconorange);
+  drawWaypoint(CCONORANGE);
   push();
   translate(0, 40);
-  durationpov(triptimeL, maxtime, cconorange);
+  showDurationPoV(triptimeL, maxtime, CCONORANGE);
   pop();
 
   pop();
 
   push();
   translate(waypointlocationR.x, waypointlocationR.y);
-  waypoint(cconpink);
+  drawWaypoint(CCONPINK);
   push();
   translate(0, 40);
-  durationpov(triptimeR, maxtime, cconpink);
+  showDurationPoV(triptimeR, maxtime, CCONPINK);
   pop();
 
   pop();
@@ -190,20 +190,20 @@ function draw() {
   push();
   translate(detectorlocation.x + 120, detectorlocation.y);
   if (hidebutton.buttonisChecked == false) {
-    phasormultiple(4, 0.24, [
-      [triptimeL, cconorange],
-      [triptime, cconcyan],
-      [triptimeR, cconpink],
+    showPhasorMultiple(4, 0.24, [
+      [triptimeL, CCONORANGE],
+      [triptime, CCONCYAN],
+      [triptimeR, CCONPINK],
     ]);
   } else {
-    phasormultiple(4, 0.24, [
-      [triptimeL, cconorange],
-      [triptimeR, cconpink],
+    showPhasorMultiple(4, 0.24, [
+      [triptimeL, CCONORANGE],
+      [triptimeR, CCONPINK],
     ]);
   }
   pop();
 
-  titleBold("Exploring deleting paths via a mirror");
+  placeTitleBold("Exploring deleting paths via a mirror");
 }
 
 function mouseReleased() {

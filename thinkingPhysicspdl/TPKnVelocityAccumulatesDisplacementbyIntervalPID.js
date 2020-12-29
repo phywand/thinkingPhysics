@@ -29,17 +29,17 @@ function preload() {
 function setup() {
   createCanvas(900, 650);
   for (let i = 0; i < numberoffluxions; i++) {
-    fluxions[i] = new controlPuck();
+    fluxions[i] = new CreateControlPuck();
     let xloc = xlocfluxion1 + xstepdisplay * i;
     fluxions[i].create(xloc, ylocfluxion);
   }
 
-  fluents[0] = new controlPuck();
+  fluents[0] = new CreateControlPuck();
   fluents[0].create(xlocfluentIntial, ylocfluentIntial);
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
 
   for (let i = 0; i < fluxions.length; i++) {
     pqfluxions[i] = createVector(
@@ -58,7 +58,7 @@ function draw() {
   }
 
   //     eye-guiding grid
-  stroke(cideaGrey);
+  stroke(CIDEAGREY);
   strokeWeight(0.5);
   push();
   translate(xlocfluent1, 0);
@@ -71,7 +71,7 @@ function draw() {
   push();
   translate(xlocfluent1, 0);
   for (let i = 1; i < fluxions.length + 2; i++) {
-    words("t=" + i, -11, height - 20);
+    placeWords("t=" + i, -11, height - 20);
     translate(xstepdisplay, 0);
   }
   pop();
@@ -86,10 +86,10 @@ function draw() {
   push();
   translate(xlocfluxion1, ylocfluxionrep);
   for (let i = 0; i < pqfluxions.length; i++) {
-    velocity(
+    showVelocity(
       pqfluxions[i].mag(),
       degrees(-pqfluxions[i].heading() + PI / 2),
-      cideaBlue
+      CIDEABLUE
     );
     translate(xstepdisplay, 0);
   }
@@ -98,34 +98,34 @@ function draw() {
   push();
   translate(xlocfluent1, ylocfluentrep);
   for (let i = 0; i < pqfluents.length; i++) {
-    displacement(
+    showDisplacement(
       pqfluents[i].mag(),
       degrees(-pqfluents[i].heading() + PI / 2),
-      cideaGreen
+      CIDEAGREEN
     );
     translate(xstepdisplay, 0);
   }
   pop();
 
-  words("set\ninitial\ndisplacement", xlocfluent1 + 50, 188);
-  words(
+  placeWords("set\ninitial\ndisplacement", xlocfluent1 + 50, 188);
+  placeWords(
     "set\nthe velocities\nfor each interval",
     xlocfluxion1 + xstepdisplay * (fluxions.length - 1) + 100,
     88
   );
 
-  words(
+  placeWords(
     "velocity\nat\nthis\ntime",
     xlocfluent1 + xstepdisplay * fluxions.length + 95,
     ylocfluentrep
   );
-  words(
+  placeWords(
     "velocity\nduring\nthis\ninterval",
     xlocfluxion1 + xstepdisplay * (fluxions.length - 1) + 95,
     ylocfluxionrep
   );
 
-  titleBold("velocity accumulates displacement, interval by interval");
+  placeTitleBold("velocity accumulates displacement, interval by interval");
 }
 
 function keyTyped() {

@@ -13,13 +13,13 @@ titleFont = loadFont("../__support/Jost-700-Bold.ttf");
 }
 function setup(){
   createCanvas(800, 800, WEBGL);
-justWords("Light cones in a small region  of remote space", "invertedtitle", 20, 10, width-60);
+justplaceWords("Light cones in a small region  of remote space", "invertedtitle", 20, 10, width-60);
 
 
 }
 
 function draw(){
- background(cWhite);
+ background(CWHITE);
    orbitControl();
 
    
@@ -27,7 +27,7 @@ function draw(){
 	push();
 		translate(-300, -300,0);
 		rotateZ(-PI/3);
-		OmniEye(cpovAlice);
+		OmniEye(CPOVALICE);
 	pop();
  
 	
@@ -41,7 +41,7 @@ function draw(){
 	
 		push();
 			translate(j*120,i*120,-120*k);
-			lightcone(60,cpovAliceCone);
+			lightcone(60,CPOVALICECone);
 		pop();
 
 	}
@@ -71,7 +71,7 @@ scale(0.2);
 	pop();
 	translate(0,8,0);
 	scale(0.3);
-	ambientMaterial(cBlack);
+	ambientMaterial(CBLACK);
 	model(PoVPupil);
 pop();
 }

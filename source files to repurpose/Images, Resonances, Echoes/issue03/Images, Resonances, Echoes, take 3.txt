@@ -43,8 +43,8 @@ Of course you might prefer the flexibility of code (also enabling interactive di
 
   acceleration(magnitude,rotation,acolour)
   power(value)
-  circuitParallel(kind)
-  bulb(label)
+  drawCircuitParallel(kind)
+  drawdrawBulb(label)
 might form better building blocks with different granularities. But maybe that's a story for another time.
 
 More reading

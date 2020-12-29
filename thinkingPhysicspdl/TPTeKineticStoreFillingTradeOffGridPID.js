@@ -15,7 +15,7 @@ function preload() {
 function setup() {
   createCanvas(600, 500);
 
-  magnitudes[0] = new controlPuckpositive();
+  magnitudes[0] = new CreateControlPuckPositive();
   magnitudes[0].create(locpucks[0], locpucks[1]);
 
   boxesbutton = createCheckbox("trade-off", false);
@@ -24,28 +24,28 @@ function setup() {
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
 
   values[0] = createVector(
     magnitudes[0].getValues().xSet,
     magnitudes[0].getValues().ySet
   ).mult(scaleFactor);
 
-  words("set quantities", locpucks[0] - 40, locpucks[1] - 45);
-  words("momentum", locpucks[0] - 5, locpucks[1] + 61);
-  words("velocity", locpucks[0] + 48, locpucks[1] - 28);
+  placeWords("set quantities", locpucks[0] - 40, locpucks[1] - 45);
+  placeWords("momentum", locpucks[0] - 5, locpucks[1] + 61);
+  placeWords("velocity", locpucks[0] + 48, locpucks[1] - 28);
 
   push();
   translate(150, 100);
   push();
-  storeEmptier("kinetic");
+  drawStoreEmptier("kinetic");
   translate(330, 0);
-  storeFuller("kinetic");
+  drawStoreFuller("kinetic");
   pop();
 
   push();
   translate(205, 250);
-  energy((values[0].x * values[0].y) / 1500);
+  showEnergy((values[0].x * values[0].y) / 1500);
   stroke(cdeviceGrey);
   for (i = 0; i < 5; i++) {
     line(25, -i * 15, 45, -i * 15);
@@ -55,25 +55,25 @@ function draw() {
   pop();
 
   if (boxesbutton.checked()) {
-    tradeOfftriangle(
+    drawTradeOffTriangle(
       locpucks[0],
       locpucks[1] + tradeOffOffset,
       values[0].x,
       values[0].y,
-      cconlightgreen,
-      cconpink
+      CCONLIGHTGREEN,
+      CCONPINK
     );
   }
 
   push();
 
   translate(20, 80);
-  subHead("qualitative", 0, 0);
+  placeSubHead("qualitative", 0, 0);
   translate(0, 134);
-  subHead("quantitative", 0, 0);
+  placeSubHead("quantitative", 0, 0);
   pop();
 
-  titleBold("Filling a kinetic store: a trade-off");
+  placeTitleBold("Filling a kinetic store: a trade-off");
 }
 
 function keyTyped() {
@@ -83,7 +83,7 @@ function keyTyped() {
   return false;
 }
 
-function tradeOfftriangle(
+function drawTradeOffTriangle(
   xloc,
   yloc,
   hquantity,
@@ -91,7 +91,7 @@ function tradeOfftriangle(
   hqcolour,
   vqcolour
 ) {
-  fill(ccongray);
+  fill(CCONGRAY);
   noStroke();
   triangle(
     xloc,

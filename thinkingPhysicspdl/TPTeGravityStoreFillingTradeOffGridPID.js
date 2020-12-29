@@ -15,13 +15,13 @@ function preload() {
 function setup() {
   createCanvas(600, 500);
 
-  magnitudes[0] = new controlPuckpositive();
+  magnitudes[0] = new CreateControlPuckPositive();
   magnitudes[0].create(locpucks[0], locpucks[1]);
-  boxesbutton = new checkButton(474, 372, "trade-off", false);
+  boxesbutton = new CreateCheckButton(474, 372, "trade-off", false);
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
   boxesbutton.drawButton();
 
   values[0] = createVector(
@@ -29,21 +29,21 @@ function draw() {
     magnitudes[0].getValues().ySet
   ).mult(scaleFactor);
 
-  words("set quantities", locpucks[0] - 40, locpucks[1] - 45);
-  words("force (mg)", locpucks[0] - 5, locpucks[1] + 61);
-  words("height", locpucks[0] + 50, locpucks[1] - 28);
+  placeWords("set quantities", locpucks[0] - 40, locpucks[1] - 45);
+  placeWords("force (mg)", locpucks[0] - 5, locpucks[1] + 61);
+  placeWords("height", locpucks[0] + 50, locpucks[1] - 28);
 
   push();
   translate(150, 100);
   push();
-  storeEmptier("gravity");
+  drawStoreEmptier("gravity");
   translate(330, 0);
-  storeFuller("gravity");
+  drawStoreFuller("gravity");
   pop();
 
   push();
   translate(205, 250);
-  energy((values[0].x * values[0].y) / 1500);
+  showEnergy((values[0].x * values[0].y) / 1500);
   stroke(cdeviceGrey);
   for (i = 0; i < 5; i++) {
     line(25, -i * 15, 45, -i * 15);
@@ -53,25 +53,25 @@ function draw() {
   pop();
 
   if (boxesbutton.buttonisChecked) {
-    tradeOff(
+    drawTradeOff(
       locpucks[0],
       locpucks[1] + tradeOffOffset,
       values[0].x,
       values[0].y,
-      cconlightgreen,
-      cconpink
+      CCONLIGHTGREEN,
+      CCONPINK
     );
   }
 
   push();
 
   translate(20, 80);
-  subHead("qualitative", 0, 0);
+  placeSubHead("qualitative", 0, 0);
   translate(0, 134);
-  subHead("quantitative", 0, 0);
+  placeSubHead("quantitative", 0, 0);
   pop();
 
-  titleBold("Filling a gravity store: a trade-off");
+  placeTitleBold("Filling a gravity store: a trade-off");
 }
 function mouseReleased() {
   boxesbutton.changeState();

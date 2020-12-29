@@ -16,32 +16,32 @@ function preload() {
 }
 function setup() {
   createCanvas(900, 700);
-  controlbutton = new controlButton(20, 650, 60, 30);
+  controlbutton = new CreateControlButton(20, 650, 60, 30);
 
-  springconstantSet = new controlStripVertical();
+  springconstantSet = new CreateControlStripVertical();
   springconstantSet.create(locX - 400, locY - 240);
 
-  dragconstantSet = new controlStripVertical();
+  dragconstantSet = new CreateControlStripVertical();
   dragconstantSet.create(locX - 400, locY - 80);
 
-  massmagnitudeSet = new controlStripVertical();
+  massmagnitudeSet = new CreateControlStripVertical();
   massmagnitudeSet.create(locX - 400 + 240, locY + 80);
 
-  initialdisplacementSet = new controlStripVertical();
+  initialdisplacementSet = new CreateControlStripVertical();
   initialdisplacementSet.create(locX + 120 + 80 + 40, locY + 80 * 2);
 
-  initialvelocitySet = new controlStripVertical();
+  initialvelocitySet = new CreateControlStripVertical();
   initialvelocitySet.create(locX + 80 + 20, locY + 80);
 
-  avSet = new controlStripVertical();
+  avSet = new CreateControlStripVertical();
   avSet.create(locX + 50, locY - 70);
 
-  vxSet = new controlStripVertical();
+  vxSet = new CreateControlStripVertical();
   vxSet.create(locX + 50 + 140, locY - 70 + 80);
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
 
   var av = avSet.getValues().ySet * 30;
   var vx = vxSet.getValues().ySet * 30;
@@ -61,7 +61,7 @@ function draw() {
   switch (stateof) {
     case 0:
       //            ready to go
-      words("go", 28, height - 32);
+      placeWords("go", 28, height - 32);
       var initialfluent = initialdisplacementSet.getValues().ySet * 2;
       var initialfluxionfluent = initialvelocitySet.getValues().ySet * 2;
       runtime = 0;
@@ -70,69 +70,69 @@ function draw() {
       break;
     case 1:
       //            running
-      words("pause", 28, height - 32);
+      placeWords("pause", 28, height - 32);
       runtime++;
       predictfluxionfluentFluent();
       break;
     case 2:
       //            paused
-      words("reset", 28, height - 32);
+      placeWords("reset", 28, height - 32);
       break;
   }
 
   push();
   translate(locX, locY);
 
-  indicator(
+  placeIndicator(
     fluent * springconstant - (fluxionfluent * dragconstant) / massmagnitude,
     cindicator,
     "acceleration",
     "÷"
   );
-  contributionlinkbackup();
-  indicator(
+  placeContributionLinkBackUp();
+  placeIndicator(
     fluent * springconstant - fluxionfluent * dragconstant,
     cindicator,
     "resultant force",
     "-"
   );
   push(); //new branch
-  contributionlinkbackup();
-  indicator((springconstant / 5) * fluent, cindicator, "spring force", "×");
+  placeContributionLinkBackUp();
+  placeIndicator((springconstant / 5) * fluent, cindicator, "spring force", "×");
   push(); //new branch
-  contributionlinkbackup();
-  indicator(springconstant, cindicator, "spring constant", "");
+  placeContributionLinkBackUp();
+  placeIndicator(springconstant, cindicator, "spring constant", "");
   pop();
-  contributionlinkbackdown();
-  indicator(fluxionfluent * dragconstant, cindicator, "drag force", "×");
+  placeContributionLinkBackDown();
+  placeIndicator(fluxionfluent * dragconstant, cindicator, "drag force", "×");
   push(); //new branch
-  contributionlinkbackup();
-  indicator(dragconstant, cindicator, "drag constant", "");
+  placeContributionLinkBackUp();
+  placeIndicator(dragconstant, cindicator, "drag constant", "");
   pop();
   pop();
-  contributionlinkbackdown();
-  indicator(massmagnitude, cindicator, "mass", "");
+  placeContributionLinkBackDown();
+  placeIndicator(massmagnitude, cindicator, "mass", "");
   translate(120, -80);
-  accumulator(av, false);
-  accumulatelink();
-  indicator(fluxionfluent, cindicator, "velocity", "");
-  feedbacklinkvelocity();
-  accumulator(vx, false);
-  accumulatelink();
-  indicator(fluent, cindicator, "displacement", "");
-  feedbacklinkdiplacement();
+  placeAcumulator(av, false);
+  PlaceAccumulateLink();
+  placeIndicator(fluxionfluent, cindicator, "velocity", "");
+  placeFeedbackLinkshowVelocity();
+  placeAcumulator(vx, false);
+  PlaceAccumulateLink();
+  placeIndicator(fluent, cindicator, "displacement", "");
+  placeFeedbackLinkdiplacement();
   pop();
 
   push();
   translate(650, 150);
-  acceleration(fluxion(fluent, fluxionfluent) * 10, 90, cacceleration);
+  showAcceleration(fluxion(fluent, fluxionfluent) * 10, 90, CACCELERATION);
   translate(0, 50);
-  velocity(fluxionfluent * 5, 90, ccongreen);
+  showVelocity(fluxionfluent * 5, 90, CCONGREEN);
   translate(0, 50);
-  displacement(fluent, 90, cconorange);
+  showDisplacement(fluent, 90, CCONORANGE);
   pop();
 
-  titleBold("A simple harmonic oscillator, with drag");
+  placeTitleBold("A simple harmonic oscillator, with drag");
 }
 
 function fluxion(x, v) {
@@ -143,8 +143,8 @@ function mouseReleased() {
   controlbutton.checkPressed();
 }
 
-function feedbacklinkdiplacement() {
-  stroke(cideaGrey);
+function placeFeedbackLinkdiplacement() {
+  stroke(CIDEAGREY);
   strokeWeight(2);
   line(20, 0, 102, 0);
   line(102, 0, 102, 60);
@@ -153,8 +153,8 @@ function feedbacklinkdiplacement() {
   line(-710, -300, -710 + 170, -300);
   line(-710 + 170, -300, -710 + 170, -315);
 }
-function feedbacklinkvelocity() {
-  stroke(cideaGrey);
+function placeFeedbackLinkshowVelocity() {
+  stroke(CIDEAGREY);
   strokeWeight(2);
   line(20, 0, 30, 0);
   line(30, 0, 30, 60);

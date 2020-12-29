@@ -44,11 +44,11 @@ ActivitySynopsis{01}{Focusing in on the idea of a loop}{10}{teacher led discussi
 
 EEFMemoryLink{Help students retain knowledge in their long-term memory by spaced repetition. SpacingLinebreak Provide explicit opportunities for students to revisit and re-express representations that they have met previously.}
 
-EEFFeedbackLink{Provide feedback on student responses to drawing the components and the electrical loop. Seek to challenge choices about alternative orientations and arrangements, drawing out how some may or may not be helpful.}
+EEFplaceFeedbackLink{Provide feedback on student responses to drawing the components and the electrical loop. Seek to challenge choices about alternative orientations and arrangements, drawing out how some may or may not be helpful.}
 
 EEFSelfRegulationLink{Support students to retain and retrieve knowledge by establishing consistency across the different modes (physical, graphical, linguistic) of manipulating the loops.}
 
-EEFToolkitFeedbackLink{}
+EEFToolkitplaceFeedbackLink{}
 
 ActivitySynopsis{02}{Introducing the rope loop}{15}{teacher demonstration}{https://slowthinkingphysics.net/ESLActivityropeloop.html}{This is an interactive teacher-led discussion using a rope loop to make predictions about electrical loops. SpacingParabreak First, draw out the active parts of the electrical loops. Then relate what's running down in the electrical loop to the action of the battery hand, and connect what's warming (or other useful tasks, glowing, moving, etc.) to the grabbing action of the resistor hand. SpacingParabreak Vary the pull of one hand and how hard the other hand grabs and draw out predictions for an electrical loop. SpacingLinebreak The action of the battery is often described as a push, rather than a pull, but you'll have trouble pushing a rope. SpacingParabreak If the change from push to pull appears as a tripwire, remind students that the idea of force comes from the idea of their agency of pushing or pulling SymbolEmdash there is nothing hard here.}
 

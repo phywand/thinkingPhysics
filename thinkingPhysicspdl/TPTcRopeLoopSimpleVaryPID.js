@@ -11,15 +11,15 @@ function preload() {
 
 function setup() {
   createCanvas(672, 360);
-  setForce = new controlStripVerticalPositive();
+  setForce = new CreateControlStripVerticalPositive();
   setForce.create(64, 130);
-  setGrab = new controlStripVerticalPositive();
+  setGrab = new CreateControlStripVerticalPositive();
   setGrab.create(384, 130);
-  advicebutton = new checkButton(525, 65, "tell me more", false);
+  advicebutton = new CreateCheckButton(525, 65, "tell me more", false);
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
   advicebutton.drawButton();
 
   let theforce = createVector(
@@ -30,25 +30,25 @@ function draw() {
     setGrab.getValues().xSet,
     setGrab.getValues().ySet
   );
-  let forces = theforce.y * pixelscaling;
-  let grab = 2 + thegrab.y * pixelscaling;
-  let ropespeed = (forces / grab) * pixelscaling * 0.6;
+  let forces = theforce.y * PIXELSCALING;
+  let grab = 2 + thegrab.y * PIXELSCALING;
+  let ropespeed = (forces / grab) * PIXELSCALING * 0.6;
   let displayspeed = ropespeed / 4;
   let powers = ropespeed * forces * 0.1;
 
-  ropeloop(64, 300, 320, 150, cideaBlue, lastposition);
+  drawRopeLoop(64, 300, 320, 150, CIDEABLUE, lastposition);
 
   push();
   translate(64, 250);
-  force(forces, 0, cideaBlue);
+  showForce(forces, 0, CIDEABLUE);
   translate(320, 0);
-  force(forces, 0, cideaRed);
-  translate(-160 + (ropespeed * pixelscaling) / 2, 80);
-  velocity(-ropespeed, 90, cideaGrey);
+  showForce(forces, 0, CIDEARED);
+  translate(-160 + (ropespeed * PIXELSCALING) / 2, 80);
+  showVelocity(-ropespeed, 90, CIDEAGREY);
   pop();
 
   if (advicebutton.buttonisChecked) {
-    advicedroid(
+    placeAdviceDroid(
       600,
       100,
       "Current determined by p.d. and resistance. Rope moves at constant speed, as resultant force is zero.",
@@ -65,10 +65,10 @@ function draw() {
     }
   }
 
-  wordsframe("increase how much you pull", 84, 65, 80, 100);
-  wordsframe("increase how much your friend grabs", 404, 65, 120, 100);
+  placeWordsFrame("increase how much you pull", 84, 65, 80, 100);
+  placeWordsFrame("increase how much your friend grabs", 404, 65, 120, 100);
 
-  titleBold("A rope loop: pulling and grabbing to predict current");
+  placeTitleBold("A rope loop: pulling and grabbing to predict current");
   runtime++;
   if (ropespeed != 0) {
     lastposition = runtime * displayspeed;

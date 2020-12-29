@@ -1,4 +1,4 @@
-WebTitle{Shifting energy from a battery(Expansion &ndash; tell me more)}
+WebTitle{Shifting energy from a drawdrawBattery(Expansion &ndash; tell me more)}
 
 StepHeader{A chemical store, depleted}
 

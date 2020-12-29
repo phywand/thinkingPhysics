@@ -17,15 +17,15 @@ function preload() {
 
 function setup() {
   createCanvas(800, 400);
-  changeOne = new SliderDivider(40, 280, 100, 15, 3, [0.5], false);
-  changeTwo = new SliderDivider(240, 280, 100, 15, 3, [0.5], false);
-  startOverbutton = new controlButton(448, 281, 80, 30);
+  changeOne = new createSliderDivider(40, 280, 100, 15, 3, [0.5], false);
+  changeTwo = new createSliderDivider(240, 280, 100, 15, 3, [0.5], false);
+  startOverbutton = new CreateControlButton(448, 281, 80, 30);
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
   startOverbutton.drawButton();
-  words("start again", 452, 301);
+  placeWords("start again", 452, 301);
   changeOne.draw();
   changeTwo.draw();
 
@@ -63,21 +63,21 @@ function draw() {
 
   // set the display here
 
-  titleBold(
+  placeTitleBold(
     "a constraint relationship(a=F/m): F set constant, varying either a or m"
   );
 
-  words("increase\nmass", 70, 290);
-  words("decrease\nmass", 70, 360);
+  placeWords("increase\nmass", 70, 290);
+  placeWords("decrease\nmass", 70, 360);
 
-  words("increase\nacceleration", 270, 290);
-  words("decrease\nacceleration", 270, 360);
+  placeWords("increase\nacceleration", 270, 290);
+  placeWords("decrease\nacceleration", 270, 360);
   push();
   translate(300, 150);
-  mass(quantityB * 3, 90, ccongray);
-  force(quantityA * 2, 90, cideaBlue);
-  translate(0, -20 - quantityB * pxscale * 1.5);
-  acceleration(quantityC * 8, 90, cacceleration);
+  showMass(quantityB * 3, 90, CCONGRAY);
+  showForce(quantityA * 2, 90, CIDEABLUE);
+  translate(0, -20 - quantityB * PXSCALE * 1.5);
+  showAcceleration(quantityC * 8, 90, CACCELERATION);
   pop();
 
   //    do not change below here

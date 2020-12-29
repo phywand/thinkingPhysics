@@ -34,7 +34,7 @@ InsertGraphic{MoVelocityActsPID}{800}{460}
 
 StepHeader{Rates or accumulations}
 
-The choice is between thinking of acceleration as an accumulator(admittedly a bit different) or as a rate(rather more traditional).
+The choice is between thinking of acceleration as an placeAcumulator(admittedly a bit different) or as a rate(rather more traditional).
 
 For either choice I think that there is a clear cut case for working with the most evocative representation, and here that is, in my opinion, not words. Here is a quote from a case for the QuoteThis{acceleration is the rate of change of velocity learning path}.
 

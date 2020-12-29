@@ -2,7 +2,7 @@ WebTitle{A simple loop: current the same everywhere(Exposition)}
 
 StepHeader{Electric currents do not get used up}
 
-InsertGraphic{EcCurrentsChargesLoopsIPSC}
+InsertGraphic{ECCURRENTsChargesLoopsIPSC}
 
 Electric currents do not get used up. In a simple circuit with one battery and one bulb, the size of the electric current is the same wherever you measure it.
 

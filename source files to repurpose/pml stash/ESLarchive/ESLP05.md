@@ -48,12 +48,12 @@ EEFToolkitCollaborationLink{}
 
 ActivitySynopsis{03}{Design solutions}{10}{group presentations}{https://slowthinkingphysics.net/ESLActivitydesignsolutions.html}{Use the resources the children have prepared to arrange for a few groups to present their solutions to the class. All should have some display materials, which children might display for a few days, perhaps with a commenting system provided.}
 
-EEFFeedbackLink{Use the time during the presented solutions to garner intelligence and provide feedback on the students' developing understanding.}
+EEFplaceFeedbackLink{Use the time during the presented solutions to garner intelligence and provide feedback on the students' developing understanding.}
 
 EEFLanguageScienceLink{Reinforce students' use of language, written and diagrammatic, to refine their understanding of the behaviour of electric circuits.}
 
 
-EEFToolkitFeedbackLink{}
+EEFToolkitplaceFeedbackLink{}
 
 StepHeader{Teacher's thinking}
 

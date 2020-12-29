@@ -49,8 +49,8 @@ https://slowthinkingphysics.net/find/representations
 Of course you might prefer the flexibility of code (also enabling interactive diagrams, in which case a set of primitives like such as:
   acceleration(magnitude,rotation,acolour)
   power(value)
-  circuitParallel(kind)
-  bulb(label)
+  drawCircuitParallel(kind)
+  drawdrawBulb(label)
 Might form better building blocks with different granularities. But maybe that's a story for another time.
 InsertLink
 https://p5js.org/libraries/

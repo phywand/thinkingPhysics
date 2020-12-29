@@ -17,25 +17,25 @@ function setup(){
 }
 
 function draw() {
-    SIDPane("C","3","F","Identifying the stores and quantifying how much energy is shifted")
+    placeSIDPane("C","3","F","Identifying the stores and quantifying how much energy is shifted")
     inputtoDivvy.draw();
    
 
 switch(var energyStores = ["chemical","thermal"];.length) {
 	case 2:
-		describeEnergyOne(var energyStores = ["chemical","thermal"];[0],var energyStores = ["chemical","thermal"];[1]);
+		drawDescribeEnergyOne(var energyStores = ["chemical","thermal"];[0],var energyStores = ["chemical","thermal"];[1]);
 		break;
 	case 3:
 		twoWayDivvy.draw();
 		var bottomslice = twoWayDivvy.getValue(0);
 		var topslice = 1-twoWayDivvy.getValue(0);
-		describeEnergyTwo(var energyStores = ["chemical","thermal"];[0],var energyStores = ["chemical","thermal"];[1],var energyStores = ["chemical","thermal"];[2],topslice,bottomslice);
+		drawDescribeEnergyTwo(var energyStores = ["chemical","thermal"];[0],var energyStores = ["chemical","thermal"];[1],var energyStores = ["chemical","thermal"];[2],topslice,bottomslice);
 		break;
 	case 4:
 		theeWayDivvy.draw();
 		var topslice = 1-max(theeWayDivvy.getValue(0),theeWayDivvy.getValue(1));
 		var midslice = max(theeWayDivvy.getValue(0),theeWayDivvy.getValue(1))-min(theeWayDivvy.getValue(0),theeWayDivvy.getValue(1));;
-		var bottomslice = min(theeWayDivvy.getValue(0),theeWayDivvy.getValue(1)); describeEnergyThree(var energyStores = ["chemical","thermal"];[0],var energyStores = ["chemical","thermal"];[1],var energyStores = ["chemical","thermal"];[2],var energyStores = ["chemical","thermal"];[3],topslice,midslice,bottomslice);
+		var bottomslice = min(theeWayDivvy.getValue(0),theeWayDivvy.getValue(1)); drawDescribeEnergyThree(var energyStores = ["chemical","thermal"];[0],var energyStores = ["chemical","thermal"];[1],var energyStores = ["chemical","thermal"];[2],var energyStores = ["chemical","thermal"];[3],topslice,midslice,bottomslice);
 		break;
 	default:
 }

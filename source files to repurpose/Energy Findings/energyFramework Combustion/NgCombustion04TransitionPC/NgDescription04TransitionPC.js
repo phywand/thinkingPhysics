@@ -13,14 +13,14 @@ function setup(){
     STPlink.position(width-200, height-112);
     STPlink.mousePressed(showguide);
     STPlink.class("PDLbutton");
-    justWords(transitionPhysicalConceptual,"comiccommentL",10, 0,width-40);
+    justplaceWords(transitionPhysicalConceptual,"comiccommentL",10, 0,width-40);
 }
 
 function draw() {
-    pssguide(2,90,140,true);
+    placePSSDroid(2,90,140,true);
     push();
         scale(2.0);
-        transitionRedescribe(width-170,height-170,90);
+        placeTransitionRedescribe(width-170,height-170,90);
     pop();
 }
 

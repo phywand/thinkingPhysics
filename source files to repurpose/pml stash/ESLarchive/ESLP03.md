@@ -91,7 +91,7 @@ StepHeader{Students' thinking}
 
 Students continue to reason with the loop as a whole, explicitly representing what are and are not good ways to think about what is going on, using diagrams, drawings, actions and words.
 
-Students recognise that engineers design electrical devices to perform specific tasks when placed in a loop: focussing on warming and glowing. They make connections to illuminating and warming their homes and cooking their food, whether by conventional oven, toaster, grill or microwave. The detailed mechanism is not essential, but that there is a cost for the action is: something for nothing is not possible in the physical world. They link the running down of the battery(or substitute) to the desired glowing or warming.
+Students recognise that engineers design electrical devices to perform specific tasks when placed in a loop: focussing on warming and glowing. They make connections to illuminating and warming their homes and cooking their food, whether by conventional oven, toaster, grill or microwave. The detailed mechanism is not essential, but that there is a cost for the action is: something for nothing is not possible in the physical world. They link the running down of the drawdrawBattery(or substitute) to the desired glowing or warming.
 
 Reason about trade-offs in getting the warming or glowing as choices between high flow and low pull, or high pull and low flow. They acquire confidence in their ability to reason informally, so semi-quantitatively, about the actions of the circuit.
 

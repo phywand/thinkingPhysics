@@ -6,14 +6,14 @@ function preload() {
 }
 function setup() {
 	createCanvas(400,400);
-	background(cWhite);
+	background(CWHITE);
 	noLoop();
 }
 function draw() {
-	justWords("Stacked slices of time give a cone of locations lying in my future. I can influence events within this cone.","chattercommentL",60,10,316);
+	justplaceWords("Stacked slices of time give a cone of locations lying in my future. I can influence events within this cone.","chattercommentL",60,10,316);
 	image(guide,20,100);
 	scale(2);
-	transitionStep(180,180,0);
+	placeTransitionStep(180,180,0);
 }
 function keyTyped() {
 	if (key === "s") {

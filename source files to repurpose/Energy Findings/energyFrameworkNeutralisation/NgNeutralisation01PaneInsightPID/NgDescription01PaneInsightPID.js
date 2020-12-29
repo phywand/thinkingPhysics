@@ -15,11 +15,11 @@ function preload() {
 function setup() {
     createCanvas(600, 600);
     noLoop();
-    justWords(insightQuestion, "thinkingL", 40, 60, width - 80);
+    justplaceWords(insightQuestion, "thinkingL", 40, 60, width - 80);
 
 }
 
 function draw() {
-    SIDPane("P","1","S","A process about which I'd like to know more")
+    placeSIDPane("P","1","S","A process about which I'd like to know more")
     image(insight, 0, height - 417);
 }

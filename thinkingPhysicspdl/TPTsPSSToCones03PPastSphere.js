@@ -9,9 +9,9 @@ function preload() {
 
 function setup(){
   createCanvas(900, 600, WEBGL);
-justWords("The sphere of influence depends on duration: what is history on time for the information to arrive", "invertedtitle", 20, 10, width-60);
+justplaceWords("The sphere of influence depends on duration: what is history on time for the information to arrive", "invertedtitle", 20, 10, width-60);
 
-justWords("drag the mouse to spin the diagram", "passCommentL", 20, height-90, 150);
+justplaceWords("drag the mouse to spin the diagram", "passCommentL", 20, height-90, 150);
 
 durationslider = createSlider(10,180,50);
 durationslider.position(330, 54);
@@ -25,12 +25,12 @@ durationslider.position(330, 54);
 	ShowAxesbutton.class("PDLbutton");
 	
 	
-	justWords("set duration for influence", "infoText", 465, 62, 180);
+	justplaceWords("set duration for influence", "infoText", 465, 62, 180);
 
 }
 
 function draw(){
-  background(cWhite);
+  background(CWHITE);
   orbitControl();
   noStroke();
   if (ShowSlicesbutton.checked()){
@@ -49,11 +49,11 @@ function draw(){
  if (ShowAxesbutton.checked()){
 	 push();
 	 rotateX(PI);
-	 axis3D(50);
+	 drawAxis3D(50);
 	 rotateZ(-PI/2);
-	 axis3D(50);
+	 drawAxis3D(50);
 	 rotateX(PI/2);
-	 axis3D(50);
+	 drawAxis3D(50);
 	 pop();
 }
 }

@@ -11,11 +11,11 @@ titleFont = loadFont("../__support/Jost-700-Bold.ttf");
 }
 function setup(){
   createCanvas(800, 600, WEBGL);
-justWords("Multiple histories and futures from three points of view", "invertedtitle", 20, 10, width-60);
+justplaceWords("Multiple histories and futures from three points of view", "invertedtitle", 20, 10, width-60);
 
-justWords("drag the mouse to spin the diagram", "passCommentL", 20, height-90, 150);
+justplaceWords("drag the mouse to spin the diagram", "passCommentL", 20, height-90, 150);
 
-	justWords("set duration for influence", "infoText", 465, 62, 180);
+	justplaceWords("set duration for influence", "infoText", 465, 62, 180);
 
 
 durationslider = createSlider(1,140,30);
@@ -41,15 +41,15 @@ durationslider.position(320, 54);
 }
 
 function draw(){
-  background(cWhite);
+  background(CWHITE);
   orbitControl();
   rotateX(PI/2);
   
 if (ShowAlicebutton.checked()){
 	push();
-		conepair(durationslider.value(),cpovAliceCone);
+		conepair(durationslider.value(),CPOVALICECone);
 		if (ShowTimeAxisbutton.checked()){
-		axis3D(50);
+		drawAxis3D(50);
 	}
 	pop();
  }
@@ -60,7 +60,7 @@ if (ShowBobbutton.checked()){
 		translate(200, 0,0);
 		conepair(durationslider.value(),cpovBobCone);
 		if (ShowTimeAxisbutton.checked()){
-		axis3D(50);
+		drawAxis3D(50);
 	}
 	pop();
  }
@@ -70,7 +70,7 @@ if (ShowBobbutton.checked()){
 		 translate(200, 0,100);
 		conepair(durationslider.value(),cpovCharlieCone);
 		if (ShowTimeAxisbutton.checked()){
-		axis3D(50);
+		drawAxis3D(50);
 	}
 	pop();
  }

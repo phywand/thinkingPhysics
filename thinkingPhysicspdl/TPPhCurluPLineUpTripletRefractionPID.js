@@ -24,16 +24,16 @@ function preload() {
 function setup() {
   createCanvas(800, 600);
   const yloc = 550;
-  controllers[0] = new controlPuck();
+  controllers[0] = new CreateControlPuck();
   controllers[0].create(sourceLocX, yloc);
-  controllers[1] = new controlStripHorizontal();
+  controllers[1] = new CreateControlStripHorizontal();
   controllers[1].create(waypointLocX, yloc);
-  controllers[2] = new controlPuck();
+  controllers[2] = new CreateControlPuck();
   controllers[2].create(detectorLocX, yloc);
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
   noStroke();
   fill(cdeviceLightGrey);
   rect(20, waypointLocY, 700, 200);
@@ -93,55 +93,55 @@ function draw() {
 
   push();
   translate(sourcelocation.x, sourcelocation.y);
-  transducer(clight, degrees(sourcetowaypoint.heading()));
+  drawTransducer(CLIGHT, degrees(sourcetowaypoint.heading()));
   pop();
 
   push();
   translate(detectorlocation.x, detectorlocation.y);
-  transducer(cBlack, degrees(waypointtodetector.heading()) - 180);
+  drawTransducer(CBLACK, degrees(waypointtodetector.heading()) - 180);
   pop();
 
-  pathC(
+  showPathC(
     sourcelocation.x,
     sourcelocation.y,
     waypointlocation.x,
     waypointlocation.y,
-    cconcyan
+    CCONCYAN
   );
-  pathC(
+  showPathC(
     detectorlocation.x,
     detectorlocation.y,
     waypointlocation.x,
     waypointlocation.y,
-    cconcyan
+    CCONCYAN
   );
-  pathC(
+  showPathC(
     sourcelocation.x,
     sourcelocation.y,
     waypointlocationL.x,
     waypointlocationL.y,
-    cconorange
+    CCONORANGE
   );
-  pathC(
+  showPathC(
     detectorlocation.x,
     detectorlocation.y,
     waypointlocationR.x,
     waypointlocationR.y,
-    cconpink
+    CCONPINK
   );
-  pathC(
+  showPathC(
     sourcelocation.x,
     sourcelocation.y,
     waypointlocationR.x,
     waypointlocationR.y,
-    cconorange
+    CCONORANGE
   );
-  pathC(
+  showPathC(
     detectorlocation.x,
     detectorlocation.y,
     waypointlocationL.x,
     waypointlocationL.y,
-    cconpink
+    CCONPINK
   );
 
   var triptime =
@@ -154,42 +154,42 @@ function draw() {
   // the waypoints
   push();
   translate(waypointlocation.x, waypointlocation.y);
-  waypoint(cconcyan);
+  drawWaypoint(CCONCYAN);
   push();
   translate(0, 40);
-  durationpov(triptime, maxtime, cconcyan);
+  showDurationPoV(triptime, maxtime, CCONCYAN);
   pop();
   pop();
 
   push();
   translate(waypointlocationL.x, waypointlocationL.y);
-  waypoint(cconorange);
+  drawWaypoint(CCONORANGE);
   push();
   translate(0, 40);
-  durationpov(triptimeL, maxtime, cconorange);
+  showDurationPoV(triptimeL, maxtime, CCONORANGE);
   pop();
   pop();
 
   push();
   translate(waypointlocationR.x, waypointlocationR.y);
-  waypoint(cconpink);
+  drawWaypoint(CCONPINK);
   push();
   translate(0, 40);
-  durationpov(triptimeR, maxtime, cconpink);
+  showDurationPoV(triptimeR, maxtime, CCONPINK);
   pop();
   pop();
 
   // the phasors
   push();
   translate(detectorlocation.x + 80, detectorlocation.y);
-  phasormultiplebrightness(4, 0.12, [
-    [triptimeL, cconorange],
-    [triptime, cconcyan],
-    [triptimeR, cconpink],
+  showPhasorMultipleBrightness(4, 0.12, [
+    [triptimeL, CCONORANGE],
+    [triptime, CCONCYAN],
+    [triptimeR, CCONPINK],
   ]);
   pop();
 
-  titleBold("Exploring triplets of paths for refraction");
+  placeTitleBold("Exploring triplets of paths for refraction");
 }
 
 function keyTyped() {

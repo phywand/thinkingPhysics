@@ -9,13 +9,13 @@ titleFont = loadFont("../__support/Jost-700-Bold.ttf");
 }
 function setup(){
   createCanvas(600, 600, WEBGL);
-justWords("A transformer: linked magentic and electrical loops", "invertedtitle", 20, 10, width-60);
+justplaceWords("A transformer: linked magentic and electrical loops", "invertedtitle", 20, 10, width-60);
 
 
 }
 
 function draw(){
- background(cWhite);
+ background(CWHITE);
    orbitControl();
    
    var omegatee = frameCount/200;
@@ -24,7 +24,7 @@ function draw(){
 	noStroke();
 // 	magnetic loop
 	push();
-		fill(cmagnetgrey3D);
+		fill(CMAGNETGREY3D);
 		push();
 			translate(0, -80,0);
 			box(200, 40, 40);
@@ -53,7 +53,7 @@ function draw(){
 	
 	//electrical loops
 	
-	fill(ccircuitloopGrey3D);
+	fill(CCIRCUITLOOPGREY3D);
 	
 	push();
 		rotateX(PI/2);
@@ -74,47 +74,47 @@ function draw(){
 	if (Bfield>0){
 		push();
 			translate(0, -80,0);
-			force3D(abs(Bfield), 90, cBfield);
+			showForce3D(abs(Bfield), 90, CBFIELD);
 			translate(0, 160,0);
-			force3D(abs(Bfield), -90, cBfield);
+			showForce3D(abs(Bfield), -90, CBFIELD);
 		pop();
 		push();
 			rotateZ(-PI/2);
 			translate(0, -120,0);
-			force3D(abs(Bfield), 90, cBfield);
+			showForce3D(abs(Bfield), 90, CBFIELD);
 			translate(0, 240,0);
-			force3D(abs(Bfield), -90, cBfield);
+			showForce3D(abs(Bfield), -90, CBFIELD);
 		pop();
 		
 	}else{
 		push();
 			translate(0, -80,0);
-			force3D(abs(Bfield), -90, cBfield);
+			showForce3D(abs(Bfield), -90, CBFIELD);
 			translate(0, 160,0);
-			force3D(abs(Bfield), 90, cBfield);
+			showForce3D(abs(Bfield), 90, CBFIELD);
 		pop();
 		push();
 			rotateZ(-PI/2);
 			translate(0, -120,0);
-			force3D(abs(Bfield), -90, cBfield);
+			showForce3D(abs(Bfield), -90, CBFIELD);
 			translate(0, 240,0);
-			force3D(abs(Bfield), 90, cBfield);
+			showForce3D(abs(Bfield), 90, CBFIELD);
 		pop();
 	}
 	pop();
 	
 	push();
 	translate(-120, 0,-80);
-	current3D(4*sin(omegatee));
+	showCurrent3D(4*sin(omegatee));
 	translate(0, 0,160);
-	current3D(-4*sin(omegatee));
+	showCurrent3D(-4*sin(omegatee));
 	pop();
 	
 	push();
 	translate(120, 0,-80);
-	current3D(4*cos(omegatee));
+	showCurrent3D(4*cos(omegatee));
 	translate(0, 0,160);
-	current3D(-4*cos(omegatee));
+	showCurrent3D(-4*cos(omegatee));
 	pop();
 }
 

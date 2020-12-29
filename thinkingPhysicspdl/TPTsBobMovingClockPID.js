@@ -33,7 +33,7 @@ function setup(){
 
 
 function draw() {
-    background(cWhite);
+    background(CWHITE);
     
     
 	var mirrorSeparationBob = 60+0.7*100;
@@ -46,7 +46,7 @@ function draw() {
 //            ready to go
             controlbutton.html("run");
             BobspeedSet.draw();
-            words("set\nBob's\nvelocity\nas seen\nby Alice",126,494);
+            placeWords("set\nBob's\nvelocity\nas seen\nby Alice",126,494);
             resetVariables();
             break;
         case 1:
@@ -74,16 +74,16 @@ function draw() {
     
     push();
     translate(45,170);
-    PoV("AliceRight");
+    drawPoV("AliceRight");
 		
     pop();
     
     push();
     translate(145+BobLocation,170);
-    PoV("BobRight");
+    drawPoV("BobRight");
 		push();
 		translate(50, 60);
-			fill(cpovBob);
+			fill(CPOVBOB);
 			noStroke();
 			rect(0, 0, 100, 10);
 			rect(0, -mirrorSeparationBob, 100, 10);
@@ -93,7 +93,7 @@ function draw() {
 
 
 
-  titleBold("Alice notices Bob moving with his light clock");  
+  placeTitleBold("Alice notices Bob moving with his light clock");  
 }
 
 function mousePressed(){

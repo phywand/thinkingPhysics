@@ -11,10 +11,10 @@ function preload() {
 
 function setup() {
   createCanvas(880, 550);
-  sliderROne = new SliderDivider(287, 122, 80, 15, 0, [0.7], false);
-  sliderRTwo = new SliderDivider(287, 338, 80, 15, 0, [0.3], false);
-  sliderPD = new SliderDivider(138, 189, 120, 15, 0, [0.9], false);
-  loopsbutton = new checkButton(
+  sliderROne = new createSliderDivider(287, 122, 80, 15, 0, [0.7], false);
+  sliderRTwo = new createSliderDivider(287, 338, 80, 15, 0, [0.3], false);
+  sliderPD = new createSliderDivider(138, 189, 120, 15, 0, [0.9], false);
+  loopsbutton = new CreateCheckButton(
     width / 2 - 60,
     height - 50,
     "show loops",
@@ -23,17 +23,17 @@ function setup() {
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
   loopsbutton.drawButton();
 
   if (loopsbutton.buttonisChecked) {
     push();
     translate(112, 290);
-    loopOneStretched();
+    drawLoopOneStretched();
     pop();
     push();
     translate(width - 323, 290);
-    loopOneStretched();
+    drawLoopOneStretched();
     pop();
   }
 
@@ -48,48 +48,48 @@ function draw() {
   // var powerbattery=I*V;
   // 	var powerR1=I*I*R1;
   // 	var powerR2=I*I*R2;
-  let ropespeed = I * pixelscaling * 0.6;
+  let ropespeed = I * PIXELSCALING * 0.6;
   let displayspeed = ropespeed / 4;
   let V1 = I * R1;
   let V2 = I * R2;
 
   // ropeloop
-  ropeloop(112, 504, 216, 428, cideaBlue, lastposition);
+  drawRopeLoop(112, 504, 216, 428, CIDEABLUE, lastposition);
   push();
   translate(112, 310);
   push();
   translate(-60, 0);
-  // 			power(powerbattery);
-  translate(loopoffset + 120, -seriesoffset);
-  // 			power(powerR1);
-  translate(0, 2 * seriesoffset);
-  // 			power(powerR2);
+  // 			showPower(powerbattery);
+  translate(LOOPOFFSET + 120, -SERIESOFFSET);
+  // 			showPower(powerR1);
+  translate(0, 2 * SERIESOFFSET);
+  // 			showPower(powerR2);
   pop();
-  force(V, 0, cideaRed);
-  translate(loopoffset + 1, -seriesoffset);
-  force(V1, 0, cideaGreen);
-  translate(0, 2 * seriesoffset);
-  force(V2, 0, cideaGreen);
-  translate(-loopoffset / 2 + (ropespeed * pixelscaling) / 2, 110);
-  velocity(-ropespeed, 90, cideaGrey);
+  showForce(V, 0, CIDEARED);
+  translate(LOOPOFFSET + 1, -SERIESOFFSET);
+  showForce(V1, 0, CIDEAGREEN);
+  translate(0, 2 * SERIESOFFSET);
+  showForce(V2, 0, CIDEAGREEN);
+  translate(-LOOPOFFSET / 2 + (ropespeed * PIXELSCALING) / 2, 110);
+  showVelocity(-ropespeed, 90, CIDEAGREY);
   pop();
 
   //electricloop
   push();
   translate(width - 323, 290);
-  circuitSeries("bulb");
+  drawCircuitSeries("bulb");
   translate(0, 0);
-  // 		power(powerbattery);
-  pd(V);
-  current(I * pixelscaling);
-  translate(loopoffset, -seriesoffset);
-  // 		power(powerR1);
-  pd(V1);
-  current(I * pixelscaling);
-  translate(0, 2 * seriesoffset);
-  // 		power(powerR2);
-  pd(V2);
-  current(I * pixelscaling);
+  // 		showPower(powerbattery);
+  showPD(V);
+  showCurrent(I * PIXELSCALING);
+  translate(LOOPOFFSET, -SERIESOFFSET);
+  // 		showPower(powerR1);
+  showPD(V1);
+  showCurrent(I * PIXELSCALING);
+  translate(0, 2 * SERIESOFFSET);
+  // 		showPower(powerR2);
+  showPD(V2);
+  showCurrent(I * PIXELSCALING);
   pop();
 
   runtime++;
@@ -97,11 +97,11 @@ function draw() {
     lastposition = runtime * displayspeed;
   }
 
-  words("pull", 168, 199);
-  words("grab", 247, 132);
-  words("grab", 247, 348);
+  placeWords("pull", 168, 199);
+  placeWords("grab", 247, 132);
+  placeWords("grab", 247, 348);
 
-  titleBold(
+  placeTitleBold(
     "Reasoning with the rope loop: predictions about current and pd (series connections)"
   );
 }

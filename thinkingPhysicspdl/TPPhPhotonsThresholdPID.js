@@ -29,8 +29,8 @@ function preload() {
 function setup() {
   createCanvas(760, 500);
 
-  powerbutton = new checkButton(520, 80, "power visualisation", false);
-  photonSet = new SliderDivider(
+  powerbutton = new CreateCheckButton(520, 80, "power visualisation", false);
+  photonSet = new createSliderDivider(
     photonSetloc[0],
     photonSetloc[1],
     120,
@@ -39,7 +39,7 @@ function setup() {
     [0.3],
     false
   );
-  materialSet = new SliderDivider(
+  materialSet = new createSliderDivider(
     materialSetloc[0],
     materialSetloc[1],
     160,
@@ -51,7 +51,7 @@ function setup() {
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
 
   materialSet.draw();
   photonSet.draw();
@@ -64,7 +64,7 @@ function draw() {
   }
 
   for (i = 0; i < photonData.length; i++) {
-    words(
+    placeWords(
       photonData[i][0] + "(" + photonData[i][1] + " THz)",
       photonSetloc[0] + 30,
       photonSetloc[1] + 10 + i * 36
@@ -81,18 +81,18 @@ function draw() {
   var photonenergy =
     photonData[((1 - photonSet.getValue()) * 3).toFixed(0)][1] / 100;
 
-  words("choose\nmaterial", 100 - 22, 200 + 92);
+  placeWords("choose\nmaterial", 100 - 22, 200 + 92);
 
   push();
   translate(260, 136);
-  quantum(photonenergy);
-  words("quantum energy", 40, 0);
+  showQuantum(photonenergy);
+  placeWords("quantum energy", 40, 0);
   translate(0, 164);
-  energy(photonenergy);
-  words("photon\nenergy", -20, 20);
+  showEnergy(photonenergy);
+  placeWords("photon\nenergy", -20, 20);
   translate(80, 0);
-  energy(materialenergy);
-  words("energy\nto permit\nprocess", -20, 20);
+  showEnergy(materialenergy);
+  placeWords("energy\nto permit\nprocess", -20, 20);
   pop();
 
   var powerincident = photonenergy;
@@ -114,18 +114,18 @@ function draw() {
 
     push();
     translate(480, 350);
-    power(powerincident);
-    words("incident", -30, 20);
-    words("absorbed", 70, 20);
-    words("dissipated", 170, 20);
+    showPower(powerincident);
+    placeWords("incident", -30, 20);
+    placeWords("absorbed", 70, 20);
+    placeWords("dissipated", 170, 20);
     translate(100, 0);
-    power(powerabsorbed);
-    translate(100, -powerabsorbed * pxscale);
-    power(powertransmitted);
+    showPower(powerabsorbed);
+    translate(100, -powerabsorbed * PXSCALE);
+    showPower(powertransmitted);
     pop();
   }
 
-  titleBold("Photons and materials: threshold effects");
+  placeTitleBold("Photons and materials: threshold effects");
 }
 
 function mousePressed() {

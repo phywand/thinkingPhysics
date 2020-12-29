@@ -19,13 +19,13 @@ function preload() {
 function setup() {
   createCanvas(800, 800);
 
-  displacementsbutton = new checkButton(20, 750, "displacements", false);
+  displacementsbutton = new CreateCheckButton(20, 750, "displacements", false);
 
-  segmentsbutton = new checkButton(177, 750, "track segments", false);
+  segmentsbutton = new CreateCheckButton(177, 750, "track segments", false);
 
   const xloc = width - 60;
   for (let i = 0; i < numberVectors; i++) {
-    controllers[i] = new controlPuck();
+    controllers[i] = new CreateControlPuck();
     let yloc = 107 + 90 * i;
     controllers[i].create(xloc, yloc);
   }
@@ -36,7 +36,7 @@ function setup() {
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
   imageMode(CENTER);
   image(thebackground, width / 2 - 30, height / 2);
 
@@ -52,10 +52,10 @@ function draw() {
 
   push();
   translate(width / 2 - 30, height / 2);
-  stroke(cideaRed);
+  stroke(CIDEARED);
   line(-8, 0, 8, 0); // origin marker
   line(0, -8, 0, 8);
-  fill(cideaBlue);
+  fill(CIDEABLUE);
   noStroke();
   for (let i = 0; i < controllers.length; i++) {
     if (i != 0) {
@@ -69,7 +69,7 @@ function draw() {
       lastDisplacement.set(displacements[i].x, -displacements[i].y);
     }
     if (segmentsbutton.buttonisChecked) {
-      trackSegment(
+      showTrackSegment(
         lastDisplacement.x,
         lastDisplacement.y,
         displacements[i].x,
@@ -77,17 +77,17 @@ function draw() {
       ); //draws the trackSegments showing track
     }
     if (displacementsbutton.buttonisChecked) {
-      displacement(
+      showDisplacement(
         displacements[i].mag() * 0.1,
         degrees(-displacements[i].heading() + PI / 2),
-        cpovAlice
+        CPOVALICE
       ); //draws displacements
     }
     ellipse(displacements[i].x, -displacements[i].y, 8, 8); // draws marker
   }
   pop();
 
-  titleBold("Navigate the streets by setting the displacements");
+  placeTitleBold("Navigate the streets by setting the displacements");
 }
 
 function mouseReleased() {

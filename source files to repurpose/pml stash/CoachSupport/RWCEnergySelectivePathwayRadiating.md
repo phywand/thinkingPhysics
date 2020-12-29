@@ -1,4 +1,4 @@
-FileName: RWCEnergySelectivePathwayRadiating
+FileName: RWCenergySelectivePathwayRadiating
 
 WebTitle{Heating by radiation pathway does not always seem like a good fit}
 

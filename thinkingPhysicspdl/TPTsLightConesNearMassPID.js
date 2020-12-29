@@ -13,13 +13,13 @@ titleFont = loadFont("../__support/Jost-700-Bold.ttf");
 }
 function setup(){
   createCanvas(800, 800, WEBGL);
-justWords("Light cones near a mass", "invertedtitle", 20, 10, width-60);
+justplaceWords("Light cones near a mass", "invertedtitle", 20, 10, width-60);
 
 
 }
 
 function draw(){
- background(cWhite);
+ background(CWHITE);
    orbitControl();
 //    scale(0.01);
    
@@ -27,14 +27,14 @@ function draw(){
 	push();
 		translate(-300, -300,0);
 		rotateZ(-PI/3);
-		OmniEye(cpovAlice);
+		OmniEye(CPOVALICE);
 	pop();
  
 	
 	push();
 		translate(0,10350,0);
 		noStroke();
-		fill(cideaGreen);
+		fill(CIDEAGREEN);
 		sphere(10000);
 	pop();
 	
@@ -65,11 +65,11 @@ function draw(){
 		
 		push();
 			translate(0,-10650,0);
-			lightcone(60,cpovAliceCone);
+			lightcone(60,CPOVALICECone);
 		pop();
 		
 		noStroke();
-		// fill(cideaGrey);
+		// fill(CIDEAGREY);
 // 		cylinder(2,40000);
 	pop();
 	}
@@ -99,7 +99,7 @@ scale(0.2);
 	pop();
 	translate(0,8,0);
 	scale(0.3);
-	ambientMaterial(cBlack);
+	ambientMaterial(CBLACK);
 	model(PoVPupil);
 pop();
 }

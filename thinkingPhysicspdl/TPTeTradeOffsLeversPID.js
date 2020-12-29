@@ -15,47 +15,47 @@ function preload() {
 function setup() {
   createCanvas(640, 600);
 
-  magnitudes[0] = new controlPuckpositive();
+  magnitudes[0] = new CreateControlPuckPositive();
   magnitudes[0].create(locpucks[0], locpucks[1]);
 
-  boxesbutton = new checkButton(474, 340, "trade-off", false);
+  boxesbutton = new CreateCheckButton(474, 340, "trade-off", false);
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
   boxesbutton.drawButton();
 
-  words("set quantities", locpucks[0] - 40, locpucks[1] - 45);
+  placeWords("set quantities", locpucks[0] - 40, locpucks[1] - 45);
 
   values[0] = createVector(
     magnitudes[0].getValues().xSet,
     magnitudes[0].getValues().ySet
   ).mult(scaleFactor);
 
-  words("distance", locpucks[0], locpucks[1] + 61);
-  words("force", locpucks[0] + 50, locpucks[1] - 28);
+  placeWords("distance", locpucks[0], locpucks[1] + 61);
+  placeWords("force", locpucks[0] + 50, locpucks[1] - 28);
   console.log(values[0].y);
   push();
   translate(150, 400);
-  leversystem((100 - values[0].y) / 90 + 0.3, values[0].x * 2);
+  drawLeverSystem((100 - values[0].y) / 90 + 0.3, values[0].x * 2);
   pop();
 
   push();
   translate(391, 421);
-  energy(((values[0].y / 5) * (values[0].x * 2)) / 120);
+  showEnergy(((values[0].y / 5) * (values[0].x * 2)) / 120);
   pop();
 
   if (boxesbutton.buttonisChecked) {
-    tradeOff(
+    drawTradeOff(
       locpucks[0],
       locpucks[1] + tradeOffOffset,
       values[0].x,
       values[0].y,
-      cconlightgreen,
-      cconpink
+      CCONLIGHTGREEN,
+      CCONPINK
     );
   }
-  titleBold("Trade-offs for a lever system");
+  placeTitleBold("Trade-offs for a lever system");
 }
 
 function mouseReleased() {

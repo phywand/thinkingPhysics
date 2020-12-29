@@ -1,4 +1,4 @@
-FileName: RWCEnergyAdjectives
+FileName: RWCenergyAdjectives
 
 WebTitle{Adjectives for energy}
 

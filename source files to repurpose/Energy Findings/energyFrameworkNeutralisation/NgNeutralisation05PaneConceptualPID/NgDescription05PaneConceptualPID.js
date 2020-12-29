@@ -18,25 +18,25 @@ function setup(){
 }
 
 function draw() {
-    SIDPane("C","3","F","Identifying the stores and quantifying how much energy is shifted")
+    placeSIDPane("C","3","F","Identifying the stores and quantifying how much energy is shifted")
     inputtoDivvy.draw();
    
 
 switch(energyStores.length) {
 	case 2:
-		describeEnergyOne(energyStores[0],energyStores[1]);
+		drawDescribeEnergyOne(energyStores[0],energyStores[1]);
 		break;
 	case 3:
 		twoWayDivvy.draw();
 		var bottomslice = twoWayDivvy.getValue(0);
 		var topslice = 1-twoWayDivvy.getValue(0);
-		describeEnergyTwo(energyStores[0],energyStores[1],energyStores[2],topslice,bottomslice);
+		drawDescribeEnergyTwo(energyStores[0],energyStores[1],energyStores[2],topslice,bottomslice);
 		break;
 	case 4:
 		theeWayDivvy.draw();
 		var topslice = 1-max(theeWayDivvy.getValue(0),theeWayDivvy.getValue(1));
 		var midslice = max(theeWayDivvy.getValue(0),theeWayDivvy.getValue(1))-min(theeWayDivvy.getValue(0),theeWayDivvy.getValue(1));;
-		var bottomslice = min(theeWayDivvy.getValue(0),theeWayDivvy.getValue(1)); describeEnergyThree(energyStores[0],energyStores[1],energyStores[2],energyStores[3],topslice,midslice,bottomslice);
+		var bottomslice = min(theeWayDivvy.getValue(0),theeWayDivvy.getValue(1)); drawDescribeEnergyThree(energyStores[0],energyStores[1],energyStores[2],energyStores[3],topslice,midslice,bottomslice);
 		break;
 	default:
 }

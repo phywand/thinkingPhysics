@@ -8,9 +8,9 @@ function preload() {
 }
 function setup(){
   createCanvas(800, 600, WEBGL);
-justWords("In a 2-dimensional world, circles of influence depend on time for my influence to arrive", "invertedtitle", 20, 10, width-60);
+justplaceWords("In a 2-dimensional world, circles of influence depend on time for my influence to arrive", "invertedtitle", 20, 10, width-60);
 
-justWords("drag the mouse to spin the diagram", "passCommentL", 20, height-90, 150);
+justplaceWords("drag the mouse to spin the diagram", "passCommentL", 20, height-90, 150);
 
 durationslider = createSlider(1,180,30);
 durationslider.position(302, 54);
@@ -23,16 +23,16 @@ durationslider.position(302, 54);
 	ShowTimeAxisbutton.position(630, 60);
 	ShowTimeAxisbutton.class("PDLbutton");
 	
-	justWords("set duration for influence", "infoText", 437, 62, 180);
+	justplaceWords("set duration for influence", "infoText", 437, 62, 180);
 
 }
 
 function draw(){
-  background(cWhite);
+  background(CWHITE);
   orbitControl();
   rotateX(PI/2);
   noStroke();
-  fill(cpovAlice);
+  fill(CPOVALICE);
   if (ShowSlicesbutton.checked()){
 	push();
 		// past slices
@@ -46,7 +46,7 @@ function draw(){
 	}
 
   if (ShowTimeAxisbutton.checked()){
-		axis3D(50);
+		drawAxis3D(50);
 	}
 }
 

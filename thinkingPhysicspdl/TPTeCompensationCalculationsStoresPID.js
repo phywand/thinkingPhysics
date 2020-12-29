@@ -19,7 +19,7 @@ function setup() {
     createCanvas(640,460);
     storeChoice=new IanSlider(20,105,200,15,6,[0.0],false);
     
-    magnitudes[0]= new controlPuckpositive();
+    magnitudes[0]= new CreateControlPuckPositive();
 	magnitudes[0].create(locpucks[0],locpucks[1]);
     
     boxesbutton = createCheckbox("trade-off",false);
@@ -32,61 +32,61 @@ function setup() {
 
 
 function draw() {
-	background(cWhite);
+	background(CWHITE);
 	storeChoice.draw();
 	var thechoice = int((storeChoice.getValue()+0.1)*7);
 	for (i = 0; i < storesdata.length; i++) {
-		words(storesdata[i][0], 44, 308-i*28);
+		placeWords(storesdata[i][0], 44, 308-i*28);
 				}
 	if (storesdata[thechoice][0]!="electric-magnetic"){
 		 var storeKind=storesdata[thechoice][0];
 	 }else{
 		 storeKind="electricmagnetic"
      }	
-	subHead("for the "+storesdata[thechoice][0]+" store", 180, 80);
+	placeSubHead("for the "+storesdata[thechoice][0]+" store", 180, 80);
 	
 	push();
         translate(180,120);
-		subHead('qualitative',0, 0);
+		placeSubHead('qualitative',0, 0);
 		translate(150,0);
-		subHead('quantitative',0, 0);
+		placeSubHead('quantitative',0, 0);
 	pop();
 
-	words("set quantities", locpucks[0]-40,locpucks[1]-45);
+	placeWords("set quantities", locpucks[0]-40,locpucks[1]-45);
 
       values[0] = createVector(magnitudes[0].getValues().xSet,magnitudes[0].getValues().ySet).mult(scaleFactor);
     
-	words(storesdata[thechoice][3], locpucks[0],locpucks[1]+61);
-	words(storesdata[thechoice][4], locpucks[0]+50, locpucks[1]-28);
+	placeWords(storesdata[thechoice][3], locpucks[0],locpucks[1]+61);
+	placeWords(storesdata[thechoice][4], locpucks[0]+50, locpucks[1]-28);
 
 	push();
 		translate(220, 350);
 		if (emptiedbutton.checked()){
-			storeEmptied(storeKind);
-			wordsframe(storesdata[thechoice][0]+' store emptied if: ' + storesdata[thechoice][2], -40, 2,150,200);
+			drawStoreEmptied(storeKind);
+			placeWordsFrame(storesdata[thechoice][0]+' store emptied if: ' + storesdata[thechoice][2], -40, 2,150,200);
 			} else{
-			storeFilled(storeKind);
-			wordsframe(storesdata[thechoice][0]+' store filled if: ' + storesdata[thechoice][1], -40, 2,250,200);
+			drawStoreFilled(storeKind);
+			placeWordsFrame(storesdata[thechoice][0]+' store filled if: ' + storesdata[thechoice][1], -40, 2,250,200);
 			}
 	pop();
         
 	push();
 		translate(351,238);
-		energy(values[0].x*values[0].y/1500);
+		showEnergy(values[0].x*values[0].y/1500);
 	pop();
         
 
 	
 	if (boxesbutton.checked()){
 	
-	if((storeKind=="kinetic")||(storeKind=="elastic")||(storeKind=="vibration")){	tradeOfftriangle(locpucks[0],locpucks[1]+tradeOffOffset,values[0].x,values[0].y,cconlightgreen,cconpink);
+	if((storeKind=="kinetic")||(storeKind=="elastic")||(storeKind=="vibration")){	drawTradeOffTriangle(locpucks[0],locpucks[1]+tradeOffOffset,values[0].x,values[0].y,CCONLIGHTGREEN,CCONPINK);
 	}else{
-		tradeOff(locpucks[0],locpucks[1]+tradeOffOffset,values[0].x,values[0].y,cconlightgreen,cconpink);	
+		drawTradeOff(locpucks[0],locpucks[1]+tradeOffOffset,values[0].x,values[0].y,CCONLIGHTGREEN,CCONPINK);	
 }
 }
 	
 
- titleBold("Compensation calculations for energy shifted to or from a store");
+ placeTitleBold("Compensation calculations for energy shifted to or from a store");
 }
 
 function mousePressed(){

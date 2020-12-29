@@ -2,7 +2,7 @@ WebTitle{Electric current: a flow of charges(Exposition)}
 
 StepHeader{Electric current is a flow of charges}
 
-InsertGraphic{EcCurrentAndChargeFlowIPCC}
+InsertGraphic{ECCURRENTAndChargeFlowIPCC}
 
 When the battery is connected up to the bulb to make a complete circuit, there is an electric current everywhere in the circuit. Something flows steadily. That thing is charge, and there can be many different objects that carry the charge.
 

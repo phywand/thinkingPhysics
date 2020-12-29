@@ -14,12 +14,12 @@ titleFont = loadFont("../__support/Jost-700-Bold.ttf");
 function setup(){
     createCanvas(600, 600);
     noLoop();
-    justWords(insightCommentary,"thinkingL",40, 100,width-80);
+    justplaceWords(insightCommentary,"thinkingL",40, 100,width-80);
 }
 
 
 function draw() {
-    SIDPane("P","4","F","Now check that you could gain the intended insights")
+    placeSIDPane("P","4","F","Now check that you could gain the intended insights")
 
 }
 

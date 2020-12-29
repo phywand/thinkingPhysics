@@ -74,7 +74,7 @@ function setup() {
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
 
   for (var i = 0; i < ideaLinks.length; i = i + 1) {
     drawLink(
@@ -95,11 +95,11 @@ function draw() {
     );
   }
 
-  titleBold("Four steps across three levels");
+  placeTitleBold("Four steps across three levels");
 }
 
 function drawCoreIdeaBox(boxText, xpos, ypos, boxWidth, boxHeight) {
-  fill(cideaGrey);
+  fill(CIDEAGREY);
   noStroke();
   rectMode(CENTER);
   rect(xpos, ypos, boxWidth, boxHeight, cornerRound);

@@ -8,12 +8,12 @@ function preload() {
 }
 function setup() {
   createCanvas(860, 430);
-  sliderHeight = new SliderDivider(40, 220, 100, 15, 0, [0], false);
-  sliderArea = new SliderDivider(40, 80, 60, 15, 2, [0.334], false);
+  sliderHeight = new createSliderDivider(40, 220, 100, 15, 0, [0], false);
+  sliderArea = new createSliderDivider(40, 80, 60, 15, 2, [0.334], false);
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
 
   sliderHeight.draw();
   var liftedby = (1 - sliderHeight.getValue()) * 20;
@@ -26,10 +26,10 @@ function draw() {
   leversystemY(ratio, liftedby);
   pop();
 
-  words("choose\nhow to share\nthe load", 70, 90);
-  words("lift the load\nby pushing\non one end", 70, 230);
+  placeWords("choose\nhow to share\nthe load", 70, 90);
+  placeWords("lift the load\nby pushing\non one end", 70, 230);
 
-  titleBold("sharing a load with a lever system");
+  placeTitleBold("sharing a load with a lever system");
 }
 
 function keyTyped() {
@@ -56,7 +56,7 @@ function leversystemY(multiplier, leftDisplacement) {
   push();
   translate(lengthR, 0);
   rotate(-atan(leftDisplacement / lengthL));
-  force(ForceR, 0, ccompression);
+  showForce(ForceR, 0, CCOMPRESSION);
   push();
   translate(40, 44);
   scale(0.2);
@@ -68,7 +68,7 @@ function leversystemY(multiplier, leftDisplacement) {
   translate(-lengthL, 0);
   rotate(-atan(leftDisplacement / lengthL));
   noStroke();
-  fill(cideaBrown);
+  fill(CIDEABROWN);
   rect(-15, 0, 45, -50);
   pop();
 

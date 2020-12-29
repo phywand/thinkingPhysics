@@ -80,7 +80,7 @@ As the diagram can be continuously redrawn with tests for interaction, so button
 Other than this, primitives encapsulate the drawing of standard physics depiction. Here:
 
 	resistor ()
-	battery()
+	drawdrawBattery()
 	power(4)
 
 When the button is pressed, the visual impression formed by the change in the magnitude of the power representations is memorable. But if one wanted some other representational change, then code is very malleable, primitives for representations of different quantities such as current or potential difference are built-in.

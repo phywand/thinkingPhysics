@@ -41,7 +41,7 @@ ActivitySynopsis{02}{How the loop works}{20}{small group discussion}{https://slo
 
 EEFToolkitCollaborationLink{Explaining to others, and listening to how others have understood your explanations forms a vital resource to help students know what they are thinking.}
 
-EEFFeedbackLink{Provide reinforcement, supporting and guiding students heading along the QuoteThis{right lines} and adapt what you do to switch the direction of travel where students are heading off down the QuoteThis{wrong track}. Be very aware of student's statements that might well be little more than a recalled phrase.}
+EEFplaceFeedbackLink{Provide reinforcement, supporting and guiding students heading along the QuoteThis{right lines} and adapt what you do to switch the direction of travel where students are heading off down the QuoteThis{wrong track}. Be very aware of student's statements that might well be little more than a recalled phrase.}
 
 EEFToolkitCPeerTutorLink{}
 
@@ -61,9 +61,9 @@ EEFModellingLink{The circuit diagram is a model, as you can reason using this re
 
 EEFMemoryLink{Draw on previous experience of representing circuits.}
 
-EEFFeedbackLink{Share the purposes of drawing circuits in the way that you choose as a framework to provide feedback on both prior representations used by the students, and on ways of thinking encouraged by the representations.}
+EEFplaceFeedbackLink{Share the purposes of drawing circuits in the way that you choose as a framework to provide feedback on both prior representations used by the students, and on ways of thinking encouraged by the representations.}
 
-EEFToolkitFeedbackLink{}
+EEFToolkitplaceFeedbackLink{}
 
 StepHeader{Teacher's thinking}
 

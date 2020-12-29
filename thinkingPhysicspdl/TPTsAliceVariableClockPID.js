@@ -32,7 +32,7 @@ function setup(){
 
 
 function draw() {
-    background(cWhite);
+    background(CWHITE);
     
     
     var mirrorSeparationAlice = 60+spacingSet.getValue()*100;
@@ -44,7 +44,7 @@ function draw() {
 //            ready to go
             controlbutton.html("run");
             spacingSet.draw();
-            words("set\nmirror\nspacing\nfor this\nclock",430,148);
+            placeWords("set\nmirror\nspacing\nfor this\nclock",430,148);
             resetVariables();
             break;
         case 1:
@@ -67,10 +67,10 @@ function draw() {
     
     push();
     translate(100,170);
-    PoV("AliceRight");
+    drawPoV("AliceRight");
 		push();
 		translate(50, 60);
-			fill(cpovAlice);
+			fill(CPOVALICE);
 			noStroke();
 			rect(0, 0, 100, 10);
 			rect(0, -mirrorSeparationAlice, 100, 10);
@@ -79,7 +79,7 @@ function draw() {
     pop();
     
     
-  titleBold("A light clock with variable tick rate for Alice");  
+  placeTitleBold("A light clock with variable tick rate for Alice");  
 }
 
 function mousePressed(){

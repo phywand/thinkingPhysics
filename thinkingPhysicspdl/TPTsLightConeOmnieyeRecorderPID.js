@@ -18,7 +18,7 @@ function preload() {
 }
 function setup(){
   createCanvas(600, 600, WEBGL);
-justWords("Light cone with observer, paying attention to the past", "invertedtitle", 20, 10, width-60);
+justplaceWords("Light cone with observer, paying attention to the past", "invertedtitle", 20, 10, width-60);
 
 
 
@@ -37,22 +37,22 @@ justWords("Light cone with observer, paying attention to the past", "invertedtit
 }
 
 function draw(){
-  background(cWhite);
+  background(CWHITE);
   orbitControl();
   
-  lightcone(100,cpovAliceCone);
+  lightcone(100,CPOVALICECone);
 	
  
  if (showOmnieye.checked()){
  push();
  rotateZ(PI/6);
  scale(0.5);
-	 OmniEye(cpovAlice);
+	 OmniEye(CPOVALICE);
 	 pop();
  }
 
 if (showRecorder.checked()){
-aRecorder(cpovAlice);
+aRecorder(CPOVALICE);
 
 }
 
@@ -72,7 +72,7 @@ scale(0.2);
 	pop();
 	translate(0,8,0);
 	scale(0.3);
-	ambientMaterial(cBlack);
+	ambientMaterial(CBLACK);
 	model(PoVPupil);
 pop();
 }

@@ -1,4 +1,4 @@
-FileName: RWCEnergyTreeChoices
+FileName: RWCenergyTreeChoices
 
 WebTitle{The energy choice tree}
 

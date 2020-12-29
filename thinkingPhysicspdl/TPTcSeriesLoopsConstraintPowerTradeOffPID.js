@@ -9,18 +9,18 @@ function preload() {
 
 function setup() {
   createCanvas(760, 600);
-  sliderROne = new SliderDivider(580, 160, 80, 15, 0, [0.7], false);
-  sliderRTwo = new SliderDivider(580, 375, 80, 15, 0, [0.3], false);
-  sliderPD = new SliderDivider(160, 260, 120, 15, 0, [0.9], false);
-  boxesbutton = new checkButton(630, 80, "trade-offs", false);
+  sliderROne = new createSliderDivider(580, 160, 80, 15, 0, [0.7], false);
+  sliderRTwo = new createSliderDivider(580, 375, 80, 15, 0, [0.3], false);
+  sliderPD = new createSliderDivider(160, 260, 120, 15, 0, [0.9], false);
+  boxesbutton = new CreateCheckButton(630, 80, "trade-offs", false);
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
   boxesbutton.drawButton();
   push();
   translate(220, 300);
-  circuitSeries("bulb");
+  drawCircuitSeries("bulb");
   pop();
 
   sliderROne.draw();
@@ -36,38 +36,38 @@ function draw() {
   var powerR2 = I * I * R2;
 
   if (boxesbutton.buttonisChecked) {
-    tradeOff(740, 192, -I * 50, -I * R1 * 20, ccurrent, cpotentialdifference);
-    tradeOff(
+    drawTradeOff(740, 192, -I * 50, -I * R1 * 20, CCURRENT, CPOTENTIALDIFFERENCE);
+    drawTradeOff(
       740,
-      192 + 2 * seriesoffset,
+      192 + 2 * SERIESOFFSET,
       -I * 50,
       -I * R2 * 20,
-      ccurrent,
-      cpotentialdifference
+      CCURRENT,
+      CPOTENTIALDIFFERENCE
     );
 
-    tradeOff(
+    drawTradeOff(
       20,
-      192 + seriesoffset,
+      192 + SERIESOFFSET,
       I * 50,
       V * 20,
-      ccurrent,
-      cpotentialdifference
+      CCURRENT,
+      CPOTENTIALDIFFERENCE
     );
   }
 
   push();
   translate(300, 300);
-  power(powerbattery);
-  translate(loopoffset, -seriesoffset);
-  power(powerR1);
-  translate(0, 2 * seriesoffset);
-  power(powerR2);
+  showPower(powerbattery);
+  translate(LOOPOFFSET, -SERIESOFFSET);
+  showPower(powerR1);
+  translate(0, 2 * SERIESOFFSET);
+  showPower(powerR2);
   pop();
 
-  words("set\npotential difference", 40, 560);
-  words("set\nresistances", 460, 560);
-  titleBold("constraints and trade-offs in altering the power dissipated");
+  placeWords("set\npotential difference", 40, 560);
+  placeWords("set\nresistances", 460, 560);
+  placeTitleBold("constraints and trade-offs in altering the power dissipated");
 }
 
 function mousePressed() {

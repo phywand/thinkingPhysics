@@ -9,18 +9,18 @@ function preload() {
 
 function setup() {
   createCanvas(750, 600);
-  sliderROne = new SliderDivider(336, 334, 80, 15, 0, [0.1], false);
-  sliderRTwo = new SliderDivider(552, 334, 80, 15, 0, [0.3], false);
-  sliderPD = new SliderDivider(70, 160, 120, 15, 0, [0.9], false);
-  boxesbutton = new checkButton(620, 80, "trade-offs", false);
+  sliderROne = new createSliderDivider(336, 334, 80, 15, 0, [0.1], false);
+  sliderRTwo = new createSliderDivider(552, 334, 80, 15, 0, [0.3], false);
+  sliderPD = new createSliderDivider(70, 160, 120, 15, 0, [0.9], false);
+  boxesbutton = new CreateCheckButton(620, 80, "trade-offs", false);
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
   boxesbutton.drawButton();
   push();
   translate(130, 200);
-  circuitParallel("bulb");
+  drawCircuitParallel("bulb");
   pop();
 
   sliderROne.draw();
@@ -39,39 +39,39 @@ function draw() {
   var powerR2 = (V * V) / R2;
 
   if (boxesbutton.buttonisChecked) {
-    tradeOff(130, 480, I * 50, V * 20, ccurrent, cpotentialdifference);
-    tradeOff(
-      130 + loopoffset,
+    drawTradeOff(130, 480, I * 50, V * 20, CCURRENT, CPOTENTIALDIFFERENCE);
+    drawTradeOff(
+      130 + LOOPOFFSET,
       480,
       -I1 * 50,
       -V * 20,
-      ccurrent,
-      cpotentialdifference
+      CCURRENT,
+      CPOTENTIALDIFFERENCE
     );
-    tradeOff(
-      130 + 2 * loopoffset,
+    drawTradeOff(
+      130 + 2 * LOOPOFFSET,
       480,
       -I2 * 50,
       -V * 20,
-      ccurrent,
-      cpotentialdifference
+      CCURRENT,
+      CPOTENTIALDIFFERENCE
     );
   }
 
   push();
   translate(210, 200);
-  power(powerbattery);
-  translate(loopoffset, 0);
-  power(powerR1);
-  translate(loopoffset, 0);
-  power(powerR2);
+  showPower(powerbattery);
+  translate(LOOPOFFSET, 0);
+  showPower(powerR1);
+  translate(LOOPOFFSET, 0);
+  showPower(powerR2);
   pop();
 
-  words("set\npotential\ndifference", 70, 351);
-  words("set\nresistance", 374, 351);
-  words("set\nresistance", 590, 351);
+  placeWords("set\npotential\ndifference", 70, 351);
+  placeWords("set\nresistance", 374, 351);
+  placeWords("set\nresistance", 590, 351);
 
-  titleBold(
+  placeTitleBold(
     "changing the circuit: constraints in altering the power dissipated"
   );
 }

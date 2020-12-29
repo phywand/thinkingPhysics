@@ -12,11 +12,11 @@ function preload() {
 
 function setup() {
   createCanvas(550, 450);
-  controlbutton = new controlButton(418, 143, 112, 30);
+  controlbutton = new CreateControlButton(418, 143, 112, 30);
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
   controlbutton.drawButton();
   if (controlbutton.buttonwasPressed) {
     completeloop = !completeloop;
@@ -24,24 +24,24 @@ function draw() {
   }
 
   if (completeloop == true) {
-    words("break loop", 426, 165);
+    placeWords("break loop", 426, 165);
     var magnitudetheCurrent = 5;
   }
 
   if (completeloop == false) {
-    words("complete loop", 408 + 18, 192 + 30 - 57);
+    placeWords("complete loop", 408 + 18, 192 + 30 - 57);
     var magnitudetheCurrent = 0;
   }
 
   push();
   translate(100, 250);
-  circuitSimple("bulb");
+  drawCircuitSimple("bulb");
   if (completeloop == true) {
     push();
     translate(70, 0);
-    power(magnitudetheCurrent);
+    showPower(magnitudetheCurrent);
     translate(210, 0);
-    power(magnitudetheCurrent);
+    showPower(magnitudetheCurrent);
     pop();
   }
 
@@ -54,19 +54,19 @@ function draw() {
   fill(0);
   ellipse(0, 0, 5, 5);
   scale(0.5);
-  velocity(-magnitudetheCurrent, 90, cBlack);
+  showVelocity(-magnitudetheCurrent, 90, CBLACK);
   scale(2);
   translate(24, 7);
   fill(0);
   ellipse(0, 0, 5, 5);
   scale(0.5);
-  velocity(-magnitudetheCurrent, 90, cBlack);
+  showVelocity(-magnitudetheCurrent, 90, CBLACK);
   scale(2);
   translate(-18, 9);
   fill(0);
   ellipse(0, 0, 5, 5);
   scale(0.5);
-  velocity(-magnitudetheCurrent, 90, cBlack);
+  showVelocity(-magnitudetheCurrent, 90, CBLACK);
   scale(2);
 
   // charge flow bottom
@@ -78,19 +78,19 @@ function draw() {
   fill(0);
   ellipse(0, 0, 5, 5);
   scale(0.5);
-  velocity(-magnitudetheCurrent, -90, cBlack);
+  showVelocity(-magnitudetheCurrent, -90, CBLACK);
   scale(2);
   translate(-12, 14);
   fill(0);
   ellipse(0, 0, 5, 5);
   scale(0.5);
-  velocity(-magnitudetheCurrent, -90, cBlack);
+  showVelocity(-magnitudetheCurrent, -90, CBLACK);
   scale(2);
   translate(17, 16);
   fill(0);
   ellipse(0, 0, 5, 5);
   scale(0.5);
-  velocity(-magnitudetheCurrent, -90, cBlack);
+  showVelocity(-magnitudetheCurrent, -90, CBLACK);
   scale(2);
 
   // charge flow left
@@ -102,19 +102,19 @@ function draw() {
   fill(0);
   ellipse(0, 0, 5, 5);
   scale(0.5);
-  velocity(-magnitudetheCurrent, 0, cBlack);
+  showVelocity(-magnitudetheCurrent, 0, CBLACK);
   scale(2);
   translate(-12, 14);
   fill(0);
   ellipse(0, 0, 5, 5);
   scale(0.5);
-  velocity(-magnitudetheCurrent, 0, cBlack);
+  showVelocity(-magnitudetheCurrent, 0, CBLACK);
   scale(2);
   translate(17, 16);
   fill(0);
   ellipse(0, 0, 5, 5);
   scale(0.5);
-  velocity(-magnitudetheCurrent, 0, cBlack);
+  showVelocity(-magnitudetheCurrent, 0, CBLACK);
   scale(2);
 
   // charge flow right
@@ -126,34 +126,34 @@ function draw() {
   fill(0);
   ellipse(0, 0, 5, 5);
   scale(0.5);
-  velocity(-magnitudetheCurrent, 180, cBlack);
+  showVelocity(-magnitudetheCurrent, 180, CBLACK);
   scale(2);
   translate(-12, 14);
   fill(0);
   ellipse(0, 0, 5, 5);
   scale(0.5);
-  velocity(-magnitudetheCurrent, 180, cBlack);
+  showVelocity(-magnitudetheCurrent, 180, CBLACK);
   scale(2);
   translate(17, 16);
   fill(0);
   ellipse(0, 0, 5, 5);
   scale(0.5);
-  velocity(-magnitudetheCurrent, 180, cBlack);
+  showVelocity(-magnitudetheCurrent, 180, CBLACK);
   scale(2);
   pop();
 
   if (completeloop == false) {
     push();
     translate(200, 352);
-    fill(cWhite);
+    fill(CWHITE);
     rect(0, 0, 40, 10);
-    stroke(ccircuitRed);
+    stroke(CCIRCUITRED);
     strokeWeight(1);
     line(0, 5, 40, -10);
     pop();
   }
 
-  titleBold("Charges flow and power switched only in a complete loop");
+  placeTitleBold("Charges flow and power switched only in a complete loop");
 }
 
 function mouseReleased() {

@@ -16,20 +16,20 @@ function preload() {
 
 function setup() {
   createCanvas(810, 780);
-  advicebutton = new checkButton(663, 65, "tell me more", false);
+  advicebutton = new CreateCheckButton(663, 65, "tell me more", false);
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
   advicebutton.drawButton();
 
-  physicalPane(144, 150, 200, 140);
-  conceptualPane(144, 372, 246, 244);
-  conceptualPane(430, 372, 266, 244);
-  conceptualPane(430, 646, 266, 244);
-  transitionRedescribe(144, 235, 0);
-  transitionRedescribe(282, 372, 0);
-  transitionRedescribe(430, 509, 0);
+  placePhysicalPane(144, 150, 200, 140);
+  placeConceptualPane(144, 372, 246, 244);
+  placeConceptualPane(430, 372, 266, 244);
+  placeConceptualPane(430, 646, 266, 244);
+  placeTransitionRedescribe(144, 235, 0);
+  placeTransitionRedescribe(282, 372, 0);
+  placeTransitionRedescribe(430, 509, 0);
 
   // pane01
   image(drawncircuit, 59, 90);
@@ -37,29 +37,29 @@ function draw() {
   // 	pane02
   push();
   translate(34, 372);
-  loopOne();
+  drawLoopOne();
 
   pop();
 
   // 	pane03
   push();
   translate(600 - 276, 371);
-  circuitSimple("bulb");
+  drawCircuitSimple("bulb");
 
   pop();
 
   // 	pane04
-  ropeloop(
+  drawRopeLoop(
     235 + 89,
     476 + 244 + 34,
     216,
     214,
-    cideaBlue,
+    CIDEABLUE,
     runtime * displayspeed
   );
 
   if (advicebutton.buttonisChecked) {
-    advicedroid(
+    placeAdviceDroid(
       740,
       120,
       "A physical circuit is re-imagined as a loop.\n\n\nThe loop is an electrical circuit.\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe electrical circuit is modelled using a rope loop.",
@@ -68,7 +68,7 @@ function draw() {
     );
   }
 
-  titleBold("Representing circuits as loops, to support reasoning");
+  placeTitleBold("Representing circuits as loops, to support reasoning");
   runtime++;
 }
 

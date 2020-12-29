@@ -20,7 +20,7 @@ titleFont = loadFont("../__support/Jost-700-Bold.ttf");
 }
 function setup(){
   createCanvas(800, 700, WEBGL);
-justWords("Light cones as a gravitational wave passes", "invertedtitle", 20, 10, width-60);
+justplaceWords("Light cones as a gravitational wave passes", "invertedtitle", 20, 10, width-60);
 
 	controlbutton = createButton("gravitational wave");
     controlbutton.position(20, height-50);
@@ -30,7 +30,7 @@ justWords("Light cones as a gravitational wave passes", "invertedtitle", 20, 10,
 }
 
 function draw(){
- background(cWhite);
+ background(CWHITE);
    orbitControl();
    
    if (focused){
@@ -61,7 +61,7 @@ function draw(){
 						translate((j-4)*120,i*120,-120*k);
 // 		rotateZ(theamplitude*exp(-0.25*pow(thefrequency*runtime,2))*cos(degrees(0.04*thefrequency*(runtime-j*thedelay)))*PI/32);
 		rotateZ(theamplitude*cos(degrees(0.04*thefrequency*runtime-j*thedelay)));
-						lightcone(60,cpovAliceCone);
+						lightcone(60,CPOVALICECone);
 					pop();
 
 				}
@@ -75,7 +75,7 @@ function draw(){
 				for (j = -4; j < 4; j++) {	
 					push();
 						translate(j*120,i*120,-120*k);
-						lightcone(60,cpovAliceCone);
+						lightcone(60,CPOVALICECone);
 					pop();
 				}
 			}	
@@ -87,7 +87,7 @@ function draw(){
 	push();
 		translate(-300, 260,0);
 		rotateZ(-2*PI/3);
-		OmniEye(cpovAlice);
+		OmniEye(CPOVALICE);
 	pop();
  }
 	
@@ -118,7 +118,7 @@ scale(0.2);
 	pop();
 	translate(0,8,0);
 	scale(0.3);
-	ambientMaterial(cBlack);
+	ambientMaterial(CBLACK);
 	model(PoVPupil);
 pop();
 }

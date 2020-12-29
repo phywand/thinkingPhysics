@@ -11,10 +11,10 @@ function preload() {
 }
 function setup(){
   createCanvas(600, 500, WEBGL);
-justWords("Alice whizzes past Bob: notice the rotation of Bob's light cone", "invertedtitle", 20, 10, width-60);
+justplaceWords("Alice whizzes past Bob: notice the rotation of Bob's light cone", "invertedtitle", 20, 10, width-60);
 
 
-	justWords("set Alice's speed", "infoBlock", 20, 190, 110);
+	justplaceWords("set Alice's speed", "infoBlock", 20, 190, 110);
 	
 
 
@@ -31,7 +31,7 @@ justWords("Alice whizzes past Bob: notice the rotation of Bob's light cone", "in
 }
 
 function draw(){
-  background(cWhite);
+  background(CWHITE);
   orbitControl();
   
   var AliceSpeed=AliceSpeedslider.value();
@@ -39,7 +39,7 @@ function draw(){
 
 	push();
 		translate(0, -100,0);
-		lightcone(120,cpovAliceCone);
+		lightcone(120,CPOVALICECone);
 	pop();
 	
 	push();
@@ -54,7 +54,7 @@ function draw(){
 if (showSpeed.checked()){
 push();
 		translate(0, 10,0);
-		velocity3D(AliceSpeed, 90, cpovAlice);
+		showVelocity3D(AliceSpeed, 90, CPOVALICE);
 	pop();
  }
 

@@ -1,4 +1,4 @@
-FileName: RWCEnergyAnalogiesMoney.md
+FileName: RWCenergyAnalogiesMoney.md
 
 WebTitle{Analogies for energy}
 

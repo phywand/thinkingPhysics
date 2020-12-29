@@ -12,37 +12,37 @@ function setup() {
 }
 
 function draw() {
-  background(cpaneBlue);
+  background(CPANEBLUE);
   push();
   translate(120, 280);
-  circuitSeries("bulb");
-  pd(8);
-  current(6);
+  drawCircuitSeries("bulb");
+  showPD(8);
+  showCurrent(6);
   push();
   translate(120, 0);
-  power(5);
+  showPower(5);
   pop();
   push();
-  translate(loopoffset, seriesoffset);
-  pd(4);
-  current(-6);
+  translate(LOOPOFFSET, SERIESOFFSET);
+  showPD(4);
+  showCurrent(-6);
   push();
   translate(120, 0);
-  power(2.5);
+  showPower(2.5);
   pop();
   pop();
   push();
-  translate(loopoffset, -seriesoffset);
-  pd(4);
-  current(-6);
+  translate(LOOPOFFSET, -SERIESOFFSET);
+  showPD(4);
+  showCurrent(-6);
   push();
   translate(120, 0);
-  power(2.5);
+  showPower(2.5);
   pop();
   pop();
   pop();
 
-  titleBold("power, p.d., current with series connections");
+  placeTitleBold("power, p.d., current with series connections");
 }
 
 function keyTyped() {

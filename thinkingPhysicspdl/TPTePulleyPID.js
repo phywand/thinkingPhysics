@@ -12,12 +12,12 @@ function preload() {
 
 function setup() {
   createCanvas(600, 740);
-  sliderHeight = new SliderDivider(40, 220, 100, 15, 0, [0], false);
-  sliderPulleys = new SliderDivider(40, 80, 60, 15, 2, [0.334], false);
+  sliderHeight = new createSliderDivider(40, 220, 100, 15, 0, [0], false);
+  sliderPulleys = new createSliderDivider(40, 80, 60, 15, 2, [0.334], false);
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
 
   sliderHeight.draw();
 
@@ -32,10 +32,10 @@ function draw() {
   pulleysetY(howmanypulleys, heightlifted);
   pop();
 
-  words("choose number\nof ropes to\nshare your load", 70, 90);
-  words("lift the load\nby pulling\nthe rope", 70, 230);
+  placeWords("choose number\nof ropes to\nshare your load", 70, 90);
+  placeWords("lift the load\nby pulling\nthe rope", 70, 230);
 
-  titleBold("Sharing the load with ropes: using pulleys to lift");
+  placeTitleBold("Sharing the load with ropes: using pulleys to lift");
 }
 
 function pulleysetY(numberofpulleys, heightlifted) {
@@ -115,7 +115,7 @@ function pulleysetY(numberofpulleys, heightlifted) {
       rect(0, 0, ropethickness, -90);
       pop();
       translate(0, -40);
-      fill(cideaBrown);
+      fill(CIDEABROWN);
       ellipse(0, 0, 200, 50);
       rectMode(CENTER);
       rect(0, -15, 200, 30);
@@ -148,7 +148,7 @@ function pulleysetY(numberofpulleys, heightlifted) {
       scale(-1, -1);
       translate(74, -85);
       // 		thehand
-      stroke(cdrawTiFo);
+      stroke(cplaceTiFo);
       strokeWeight(1);
       noFill();
 
@@ -603,7 +603,7 @@ function pulleysetY(numberofpulleys, heightlifted) {
       pop();
       pop();
     }
-    pulley(pulleyradius * 2, "D");
+    drawPulley(pulleyradius * 2, "D");
     oldpulleystep = pulleysep + i * pulleyradius * 0.6;
     pulleygap += 2 * pulleystep;
     translate(0, pulleystep);
@@ -616,7 +616,7 @@ function pulleysetY(numberofpulleys, heightlifted) {
   rotate(0);
   for (var i = 0; i < numberofpulleys; i = i + 1) {
     pulleyradius = 15 + i * pulleyincrement;
-    pulley(pulleyradius * 2, "D");
+    drawPulley(pulleyradius * 2, "D");
     translate(0, pulleysep + i * pulleyradius * 0.6);
   }
   pop();
@@ -638,7 +638,7 @@ function keyTyped() {
 }
 
 function thehand() {
-  stroke(cdrawTiFo);
+  stroke(cplaceTiFo);
   strokeWeight(1);
   noFill();
 

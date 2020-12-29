@@ -23,16 +23,16 @@ function preload() {
 function setup() {
   createCanvas(800, 600);
   const yloc = 550;
-  controllers[0] = new controlPuck();
+  controllers[0] = new CreateControlPuck();
   controllers[0].create(sourceLocX, yloc);
-  controllers[1] = new controlStripHorizontal();
+  controllers[1] = new CreateControlStripHorizontal();
   controllers[1].create(waypointLocX, yloc);
-  controllers[2] = new controlPuck();
+  controllers[2] = new CreateControlPuck();
   controllers[2].create(detectorLocX, yloc);
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
   noStroke();
   fill(cdeviceLightGrey);
   rect(20, waypointLocY, 700, 200);
@@ -70,27 +70,27 @@ function draw() {
 
   push();
   translate(sourcelocation.x, sourcelocation.y);
-  transducer(clight, degrees(sourcetowaypoint.heading()));
+  drawTransducer(CLIGHT, degrees(sourcetowaypoint.heading()));
   pop();
 
   push();
   translate(detectorlocation.x, detectorlocation.y);
-  transducer(cBlack, degrees(waypointtodetector.heading()) - 180);
+  drawTransducer(CBLACK, degrees(waypointtodetector.heading()) - 180);
   pop();
 
-  pathC(
+  showPathC(
     sourcelocation.x,
     sourcelocation.y,
     waypointlocation.x,
     waypointlocation.y,
-    cconcyan
+    CCONCYAN
   );
-  pathC(
+  showPathC(
     detectorlocation.x,
     detectorlocation.y,
     waypointlocation.x,
     waypointlocation.y,
-    cconcyan
+    CCONCYAN
   );
 
   var triptime =
@@ -99,10 +99,10 @@ function draw() {
   // the waypoints
   push();
   translate(waypointlocation.x, waypointlocation.y);
-  waypoint(cconcyan);
+  drawWaypoint(CCONCYAN);
   push();
   translate(0, 40);
-  durationpov(triptime, maxtime, cconcyan);
+  showDurationPoV(triptime, maxtime, CCONCYAN);
   pop();
   pop();
 
@@ -111,11 +111,11 @@ function draw() {
   translate(756, waypointLocY + 40);
   strokeWeight(8);
   strokeCap(SQUARE);
-  stroke(cconcyan);
+  stroke(CCONCYAN);
   line(4, 0, 4, -(triptime - 200) * 0.3);
   pop();
 
-  titleBold("Exploring trip times in refraction");
+  placeTitleBold("Exploring trip times in refraction");
 }
 
 function keyTyped() {

@@ -1,4 +1,4 @@
-WebTitle{Energy: battery store to stores of surroundings via bulb(Expansion &ndash; lead me deeper)}
+WebTitle{Energy: battery store to stores of surroundings via drawdrawBulb(Expansion &ndash; lead me deeper)}
 
 StepHeader{Shifting energy in a circuit}
 

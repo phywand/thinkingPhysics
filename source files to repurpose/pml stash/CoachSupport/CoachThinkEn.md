@@ -117,7 +117,7 @@ InsertLinkTL{Selecting and naming stores}{RWCSelectionNamingStores.html}
 
 SpacingLinebreak
 
-InsertLinkTL{The Radiating pathway}{RWCEnergySelectivePathwayRadiating.html}
+InsertLinkTL{The Radiating pathway}{RWCenergySelectivePathwayRadiating.html}
 
 SpacingLinebreak
 
@@ -125,7 +125,7 @@ InsertLinkTL{Energy QuoteThis{sources} or QuoteThis{energy resources}?}{RWCSourc
 
 SpacingLinebreak
 
-InsertLinkTL{Adjectives for energy}{RWCEnergyAdjectives.html}
+InsertLinkTL{Adjectives for energy}{RWCenergyAdjectives.html}
 
 SpacingLinebreak
 
@@ -137,11 +137,11 @@ InsertLinkTL{Avoid mission creep}{RWCAvoidMissionCreep.html}
 
 SpacingLinebreak
 
-InsertLinkTL{Asking precise questions}{RWCEnergyTreeChoices.html}
+InsertLinkTL{Asking precise questions}{RWCenergyTreeChoices.html}
 
 SpacingLinebreak
 
-InsertLinkTL{All about stores}{RWCEnergyStores.html}
+InsertLinkTL{All about stores}{RWCenergyStores.html}
 
 SpacingLinebreak
 

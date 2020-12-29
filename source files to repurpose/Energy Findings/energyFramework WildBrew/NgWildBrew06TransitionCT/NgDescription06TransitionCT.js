@@ -10,14 +10,14 @@ function setup(){
     createCanvas(300, 300);
     noLoop();
     background(cSIDbg);
-    justWords(transitionConceptualTest,"comiccommentL",10, 0,width-40);
+    justplaceWords(transitionConceptualTest,"comiccommentL",10, 0,width-40);
 }
 
 function draw() {
-    pssguide(5,50,166,true);
+    placePSSDroid(5,50,166,true);
     push();
         scale(2.0);
-        transitionStep(width-170,height-170,0);
+        placeTransitionStep(width-170,height-170,0);
     pop();
 }
 

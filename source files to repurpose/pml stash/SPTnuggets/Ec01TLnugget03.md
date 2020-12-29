@@ -10,7 +10,7 @@ RightLines{The circuit starts working as soon as you throw the switch. The charg
 
 StepHeader{When do the charges start to move?}
 
-InsertGraphic{EcLightSwitchIMCP}
+InsertGraphic{ECLIGHTSwitchIMCP}
 
 ThinkHeader{Thinking about the learning}
 

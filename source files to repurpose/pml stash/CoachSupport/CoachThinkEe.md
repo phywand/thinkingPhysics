@@ -108,11 +108,11 @@ InsertLinkTL{Energy QuoteThis{sources} or energy QuoteThis{resources}?}{RWCSourc
 
 SpacingLinebreak
 
-InsertLinkTL{Adjectives for energy}{RWCEnergyAdjectives.html}
+InsertLinkTL{Adjectives for energy}{RWCenergyAdjectives.html}
 
 SpacingLinebreak
 
-InsertLinkTL{All about stores}{RWCEnergyStores.html}
+InsertLinkTL{All about stores}{RWCenergyStores.html}
 
 SpacingLinebreak
 

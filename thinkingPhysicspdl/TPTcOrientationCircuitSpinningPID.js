@@ -11,11 +11,11 @@ function preload() {
 
 function setup() {
   createCanvas(600, 600);
-  spinbutton = new checkButton(418 + 70, 143 + 40 - 114, "rotate", true);
+  spinbutton = new CreateCheckButton(418 + 70, 143 + 40 - 114, "rotate", true);
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
   spinbutton.drawButton();
 
   console.log(spinbutton.buttonisChecked);
@@ -26,10 +26,10 @@ function draw() {
   push();
   translate(300, 300);
   rotate(runtime * 0.01);
-  circuitSimple("bulb");
+  drawCircuitSimple("bulb");
   pop();
 
-  titleBold("Circuit orientation: does it matter?");
+  placeTitleBold("Circuit orientation: does it matter?");
 }
 
 function mouseReleased() {

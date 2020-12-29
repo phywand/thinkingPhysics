@@ -13,9 +13,9 @@ function setup() {
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
 
-  saydroid(
+  placeSayDroid(
     1,
     100,
     160,
@@ -25,7 +25,7 @@ function draw() {
     "R"
   );
 
-  saydroid(
+  placeSayDroid(
     3,
     500,
     200,
@@ -35,7 +35,7 @@ function draw() {
     "L"
   );
 
-  thinkdroid(
+  placeThinkDroid(
     6,
     350,
     320,
@@ -45,7 +45,7 @@ function draw() {
     "L"
   );
 
-  titleBold("Craziness");
+  placeTitleBold("Craziness");
 }
 
 function keyTyped() {

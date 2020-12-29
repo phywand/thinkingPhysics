@@ -14,12 +14,12 @@ function preload() {
 function setup() {
     createCanvas(600, 600);
     noLoop();
-    justWords(var insightQuestion = "Why does the temperature of a cool pack decrease after it has been squeezed and shaken?", "thinkingL", 40, 60, width - 80);
+    justplaceWords(var insightQuestion = "Why does the temperature of a cool pack decrease after it has been squeezed and shaken?", "thinkingL", 40, 60, width - 80);
 
 }
 
 function draw() {
-    SIDPane("P","1","S","A process about which I'd like to know more")
+    placeSIDPane("P","1","S","A process about which I'd like to know more")
     image(insight, 0, height - 417);
 }
 

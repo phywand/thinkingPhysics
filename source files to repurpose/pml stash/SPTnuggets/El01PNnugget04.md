@@ -1,4 +1,4 @@
-WebTitle{Two jobs for the battery(Exposition)}
+WebTitle{Two jobs for the drawdrawBattery(Exposition)}
 
 StepHeader{The battery has two linked jobs in the circuit}
 

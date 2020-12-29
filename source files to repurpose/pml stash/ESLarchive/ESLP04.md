@@ -46,11 +46,11 @@ EEFToolkitCollaborationLink{}
 
 ActivitySynopsis{03}{Consequences and tradeoffs}{20}{teacher demonstration}{https://slowthinkingphysics.net/ESLActivityconsequencestradeoffs.html}{Demonstrate loops with parallel connections and use discussions drawing on the previous experiment to emphasise that there is a trade-off. You don't get QuoteThis{something for nothing} as the battery is running-down more quickly when driving current through two loops.}
 
-EEFFeedbackLink{Draw on what you've noticed about  the students'  thinking during the practical activity to shape the discussion here,  maximising the chances that students are heading off along the QuoteThis{right lines}.}
+EEFplaceFeedbackLink{Draw on what you've noticed about  the students'  thinking during the practical activity to shape the discussion here,  maximising the chances that students are heading off along the QuoteThis{right lines}.}
 
 EEFLanguageScienceLink{Introduce a new thought through actions, then capture that thought in an evocative phrase.}
 
-EEFToolkitFeedbackLink{}
+EEFToolkitplaceFeedbackLink{}
 
 StepHeader{Teacher's thinking}
 

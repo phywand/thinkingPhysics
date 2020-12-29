@@ -34,17 +34,17 @@ function preload() {
 function setup() {
   createCanvas(800, 800);
 
-  valuesbutton = new checkButton(100, 750, "values", false);
+  valuesbutton = new CreateCheckButton(100, 750, "values", false);
 
-  displacementsbutton = new checkButton(203, 750, "displacements", false);
+  displacementsbutton = new CreateCheckButton(203, 750, "displacements", false);
 
-  segmentsbutton = new checkButton(350, 750, "track segments", false);
+  segmentsbutton = new CreateCheckButton(350, 750, "track segments", false);
 
-  backgroundbutton = new checkButton(511, 750, "background", true);
+  backgroundbutton = new CreateCheckButton(511, 750, "background", true);
 
-  animatebutton = new checkButton(646, 750, "step through", false);
+  animatebutton = new CreateCheckButton(646, 750, "step through", false);
 
-  setStep = new SliderDivider(
+  setStep = new createSliderDivider(
     745,
     102,
     600,
@@ -71,7 +71,7 @@ function setup() {
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
   if (backgroundbutton.buttonisChecked) {
     imageMode(CENTER);
     image(thebackground, width / 2, height / 2);
@@ -95,18 +95,18 @@ function draw() {
       (-300 < mouseY - width / 2)
     ) {
       mouseDisplacement.set(mouseX - width / 2, -mouseY + width / 2);
-      meterinteger(mouseDisplacement.mag(), "", 20, 730);
-      meterinteger(degrees(mouseDisplacement.heading()), "", 20, 765);
+      placeMeterInteger(mouseDisplacement.mag(), "", 20, 730);
+      placeMeterInteger(degrees(mouseDisplacement.heading()), "", 20, 765);
       push();
       translate(width / 2, height / 2);
-      displacement(
+      showDisplacement(
         mouseDisplacement.mag() * 0.1,
         -degrees(mouseDisplacement.heading() - PI / 2),
-        cideaGreen
+        CIDEAGREEN
       );
       pop();
     }
-    words(
+    placeWords(
       "an image appears every 60 seconds; one unit on the screen represents 1 metre",
       100,
       740
@@ -116,7 +116,7 @@ function draw() {
   push();
   translate(width / 2, height / 2);
   // 	ellipse(0,0,5,5); origin marker
-  fill(cideaBlue);
+  fill(CIDEABLUE);
   for (let i = 0; i < motionlocations.length * setStep.getValue(); i++) {
     if (i != 0) {
       lastDisplacement.set(displacements[i - 1].x, -displacements[i - 1].y);
@@ -129,7 +129,7 @@ function draw() {
       lastDisplacement.set(0, 0);
     }
     if (segmentsbutton.buttonisChecked) {
-      trackSegment(
+      showTrackSegment(
         lastDisplacement.x,
         lastDisplacement.y,
         displacements[i].x,
@@ -137,10 +137,10 @@ function draw() {
       ); //draws the trackSegments showing track
     }
     if (displacementsbutton.buttonisChecked) {
-      displacement(
+      showDisplacement(
         displacements[i].mag() * 0.1,
         degrees(-displacements[i].heading() + PI / 2),
-        cpovAlice
+        CPOVALICE
       ); //draws displacements
     }
     // 			ellipse(displacements[i].x,-displacements[i].y,8,8);// draws marker
@@ -154,7 +154,7 @@ function draw() {
   }
   pop();
 
-  titleBold("A motion diagram: a dragonfly over a pond");
+  placeTitleBold("A motion diagram: a dragonfly over a pond");
 }
 
 function keyTyped() {

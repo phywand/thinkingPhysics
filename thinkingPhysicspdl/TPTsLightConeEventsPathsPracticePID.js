@@ -11,16 +11,16 @@ function preload() {
 }
 function setup(){
   createCanvas(800, 800, WEBGL);
-justWords("Events and light cones: practice interpreting these representations", "invertedtitle", 20, 10, width-60);
+justplaceWords("Events and light cones: practice interpreting these representations", "invertedtitle", 20, 10, width-60);
 
 
-justWords("set t", "infoBlock", 150, 110, 40);
-justWords("set x", "infoBlock", 150, 150, 30);
-justWords("set y", "infoBlock", 150, 190, 30);
+justplaceWords("set t", "infoBlock", 150, 110, 40);
+justplaceWords("set x", "infoBlock", 150, 150, 30);
+justplaceWords("set y", "infoBlock", 150, 190, 30);
 
-justWords("set t", "infoBlock", 600, 110, 30);
-justWords("set x", "infoBlock", 600, 150, 30);
-justWords("set y", "infoBlock", 600, 190, 30);
+justplaceWords("set t", "infoBlock", 600, 110, 30);
+justplaceWords("set x", "infoBlock", 600, 150, 30);
+justplaceWords("set y", "infoBlock", 600, 190, 30);
 
 	timeStartslider = createSlider(-60,60,20);
 	timeStartslider.position(20, 100);
@@ -58,7 +58,7 @@ justWords("set y", "infoBlock", 600, 190, 30);
 }
 
 function draw(){
-  background(cWhite);
+  background(CWHITE);
   orbitControl();
   
   var eventStarttime=timeStartslider.value();
@@ -70,12 +70,12 @@ function draw(){
   var eventEndx=eventxEndslider.value();
 
 
-lightcone(120,cpovAliceCone);
+lightcone(120,CPOVALICECone);
 
 if (showPath.checked()){
 push();
 		translate((eventStarty+eventEndy)/2, -(eventStarttime+eventEndtime)/2,(eventStartx+eventEndx)/2)
-		fill(cideaGrey);
+		fill(CIDEAGREY);
 		var pathLength =sqrt(sq(eventStarty-eventEndy)+sq(eventStarttime-eventEndtime)+sq(eventStartx-eventEndx))
 		push();
 		rotateY(PI/2+atan2(eventStarty-eventEndy,eventStartx-eventEndx));
@@ -86,11 +86,11 @@ push();
 }
   
 if (showStartevent.checked()){
-	eventmarker(eventStarty,eventStarttime,eventStartx,cideaGreen);
+	eventmarker(eventStarty,eventStarttime,eventStartx,CIDEAGREEN);
  }
  
  if (showEndevent.checked()){
-	eventmarker(eventEndy,eventEndtime,eventEndx,cideaRed);
+	eventmarker(eventEndy,eventEndtime,eventEndx,CIDEARED);
  }
 
 

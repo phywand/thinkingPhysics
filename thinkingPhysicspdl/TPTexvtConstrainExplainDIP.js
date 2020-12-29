@@ -17,11 +17,11 @@ function preload() {
 }
 function setup() {
   createCanvas(800, 500);
-  changeOne = new SliderDivider(40, 280, 100, 15, 3, [0.5], false);
-  changeTwo = new SliderDivider(240, 280, 100, 15, 3, [0.5], false);
-  startOverbutton = new controlButton(448, 281, 80, 30);
+  changeOne = new createSliderDivider(40, 280, 100, 15, 3, [0.5], false);
+  changeTwo = new createSliderDivider(240, 280, 100, 15, 3, [0.5], false);
+  startOverbutton = new CreateControlButton(448, 281, 80, 30);
 
-  justWords(
+  justplaceWords(
     "comparing snapshots before or after a change: SpacingLinebreak EqualityAssertion{QuantitySymbol{x}}{QuantitySymbol{v} SymbolMultipliedby QuantitySymbol{t}} SpacingLinebreak as duration or velocity are varied: ",
     "thinkingL",
     546 + 22,
@@ -31,9 +31,9 @@ function setup() {
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
   startOverbutton.drawButton();
-  words("start again", 452, 301);
+  placeWords("start again", 452, 301);
   changeOne.draw();
   changeTwo.draw();
 
@@ -71,25 +71,25 @@ function draw() {
 
   // set the display here
 
-  titleBold("displacement, velocity and duration are constrained");
+  placeTitleBold("displacement, velocity and duration are constrained");
 
-  words("increase\nvelocity", 70, 290);
-  words("decrease\nvelocity", 70, 360);
+  placeWords("increase\nvelocity", 70, 290);
+  placeWords("decrease\nvelocity", 70, 360);
 
-  words("increase\nduration", 270, 290);
-  words("decrease\nduration	", 270, 360);
+  placeWords("increase\nduration", 270, 290);
+  placeWords("decrease\nduration	", 270, 360);
   push();
   translate(300, 80);
-  velocity(quantityB * 3, 90, ccongray);
+  showVelocity(quantityB * 3, 90, CCONGRAY);
   translate(0, 50);
-  displacement(quantityA * 2, 90, cideaBlue);
+  showDisplacement(quantityA * 2, 90, CIDEABLUE);
   translate(0, 50);
-  duration(quantityC * 8, 90);
+  showDuration(quantityC * 8, 90);
   pop();
 
   push();
   translate(546, 430);
-  drawGirl3();
+  placeGirl3();
   pop();
 
   //    do not change below here

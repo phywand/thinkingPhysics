@@ -50,14 +50,14 @@ function setup() {
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
 
   var velcy1 = createVector(0, 0);
   var velcy2 = createVector(0, 0);
   var velcy3 = createVector(0, 0);
   var velcy4 = createVector(0, 0);
 
-  stroke(cideaGrey);
+  stroke(CIDEAGREY);
   strokeWeight(0.5);
 
   line(v0location, 80, v0location, height - 30);
@@ -77,7 +77,7 @@ function draw() {
     2 * controlBarrier + pucksize,
     5
   );
-  fill(cWhite);
+  fill(CWHITE);
   if (
     dist(dragvelcy0PuckX, dragvelcy0PuckY, mouseX, mouseY) < pucksize / 2 &&
     mouseIsPressed
@@ -124,7 +124,7 @@ function draw() {
     2 * controlBarrier + pucksize,
     5
   );
-  fill(cWhite);
+  fill(CWHITE);
   if (
     dist(dragaccln01PuckX, dragaccln01PuckY, mouseX, mouseY) < pucksize / 2 &&
     mouseIsPressed
@@ -171,7 +171,7 @@ function draw() {
     2 * controlBarrier + pucksize,
     5
   );
-  fill(cWhite);
+  fill(CWHITE);
   if (
     dist(dragaccln12PuckX, dragaccln12PuckY, mouseX, mouseY) < pucksize / 2 &&
     mouseIsPressed
@@ -218,7 +218,7 @@ function draw() {
     2 * controlBarrier + pucksize,
     5
   );
-  fill(cWhite);
+  fill(CWHITE);
   if (
     dist(dragaccln23PuckX, dragaccln23PuckY, mouseX, mouseY) < pucksize / 2 &&
     mouseIsPressed
@@ -265,7 +265,7 @@ function draw() {
     2 * controlBarrier + pucksize,
     5
   );
-  fill(cWhite);
+  fill(CWHITE);
   if (
     dist(dragaccln34PuckX, dragaccln34PuckY, mouseX, mouseY) < pucksize / 2 &&
     mouseIsPressed
@@ -313,80 +313,80 @@ function draw() {
 
   push();
   translate(a01location, heightdisplaya);
-  acceleration(
+  showAcceleration(
     accln01.mag(),
     degrees(-accln01.heading() + PI / 2),
-    cacceleration
+    CACCELERATION
   );
   pop();
 
   push();
   translate(a12location, heightdisplaya);
-  acceleration(
+  showAcceleration(
     accln12.mag(),
     degrees(-accln12.heading() + PI / 2),
-    cacceleration
+    CACCELERATION
   );
   pop();
 
   push();
   translate(a23location, heightdisplaya);
-  acceleration(
+  showAcceleration(
     accln23.mag(),
     degrees(-accln23.heading() + PI / 2),
-    cacceleration
+    CACCELERATION
   );
   pop();
 
   push();
   translate(a34location, heightdisplaya);
-  acceleration(
+  showAcceleration(
     accln34.mag(),
     degrees(-accln34.heading() + PI / 2),
-    cacceleration
+    CACCELERATION
   );
   pop();
 
   push();
   translate(v0location, heightdisplayv);
-  velocity(velcy0.mag(), degrees(-velcy0.heading() + PI / 2), cideaGreen);
+  showVelocity(velcy0.mag(), degrees(-velcy0.heading() + PI / 2), CIDEAGREEN);
   pop();
 
   push();
   translate(v1location, heightdisplayv);
-  velocity(velcy1.mag(), degrees(-velcy1.heading() + PI / 2), cideaGreen);
+  showVelocity(velcy1.mag(), degrees(-velcy1.heading() + PI / 2), CIDEAGREEN);
   pop();
 
   push();
   translate(v2location, heightdisplayv);
-  velocity(velcy2.mag(), degrees(-velcy2.heading() + PI / 2), cideaGreen);
+  showVelocity(velcy2.mag(), degrees(-velcy2.heading() + PI / 2), CIDEAGREEN);
   pop();
 
   push();
   translate(v3location, heightdisplayv);
-  velocity(velcy3.mag(), degrees(-velcy3.heading() + PI / 2), cideaGreen);
+  showVelocity(velcy3.mag(), degrees(-velcy3.heading() + PI / 2), CIDEAGREEN);
   pop();
 
   push();
   translate(v4location, heightdisplayv);
-  velocity(velcy4.mag(), degrees(-velcy4.heading() + PI / 2), cideaGreen);
+  showVelocity(velcy4.mag(), degrees(-velcy4.heading() + PI / 2), CIDEAGREEN);
   pop();
 
-  words("set\ninitial\nvelocity", v0location + 50, 188);
-  words("set\nthe accelerations\nfor each interval", a34location + 100, 88);
-  words("t=0", v0location - 11, height - 20);
-  words("t=1", v1location - 11, height - 20);
-  words("t=2", v2location - 11, height - 20);
-  words("t=3", v3location - 11, height - 20);
-  words("t=4", v4location - 11, height - 20);
-  words("velocity\nat\nthis\ntime", v4location + 95, heightdisplayv);
-  words(
+  placeWords("set\ninitial\nvelocity", v0location + 50, 188);
+  placeWords("set\nthe accelerations\nfor each interval", a34location + 100, 88);
+  placeWords("t=0", v0location - 11, height - 20);
+  placeWords("t=1", v1location - 11, height - 20);
+  placeWords("t=2", v2location - 11, height - 20);
+  placeWords("t=3", v3location - 11, height - 20);
+  placeWords("t=4", v4location - 11, height - 20);
+  placeWords("velocity\nat\nthis\ntime", v4location + 95, heightdisplayv);
+  placeWords(
     "acceleration\nduring\nthis\ninterval",
     a34location + 95,
     heightdisplaya
   );
 
-  titleBold("Acceleration accumulates velocity, interval by interval");
+  placeTitleBold("Acceleration accumulates velocity, interval by interval");
 }
 
 function keyTyped() {

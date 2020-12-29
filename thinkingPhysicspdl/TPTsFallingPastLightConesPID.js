@@ -12,11 +12,11 @@ function preload() {
 }
 function setup(){
   createCanvas(800, 800, WEBGL);
-justWords("Alice falls past two stationary Bobs: notice the rotation of Bob's light cones", "invertedtitle", 20, 10, width-60);
+justplaceWords("Alice falls past two stationary Bobs: notice the rotation of Bob's light cones", "invertedtitle", 20, 10, width-60);
 
 
-	justWords("set Alice's speed", "infoBlock", 20, 190, 110);
-	justWords("set the increase in speed", "infoBlock", 20, 190+snapshotOffset, 110);
+	justplaceWords("set Alice's speed", "infoBlock", 20, 190, 110);
+	justplaceWords("set the increase in speed", "infoBlock", 20, 190+snapshotOffset, 110);
 
 
 	startSpeedslider = createSlider(0,8,5);
@@ -42,7 +42,7 @@ justWords("Alice falls past two stationary Bobs: notice the rotation of Bob's li
 }
 
 function draw(){
-  background(cWhite);
+  background(CWHITE);
   orbitControl();
   
   var startSpeed=startSpeedslider.value();
@@ -51,9 +51,9 @@ function draw(){
 
 	push();
 		translate(-80, -238,0);
-		lightcone(120,cpovAliceCone);
+		lightcone(120,CPOVALICECone);
 		translate(0, snapshotOffset,0);
-		lightcone(120,cpovAliceCone);
+		lightcone(120,CPOVALICECone);
 	pop();
 	
 	push();
@@ -75,16 +75,16 @@ function draw(){
 if (showSpeed.checked()){
 push();
 		translate(-180, -238,0);
-		velocity3D(startSpeed, 180, cpovAlice);
+		showVelocity3D(startSpeed, 180, CPOVALICE);
 		translate(0,snapshotOffset,0);
-		velocity3D(startSpeed+incrementSpeed, 180, cpovAlice);
+		showVelocity3D(startSpeed+incrementSpeed, 180, CPOVALICE);
 	pop();
  }
  
  if (showAcceleration.checked()){
 push();
 		translate(-180, -238+snapshotOffset/2,0);
-		acceleration3D(incrementSpeed, 180, cacceleration);
+		showAcceleration3D(incrementSpeed, 180, CACCELERATION);
 		
 	pop();
  }

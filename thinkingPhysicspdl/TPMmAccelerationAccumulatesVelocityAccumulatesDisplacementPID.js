@@ -18,17 +18,17 @@ function preload() {
 }
 function setup() {
   createCanvas(800, 600);
-  controlbutton = new controlButton(20, 550, 60, 30);
-  fluentSet = new controlStripVertical();
+  controlbutton = new CreateControlButton(20, 550, 60, 30);
+  fluentSet = new CreateControlStripVertical();
   fluentSet.create(locX - 50 + 140 * 2, locY + 80 * 2);
-  fluxionSet = new controlStripVertical();
+  fluxionSet = new CreateControlStripVertical();
   fluxionSet.create(locX - 50, locY);
-  fluxionfluentSet = new controlStripVertical();
+  fluxionfluentSet = new CreateControlStripVertical();
   fluxionfluentSet.create(locX - 50 + 140, locY + 80);
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
 
   fluxionvalue = fluxionSet.getValues().ySet * 2;
 
@@ -43,7 +43,7 @@ function draw() {
   switch (stateof) {
     case 0:
       //            ready to go
-      words("go", 28, height - 32);
+      placeWords("go", 28, height - 32);
       var initialfluent = fluentSet.getValues().ySet * 20;
       var initialfluxionfluent = fluxionfluentSet.getValues().ySet * 2;
       runtime = 0;
@@ -52,7 +52,7 @@ function draw() {
       break;
     case 1:
       //            running
-      words("pause", 28, height - 32);
+      placeWords("pause", 28, height - 32);
       runtime++;
       predictfluxionfluentFluent();
       // fluxionfluent+=(accumulation2Factor/15)*(fluxion/5);
@@ -60,31 +60,31 @@ function draw() {
       break;
     case 2:
       //            paused
-      words("reset", 28, height - 32);
+      placeWords("reset", 28, height - 32);
       break;
   }
 
   push();
   translate(locX, locY);
-  indicator(fluxion(fluent, fluxionfluent) * 30, cindicator, "", "");
-  accumulator(7);
-  accumulatelink();
-  indicator(fluxionfluent, cindicator, "", "");
-  accumulator(7);
-  accumulatelink();
-  indicator(fluent, cindicator, "", "");
+  placeIndicator(fluxion(fluent, fluxionfluent) * 30, cindicator, "", "");
+  placeAcumulator(7);
+  PlaceAccumulateLink();
+  placeIndicator(fluxionfluent, cindicator, "", "");
+  placeAcumulator(7);
+  PlaceAccumulateLink();
+  placeIndicator(fluent, cindicator, "", "");
   pop();
 
   push();
   translate(400, 200);
-  acceleration(fluxion(fluent, fluxionfluent) * 10, 90, cacceleration);
+  showAcceleration(fluxion(fluent, fluxionfluent) * 10, 90, CACCELERATION);
   translate(0, 50);
-  velocity(fluxionfluent * 5, 90, ccongreen);
+  showVelocity(fluxionfluent * 5, 90, CCONGREEN);
   translate(0, 50);
-  displacement(fluent, 90, cconorange);
+  showDisplacement(fluent, 90, CCONORANGE);
   pop();
 
-  titleBold("Accumulation, acceleration, velocity and displacement");
+  placeTitleBold("Accumulation, acceleration, velocity and displacement");
 }
 
 function fluxion(x, v) {

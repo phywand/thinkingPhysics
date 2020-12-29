@@ -29,7 +29,7 @@ function setup(){
 
 
 function draw() {
-    background(cWhite);
+    background(CWHITE);
     
 
      
@@ -60,10 +60,10 @@ function draw() {
     
     push();
     translate(200,170);
-    PoV("AliceRight");
+    drawPoV("AliceRight");
 		push();
 		translate(50, 60);
-			fill(cpovAlice);
+			fill(CPOVALICE);
 			noStroke();
 			rect(0, 0, 100, 10);
 			rect(0, -mirrorSeparationAlice, 100, 10);
@@ -73,7 +73,7 @@ function draw() {
     
    
 
-  titleBold("Alice and her light clock");  
+  placeTitleBold("Alice and her light clock");  
 }
 
 

@@ -38,7 +38,7 @@ function setup(){
 
 
 function draw() {
-    background(cWhite);
+    background(CWHITE);
     
     
     var mirrorSeparationAlice = 60+0.7*100;
@@ -52,7 +52,7 @@ function draw() {
 //            ready to go
             controlbutton.html("run");
             BobspeedSet.draw();
-            words("set\nBob's\nvelocity\nas seen\nby Alice",126,494);
+            placeWords("set\nBob's\nvelocity\nas seen\nby Alice",126,494);
             resetVariables();
             break;
         case 1:
@@ -86,10 +86,10 @@ function draw() {
     
     push();
     translate(45,170);
-    PoV("AliceRight");
+    drawPoV("AliceRight");
 		push();
 		translate(50, 60);
-			fill(cpovAlice);
+			fill(CPOVALICE);
 			noStroke();
 			rect(0, 0, 100, 10);
 			rect(0, -mirrorSeparationAlice, 100, 10);
@@ -99,10 +99,10 @@ function draw() {
     
     push();
     translate(245+BobLocation,170+clockoffset);
-    PoV("BobRight");
+    drawPoV("BobRight");
 		push();
 		translate(50, 60);
-			fill(cpovBob);
+			fill(CPOVBOB);
 			noStroke();
 			rect(0, 0, 100, 10);
 			rect(0, -mirrorSeparationBob, 100, 10);
@@ -114,9 +114,9 @@ function draw() {
 if (Aliceview.checked()){
 	push();
 		translate(245+100,170+60);
-		words("Alice clock", -100, 20);
-		words("Bob clock", 0, 20);
-		stroke(cpovAlice);
+		placeWords("Alice clock", -100, 20);
+		placeWords("Bob clock", 0, 20);
+		stroke(CPOVALICE);
 		strokeWeight(2);
 		line(-100, 0, -100, -120);
 		var BobFactor = 1/sqrt(pow(lightSpeed,2)-pow(BobSpeed,2));
@@ -131,7 +131,7 @@ if (Aliceview.checked()){
 		line(760*BobFactor,-120,820*BobFactor,-70);
 	pop();
 }
-  titleBold("The path of the light in Bob's clock, according to Alice");  
+  placeTitleBold("The path of the light in Bob's clock, according to Alice");  
 }
 
 function mousePressed(){

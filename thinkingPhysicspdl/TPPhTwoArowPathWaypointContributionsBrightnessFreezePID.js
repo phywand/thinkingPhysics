@@ -25,13 +25,13 @@ var detectorlocationadjusted = "";
 const maxtime = 1000;
 const yloc = 500;
 const contribcolours = [
-  ccongreen,
-  cconpink,
-  cconorange,
-  cconlightgreen,
-  ccongray,
-  cconpurple,
-  cconcyan,
+  CCONGREEN,
+  CCONPINK,
+  CCONORANGE,
+  CCONLIGHTGREEN,
+  CCONGRAY,
+  CCONPURPLE,
+  CCONCYAN,
 ];
 const sfTriptimes = 40;
 
@@ -43,9 +43,9 @@ function preload() {
 function setup() {
   createCanvas(800, 650);
 
-  SDcontrollers[0] = new controlPuck();
+  SDcontrollers[0] = new CreateControlPuck();
   SDcontrollers[0].create(sourceinitialLoc[0], yloc);
-  SDcontrollers[1] = new controlPuck();
+  SDcontrollers[1] = new CreateControlPuck();
   SDcontrollers[1].create(detectorinitialLoc[0], yloc);
 
   sourcelocation = createVector(sourceinitialLoc[0], sourceinitialLoc[1]);
@@ -60,7 +60,7 @@ function setup() {
   );
 
   for (let i = 0; i < numberWaypoints; i++) {
-    WPcontrollers[i] = new controlPuck();
+    WPcontrollers[i] = new CreateControlPuck();
     const WPinitialLocx = 300 + i * 150;
     const WPinitialLocy = 300;
     WPcontrollers[i].create(WPinitialLocx, yloc);
@@ -70,11 +70,11 @@ function setup() {
     sourcetowaypoints[i] = createVector(0, 0);
     waypointstodetector[i] = createVector(0, 0);
   }
-  spinbutton = new checkButton(592 + 46, 60, "freeze spinning", false);
+  spinbutton = new CreateCheckButton(592 + 46, 60, "freeze spinning", false);
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
 
   var sourceangle = 0;
   var detectorangle = 0;
@@ -103,17 +103,17 @@ function draw() {
 
     push();
     translate(waypointlocations[i].x, waypointlocations[i].y);
-    waypoint(contribcolours[i]);
+    drawWaypoint(contribcolours[i]);
     pop();
 
-    pathC(
+    showPathC(
       sourcelocation.x,
       sourcelocation.y,
       waypointlocations[i].x,
       waypointlocations[i].y,
       contribcolours[i]
     );
-    pathC(
+    showPathC(
       detectorlocation.x,
       detectorlocation.y,
       waypointlocations[i].x,
@@ -126,7 +126,7 @@ function draw() {
     triptimes[i] = sourcetowaypoints[i].mag() + waypointstodetector[i].mag();
     push();
     translate(300 + i * 150, 620);
-    durationpov(triptimes[i], maxtime, contribcolours[i]);
+    showDurationPoV(triptimes[i], maxtime, contribcolours[i]);
     pop();
     sourcetowaypoints[i].mult(-1);
     sourceangle += sourcetowaypoints[i].heading();
@@ -136,27 +136,27 @@ function draw() {
   }
   push();
   translate(sourcelocation.x, sourcelocation.y);
-  phasorArrow(4, 0.08, timeoclock, cdeviceGrey);
+  showPhasorArrow(4, 0.08, timeoclock, cdeviceGrey);
   push();
   rotate(PI);
-  transducer(clight, degrees(sourceangle - PI));
+  drawTransducer(CLIGHT, degrees(sourceangle - PI));
   translate(abs(10 * sin(degrees(sourceangle - PI))), 0);
   pop();
   pop();
 
   push();
   translate(detectorlocation.x, detectorlocation.y);
-  transducer(cideaGrey, degrees(detectorangle - PI));
+  drawTransducer(CIDEAGREY, degrees(detectorangle - PI));
   pop();
 
-  words("source\nlocation", sourceinitialLoc[0] - 38, yloc + 60);
-  words("detector\nlocation", detectorinitialLoc[0] - 38, yloc + 60);
-  words("green\nwaypoint", 260, yloc + 60);
-  words("pink\nwaypoint", 260 + 150, yloc + 60);
+  placeWords("source\nlocation", sourceinitialLoc[0] - 38, yloc + 60);
+  placeWords("detector\nlocation", detectorinitialLoc[0] - 38, yloc + 60);
+  placeWords("green\nwaypoint", 260, yloc + 60);
+  placeWords("pink\nwaypoint", 260 + 150, yloc + 60);
 
   push();
   translate(detectorlocation.x, detectorlocation.y);
-  phasormultipleresultantbrightness(4, 0.08, [
+  showPhasorMultipleResultantBrightness(4, 0.08, [
     [timeoclock - triptimes[0], contribcolours[0]],
     [timeoclock - triptimes[1], contribcolours[1]],
   ]);
@@ -166,7 +166,7 @@ function draw() {
     timeoclock++;
   }
 
-  titleBold(
+  placeTitleBold(
     "Two paths, defined by two waypoints, contributions, resultant and brightness"
   );
 }

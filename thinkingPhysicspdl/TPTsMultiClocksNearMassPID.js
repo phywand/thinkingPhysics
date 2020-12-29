@@ -34,10 +34,10 @@ function setup(){
 
 
 function draw() {
-    background(cWhite);
+    background(CWHITE);
     
-    words("furthest from the mass", 400, 170);
-    words("closest to the mass", 400, 570);
+    placeWords("furthest from the mass", 400, 170);
+    placeWords("closest to the mass", 400, 570);
     
 
      
@@ -82,30 +82,30 @@ function draw() {
     
     push();
     translate(160,170);
-    PoV("AliceRight");
+    drawPoV("AliceRight");
 		push();
 		translate(50, 60);
-			fill(cpovAlice);
+			fill(CPOVALICE);
 			noStroke();
 			rect(0, 0, 100, 10);
 			rect(0, -mirrorSeparation, 100, 10);
 			ellipse(50, pulseLocationAlice, 5, 5);
 		pop();
     translate(0,clockoffset);
-    PoV("BobRight");
+    drawPoV("BobRight");
 		push();
 		translate(50, 60);
-			fill(cpovBob);
+			fill(CPOVBOB);
 			noStroke();
 			rect(0, 0, 100, 10);
 			rect(0, -mirrorSeparation, 100, 10);
 			ellipse(50, pulseLocationBob, 5, 5);
 		pop();
 	translate(0,clockoffset);
-    PoV("CharlieRight");
+    drawPoV("CharlieRight");
 		push();
 		translate(50, 60);
-			fill(cpovCharlie);
+			fill(CPOVCHARLIE);
 			noStroke();
 			rect(0, 0, 100, 10);
 			rect(0, -mirrorSeparation, 100, 10);
@@ -114,7 +114,7 @@ function draw() {
     
    
 
-  titleBold("Three light clocks, closer and closer to a gravitating mass");  
+  placeTitleBold("Three light clocks, closer and closer to a gravitating mass");  
 }
 
 

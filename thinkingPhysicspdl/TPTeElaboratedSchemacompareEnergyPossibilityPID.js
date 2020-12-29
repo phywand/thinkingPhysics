@@ -10,8 +10,8 @@ function preload() {
 function setup() {
   createCanvas(800, 620);
 
-  stepsbutton = new checkButton(18, height - 50, "step numbers", false);
-  feedbackbutton = new checkButton(
+  stepsbutton = new CreateCheckButton(18, height - 50, "step numbers", false);
+  feedbackbutton = new CreateCheckButton(
     159,
     height - 50,
     "relate insight to enquiry",
@@ -23,7 +23,7 @@ function draw() {
   background(cdeviceLightGrey);
   stepsbutton.drawButton();
   feedbackbutton.drawButton();
-  advicedroid(
+  placeAdviceDroid(
     668,
     196,
     "describe process and your interest in it\nwell enough to motivate calculations",
@@ -31,14 +31,14 @@ function draw() {
     90
   );
 
-  physicalPane(118, 130, 150, 110);
-  physicalPane(143, 310, 200, 110);
-  conceptualPane(143, 490, 200, 110);
-  physicalPane(388, 490, 150, 110);
+  placePhysicalPane(118, 130, 150, 110);
+  placePhysicalPane(143, 310, 200, 110);
+  placeConceptualPane(143, 490, 200, 110);
+  placePhysicalPane(388, 490, 150, 110);
 
-  transitionStep(118, 220, 90);
-  transitionRedescribe(118, 400, 90);
-  transitionStep(278, 490, 0);
+  placeTransitionStep(118, 220, 90);
+  placeTransitionRedescribe(118, 400, 90);
+  placeTransitionStep(278, 490, 0);
 
   //     step actions
   if (stepsbutton.buttonisChecked) {
@@ -47,41 +47,41 @@ function draw() {
     paneNumber("03", "C", 118, 490);
     paneNumber("04", "P", 388, 490);
   } else {
-    words("set context: is the\nprocess described\npossible or not?", 53, 100);
-    words(
+    placeWords("set context: is the\nprocess described\npossible or not?", 53, 100);
+    placeWords(
       "describe process,\ncharacterise snapshots\nand identify quantities\nto enable calculations",
       53,
       280
     );
-    words("calculate the change in\nenergy, twice", 53, 460);
-    words(
+    placeWords("calculate the change in\nenergy, twice", 53, 460);
+    placeWords(
       "compare these two\nenergy changes\nto decide if the\nprocess is possible",
       323,
       460
     );
     push();
     translate(75, 529);
-    energy(3);
+    showEnergy(3);
     translate(138, 0);
-    energy(2);
+    showEnergy(2);
     pop();
   }
 
   if (feedbackbutton.buttonisChecked && !stepsbutton.buttonisChecked) {
-    linkBarRight(460, 490, 80, cWhite);
-    linkBarUp(540, 490, 360, cWhite);
-    linkArrowLeft(540, 130, 345, cWhite);
-    advicedroid(
+    placeLinkBarRight(460, 490, 80, CWHITE);
+    placeLinkBarUp(540, 490, 360, CWHITE);
+    placeLinkArrowLeft(540, 130, 345, CWHITE);
+    placeAdviceDroid(
       668,
       390,
       "relate step04 to step01\nto check for insight",
       170,
       90
     );
-    linkArrowRight(95, 520, 99, cWhite);
-    words(">=?", 111, 524);
+    placeLinkArrowRight(95, 520, 99, CWHITE);
+    placeWords(">=?", 111, 524);
   }
-  titleBold(
+  placeTitleBold(
     "Compare energies to explore possibilities (elaborated schema for energy descriptions)"
   );
 }

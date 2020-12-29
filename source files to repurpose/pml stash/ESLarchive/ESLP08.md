@@ -38,7 +38,7 @@ ActivitySynopsis{02}{Two loop safety}{25}{teacher demonstration}{https://spark.i
 
 EEFModellingLink{Show how physical understanding can guide design and action in the lived-in world.}
 
-EEFToolkitFeedbackLink{}
+EEFToolkitplaceFeedbackLink{}
 
 ActivitySynopsis{03}{Trade-offs and power in loops}{10}{teacher-led discussion}{https://slowthinkingphysics.net/ESLActivitytradeoffspowerloops.html}{Considers how you can control power in loops and the consequences for mains circuits.}
 
@@ -50,7 +50,7 @@ ActivitySynopsis{04}{Wrapping up the loops}{10}{teacher-led discussion}{https://
 
 EEFSelfRegulationLink{Review the modelling process through the whole series of lessons to provide a template against which other future pieces of learning can be self-managed.}
 
-EEFToolkitFeedbackLink{}
+EEFToolkitplaceFeedbackLink{}
 
 StepHeader{Teacher's thinking}
 

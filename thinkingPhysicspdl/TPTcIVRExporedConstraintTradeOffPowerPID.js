@@ -8,14 +8,14 @@ function preload() {
 }
 function setup() {
   createCanvas(600, 600);
-  exploreIV = new exploreRelationshipGraph();
+  exploreIV = new CreateExploreRelationshipGraph();
   exploreIV.create(60, 400, 200, 1, "current / A", "pd / V");
   exploreIV.setLabels();
-  setR = new SliderDivider(19, 460, 80, 15, 0, [0.3], false);
-  boxesbutton = new checkButton(473, 320 - 63, "trade-off", false);
+  setR = new createSliderDivider(19, 460, 80, 15, 0, [0.3], false);
+  boxesbutton = new CreateCheckButton(473, 320 - 63, "trade-off", false);
 }
 function draw() {
-  background(cWhite);
+  background(CWHITE);
   exploreIV.draw();
   // 	var R = .4;
   var R = (setR.getValue() + 1) * 8;
@@ -27,16 +27,16 @@ function draw() {
 
   push();
   translate(40, 180);
-  circuitSimple("bulb");
-  pd(V * 10);
-  translate(loopoffset, 0);
-  current(I * 10);
-  resistance(R * 0.7);
+  drawCircuitSimple("bulb");
+  showPD(V * 10);
+  translate(LOOPOFFSET, 0);
+  showCurrent(I * 10);
+  showResistance(R * 0.7);
   translate(60, 0);
-  power(I * V * 10);
+  showPower(I * V * 10);
   pop();
-  words("set the\nresistance", 160 - 111, 390 + 80);
-  fractionCBAWrite(
+  placeWords("set the\nresistance", 160 - 111, 390 + 80);
+  placeFractionCBAWrite(
     "current",
     "potential difference",
     "resistance",
@@ -45,17 +45,17 @@ function draw() {
   );
 
   if (boxesbutton.buttonisChecked) {
-    tradeOff(
+    drawTradeOff(
       580,
       280 - 63,
       -8 * I * 20,
       V * 50,
-      ccurrent,
-      cpotentialdifference
+      CCURRENT,
+      CPOTENTIALDIFFERENCE
     );
   }
 
-  titleBold("pd and current are constrained");
+  placeTitleBold("pd and current are constrained");
 }
 
 function mousePressed() {

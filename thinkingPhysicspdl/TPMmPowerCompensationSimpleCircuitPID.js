@@ -15,9 +15,9 @@ function preload() {
 
 function setup() {
   createCanvas(600, 340);
-  magnitudes[0] = new controlPuck();
+  magnitudes[0] = new CreateControlPuck();
   magnitudes[0].create(locpucks[0], locpucks[1]);
-  boxesbutton = new checkButton(
+  boxesbutton = new CreateCheckButton(
     locpucks[0] + tradeOffOffset,
     374 - 81,
     "trade-off",
@@ -26,41 +26,41 @@ function setup() {
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
 
   values[0] = createVector(
     magnitudes[0].getValues().xSet,
     magnitudes[0].getValues().ySet
   ).mult(scaleFactor);
 
-  words("set quantities", locpucks[0] - 40, locpucks[1] - 45);
-  words("current", locpucks[0], locpucks[1] + 61);
-  words("pd", locpucks[0] + 50, locpucks[1]);
+  placeWords("set quantities", locpucks[0] - 40, locpucks[1] - 45);
+  placeWords("current", locpucks[0], locpucks[1] + 61);
+  placeWords("pd", locpucks[0] + 50, locpucks[1]);
   boxesbutton.drawButton();
 
   push();
   translate(100 - 65, 250 - 65);
-  circuitSimple("bulb");
+  drawCircuitSimple("bulb");
   pop();
 
   push();
   translate(350 + 36 - 62, 130 + 80 - 24);
   scale(1.2);
-  power((values[0].x * values[0].y) / 1500);
+  showPower((values[0].x * values[0].y) / 1500);
   pop();
 
   if (boxesbutton.buttonisChecked) {
-    tradeOff(
+    drawTradeOff(
       locpucks[0] + tradeOffOffset,
       locpucks[1],
       values[0].x,
       values[0].y,
-      ccurrent,
-      cpotentialdifference
+      CCURRENT,
+      CPOTENTIALDIFFERENCE
     );
   }
 
-  titleBold("Calculating the power: compensation in action");
+  placeTitleBold("Calculating the power: compensation in action");
 }
 
 function mouseReleased() {

@@ -14,7 +14,7 @@ function preload() {
 function setup() {
   createCanvas(880, 400);
   //     noLoop();
-  justWords(
+  justplaceWords(
     "rope loop SymbolArrowright electrical loop SpacingParabreak force of QuoteThis{battery hand} SymbolArrowright potential difference or voltage SpacingParabreak grab of QuoteThis{resistor hand}  SymbolArrowright electrical resistance SpacingParabreakthe flow of rope SymbolArrowright electrical current SpacingParabreakFractionABC{flow}{pull}{grab} SymbolArrowright FractionABC{current}{voltage}{resistance}",
     "topthinkingL",
     20,
@@ -24,16 +24,16 @@ function setup() {
 }
 
 function draw() {
-  background(cWhite);
+  background(CWHITE);
 
-  ropeloop(464, 314, 120, 213, cideaBlue, lastposition);
+  drawRopeLoop(464, 314, 120, 213, CIDEABLUE, lastposition);
 
   push();
   translate(620, 207);
-  circuitSimple("bulb");
+  drawCircuitSimple("bulb");
   pop();
 
-  titleBold(
+  placeTitleBold(
     "Mapping physical quantities and relationships from rope loop to electrical loop"
   );
   runtime++;

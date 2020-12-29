@@ -17,11 +17,11 @@ function setup(){
 }
 
 function draw() {
-    pssguide(11,10,190,false);
-    justWords(transitionInsightPhysical,"comiccommentL",10, 0,width-40);
+    placePSSDroid(11,10,190,false);
+    justplaceWords(transitionInsightPhysical,"comiccommentL",10, 0,width-40);
     push();
         scale(2.0);
-        transitionStep(width-170,height-170,0);
+        placeTransitionStep(width-170,height-170,0);
     pop();
 }
 
