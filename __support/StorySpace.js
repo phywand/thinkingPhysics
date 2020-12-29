@@ -16,7 +16,7 @@
         this.overviewProperties.scale=overview_properties.overview_data_scale;
         this.overviewProperties.ease=overview_properties.overview_data_ease;
         var that=this;
-        var link=this.getURLParameter("file");
+        var link=this.getURLParaplaceMeter("file");
         var reqObj=new XMLHttpRequest();
         reqObj.open("GET",link,false);
         reqObj.onload=function()

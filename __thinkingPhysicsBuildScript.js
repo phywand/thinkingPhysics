@@ -33,7 +33,7 @@ fs.writeFileSync(errorfilename, parseErrors.join("\n"));
 var inputPath = "/Users/ian/_repo/thinkingPhysics/thinkingPhysicspdl";
 
 var thisFrame =
-  '<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>XXX</title>\n\t\t<link rel="stylesheet" type="text/css" href="../__support/PDLTP.css">\n\t\t<script src="../__support/p5.min.js"></script>\n\t\t<script src="../__support/p5.dom.min.js"></script>\n\t\t<script src="../__support/p5.scribble.js"></script>\n\t\t<script src="../__support/pdlEnvironment.js"></script>\n\t\t<script src="YYY.js"></script>\n\t\t<style>\n\t\thtml, body {margin: 0; height: 100%; overflow: hidden}\n\t</style>\n</head>\n\t<body>\n\t</body>\n</html>';
+  '<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>XXX</title>\n\t\t<link rel="stylesheet" type="text/css" href="../__support/PDLTP.css">\n\t\t<script src="../__support/p5.min.js"></script>\n\t\t<script src="../__support/p5.dom.min.js"></script>\n\t\t<script src="../__support/p5.scribble.js"></script>\n\t\t<script src="../__support/pdlComponents.js"></script>\n\t\t<script src="YYY.js"></script>\n\t\t<style>\n\t\thtml, body {margin: 0; height: 100%; overflow: hidden}\n\t</style>\n</head>\n\t<body>\n\t</body>\n</html>';
 
 const pdlfiles = FileHound.create().paths(inputPath).ext("js").findSync();
 

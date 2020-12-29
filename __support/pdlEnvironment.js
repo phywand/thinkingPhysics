@@ -75,7 +75,7 @@ function accumulator(thefactor){
     stroke(cdeviceLightGrey);
     quad(-10, 0, 0, -15, 10, 0,0,15);
     noStroke();
-    fill(cideaBlue);
+    fill(CIDEABLUE);
     triangle(-10, 0, 0, -thefactor, 10, 0);
 }
 
@@ -93,8 +93,8 @@ function indicator(value,icolor,label,combine){
     textFont(romanFont,16);
     fill(clabeltext);
     text(label,iwidth-2,-12);
-    stroke(cideaBlue);
-    fill(cideaBlue);
+    stroke(CIDEABLUE);
+    fill(CIDEABLUE);
     strokeWeight(2);
     line(-iwidth, 0, iwidth, 0);
 //     input
@@ -110,7 +110,7 @@ function indicator(value,icolor,label,combine){
     noStroke();
     fill(cWhite);
     text(combine,-iwidth-12,4);
-    fill(cideaBlue);
+    fill(CIDEABLUE);
 //     output
     beginShape();
 		vertex(iwidth,-5);
@@ -124,7 +124,7 @@ function indicator(value,icolor,label,combine){
 }
 
 function contributionlinkbackdown(){
-	stroke(cideaRed);
+	stroke(CIDEARED);
 	strokeWeight(2);
 	translate(120,80);
 	line(-20, 7, -20, 80);
@@ -133,7 +133,7 @@ function contributionlinkbackdown(){
     }
 
 function contributionlinkbackup(){
-	stroke(cideaRed);
+	stroke(CIDEARED);
 	strokeWeight(2);
 	line(-20, -7, -20, -80);
 	line(-20, -80,-102,-80);
@@ -141,7 +141,7 @@ function contributionlinkbackup(){
 }
 
 function contributionlinkdown(){
-	stroke(cideaRed);
+	stroke(CIDEARED);
 	strokeWeight(2);
 	line(20, 0, 122, 0);
 	line(122, 0,122,75);
@@ -149,7 +149,7 @@ function contributionlinkdown(){
     }
 
 function accumulatelink(){
-	stroke(cideaGreen);
+	stroke(CIDEAGREEN);
 	strokeWeight(2);
 	line(-24, 0, 74, 0);
 	line(74, 0,74,74);
@@ -2543,7 +2543,7 @@ function phasormultipleresultant(amplitude,angularfrequency,phasordata){
 			yresultant+=ycomponent;
 		}
 	pop();
-phasorResultant(sqrt(xresultant*xresultant+yresultant*yresultant),atan2(yresultant,xresultant),cideaRed);
+phasorResultant(sqrt(xresultant*xresultant+yresultant*yresultant),atan2(yresultant,xresultant),CIDEARED);
 }
 
 function phasormultipleresultantbrightness(amplitude,angularfrequency,phasordata){
@@ -2563,10 +2563,10 @@ function phasormultipleresultantbrightness(amplitude,angularfrequency,phasordata
 			yresultant+=ycomponent;
 		}
 	pop();
-phasorResultant(sqrt(xresultant*xresultant+yresultant*yresultant),atan2(yresultant,xresultant),cideaRed);
+phasorResultant(sqrt(xresultant*xresultant+yresultant*yresultant),atan2(yresultant,xresultant),CIDEARED);
 push();
 		translate(50, 0);
-		quantity((xresultant*xresultant+yresultant*yresultant)/1000, cideaRed, "");
+		quantity((xresultant*xresultant+yresultant*yresultant)/1000, CIDEARED, "");
 		words("brightness", 10, 0);
 
 	pop();
@@ -2591,7 +2591,7 @@ function phasormultiplebrightness(amplitude,angularfrequency,phasordata){
 	pop();
 push();
 		translate(50, 0);
-		quantity((xresultant*xresultant+yresultant*yresultant)/1000, cideaRed, "");
+		quantity((xresultant*xresultant+yresultant*yresultant)/1000, CIDEARED, "");
 	pop();
 }
 
@@ -6363,7 +6363,7 @@ endShape();
 	noFill();
      stroke(ctransitionBadgesBluedetail);
      mentonrep.scribbleEllipse( 50, 50, 40, 40);
-     stroke(cideaBlue);
+     stroke(CIDEABLUE);
      mentonrep.scribbleLine(50, 50, 32, 50);
      mentonrep.scribbleLine(50, 50, 50, 38);
 pop();
@@ -8085,7 +8085,7 @@ function mentonDroidShuffle(droidid, xloc, yloc) {
   mentonbubbleTR("", xloc, yloc, bubblewidth, bubbleheight);
 
   //draw triangles
-  fill(cideaGreen);
+  fill(CIDEAGREEN);
   if (up && statementid != 0) {
     triangle(
       10,
@@ -9414,12 +9414,12 @@ function challengedroid(xloc,yloc,theadvice,advicewidth,adviceheight){
 	}
 
 function RLdroid(xloc,yloc,theadvice,advicewidth,adviceheight){
-	discoursedroid(7,xloc,yloc,true,false,cideaGreen,1);
+	discoursedroid(7,xloc,yloc,true,false,CIDEAGREEN,1);
 	talkbubbleTR(theadvice, xloc-20, yloc+10, advicewidth,adviceheight);
 	}
 
 function WTdroid(xloc,yloc,theadvice,advicewidth,adviceheight){
-	discoursedroid(9,xloc,yloc,true,false,cideaRed,1);
+	discoursedroid(9,xloc,yloc,true,false,CIDEARED,1);
 	talkbubbleTR(theadvice, xloc, yloc+10, advicewidth,adviceheight);
 	}
 
@@ -10338,10 +10338,10 @@ function paneNumber(paneNumber,paneKind,xloc,yloc) {
 	 fill(cWhite);
 	ellipse(xloc, yloc, 30, 30);
 	if (paneKind=="C") {
-        fill(cideaBlue);
+        fill(CIDEABLUE);
     }
     if (paneKind=="P") {
-        fill(cideaGreen);
+        fill(CIDEAGREEN);
     }
 	textFont(titleFont, 18);
 	text(paneNumber, xloc-textWidth(paneNumber)/2,yloc+6);
@@ -11066,18 +11066,18 @@ var cplotaxes ='rgb(83, 136, 165)';
 var cleadline = 'rgb(204, 204, 204)';
 var cItemOverviewBlue = 'rgb(102, 154, 179)';
 var cideaGrey='rgb(150,150,150)';
-var cideaBlue='rgb(86, 137, 164)';
-var cideaBlue3D='rgba(86, 137, 164,0.8)';
-var cideaGreen='rgb(86, 164, 112)';
-var cideaGreen3D='rgba(86, 164, 112,0.8)';
-var cideaRed='rgb(171, 90, 117)';
-var cideaRed3D='rgba(171, 90, 117,0.8)';
-var cideaBrown='rgb(181, 152, 95)';
+var CIDEABLUE='rgb(86, 137, 164)';
+var CIDEABLUE3D='rgba(86, 137, 164,0.8)';
+var CIDEAGREEN='rgb(86, 164, 112)';
+var CIDEAGREEN3D='rgba(86, 164, 112,0.8)';
+var CIDEARED='rgb(171, 90, 117)';
+var CIDEARED3D='rgba(171, 90, 117,0.8)';
+var CIDEABROWN='rgb(181, 152, 95)';
 var cpathlinks='rgba(179,179,179,0.80)';
 var cboxLightGrey = 'rgb(240, 240, 240)';
 
-var ccyan ='rgb(0,255,255)';
-var ccyan3D ='rgba(0,255,255,0.6)';
+var CCYAN ='rgb(0,255,255)';
+var CCYAN3D ='rgba(0,255,255,0.6)';
 var cyellow ='rgb(255,255,0)';
 var cyellow3D ='rgba(255,255,0,0.6)';
 var cmagenta ='rgb(255,0,255)';
