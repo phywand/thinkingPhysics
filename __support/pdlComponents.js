@@ -64,6 +64,51 @@ function placeCatchingPhysicsCrossLink(
   );
 }
 
+function placeStoryCallout(sayThis,xloc,yloc, bubblewidth,bubbleheight){
+   const saymargin=5;
+   const tailparameter =10;
+   fill("#ff3405");
+   noStroke();
+   triangle(xloc, yloc, xloc-tailparameter, yloc-2*tailparameter, xloc+tailparameter, yloc-2*tailparameter);
+   rect(xloc-4*tailparameter, yloc-2*tailparameter-bubbleheight, bubblewidth, bubbleheight,5);
+   fill(cInvertedText);
+   textFont(titleFont);
+   noStroke();
+   textSize(16);
+   text(sayThis, xloc-4*tailparameter+saymargin, yloc-bubbleheight-2*tailparameter+saymargin, bubblewidth-2*saymargin, bubbleheight);
+   }
+
+ function placeNoticeCallout(sayThis,xloc,yloc, bubblewidth,bubbleheight){
+   const saymargin=5;
+   const tailparameter =10;
+   fill("#ff3405");
+   noStroke();
+   triangle(xloc, yloc+20, xloc-tailparameter, yloc+20-2*tailparameter, xloc+tailparameter, yloc+20-2*tailparameter);
+   rect(xloc-4, yloc-2*tailparameter,8,20)
+   rect(xloc-4*tailparameter, yloc-2*tailparameter-bubbleheight, bubblewidth, bubbleheight,5);
+   fill(cInvertedText);
+   textFont(titleFont);
+   noStroke();
+   textSize(16);
+   text(sayThis, xloc-4*tailparameter+saymargin, yloc-bubbleheight-2*tailparameter+saymargin, bubblewidth-2*saymargin, bubbleheight);
+   }
+
+ function placeThinkCallout(thinkThis,xloc,yloc, bubblewidth,bubbleheight){
+   const saymargin=5;
+   const tailparameter =15;
+   fill("#ff3405");
+   noStroke();
+   ellipseMode(CENTER);
+   ellipse(xloc,yloc,12,9);
+   ellipse(xloc+6,yloc-14,16,12);
+   ellipse(xloc+12,yloc-34,32,24);	rect(xloc-4*tailparameter, yloc-2*tailparameter-bubbleheight, bubblewidth, bubbleheight,5);
+   fill(cInvertedText);
+   textFont(titleFont);
+   noStroke();
+   textSize(16);
+   text(thinkThis, xloc-4*tailparameter+saymargin, yloc-bubbleheight-2*tailparameter+saymargin, bubblewidth-2*saymargin, bubbleheight);
+   }
+
 // VnR reboot Dev: graphical mathematics
 
 function predictfluxionfluentFluent() {
@@ -104,7 +149,7 @@ function rungekutta4(fluent, fluxionfluent, fluxion) {
   return [xf, vf];
 }
 
-function accumulator(thefactor) {
+function placeAccumulator(thefactor) {
   translate(50, 0);
   noFill();
   strokeWeight(1);
@@ -115,7 +160,7 @@ function accumulator(thefactor) {
   triangle(-10, 0, 0, -thefactor, 10, 0);
 }
 
-function indicator(value, icolor, label, combine) {
+function placeIndicator(value, icolor, label, combine) {
   var iwidth = 12;
   noFill();
   strokeWeight(1);
@@ -158,7 +203,7 @@ function indicator(value, icolor, label, combine) {
   endShape();
 }
 
-function contributionlinkbackdown() {
+function placeContributionLinkBackDown() {
   stroke(CIDEARED);
   strokeWeight(2);
   translate(120, 80);
@@ -167,7 +212,7 @@ function contributionlinkbackdown() {
   translate(-120, 80);
 }
 
-function contributionlinkbackup() {
+function placeContributionLinkBackUp() {
   stroke(CIDEARED);
   strokeWeight(2);
   line(-20, -7, -20, -80);
@@ -175,7 +220,7 @@ function contributionlinkbackup() {
   translate(-120, -80);
 }
 
-function contributionlinkdown() {
+function placeContributionLinkDown() {
   stroke(CIDEARED);
   strokeWeight(2);
   line(20, 0, 122, 0);
@@ -183,7 +228,7 @@ function contributionlinkdown() {
   translate(140, 80);
 }
 
-function accumulatelink() {
+function placeAccumulateLink() {
   stroke(CIDEAGREEN);
   strokeWeight(2);
   line(-24, 0, 74, 0);
@@ -191,7 +236,7 @@ function accumulatelink() {
   translate(90, 80);
 }
 
-function feedbacklink1() {
+function placeFeedbackLink1() {
   stroke(CIDEAGREY);
   strokeWeight(2);
   line(20, 0, 102, 0);
@@ -200,7 +245,7 @@ function feedbacklink1() {
   line(-160, 140, -160, 85 - 158);
 }
 
-function feedbacklink2() {
+function placeFeedbackLink2() {
   stroke(CIDEAGREY);
   strokeWeight(2);
   line(26, 0, 102, 0);
@@ -3732,7 +3777,7 @@ function drawPulley(diameter, strapdirection) {
   pop();
 }
 
-function drawHHydraulicSystem(ratio, volumeshiftedLR) {
+function drawHydraulicSystem(ratio, volumeshiftedLR) {
   var jointubeheight = 20;
   var jointubewidth = 160;
   var areaLH = 20;

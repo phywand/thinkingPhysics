@@ -34,7 +34,7 @@ function draw() {
   translate(538, 0);
   drawTransducer(CBLACK, 180);
   translate(-230 - 108, 0);
-  drawdrawAbsorber("good", 60, 60);
+  drawAbsorber("good", 60, 60);
   pop();
 
   var topslice = 1 - max(threeWayDivvy.getValue(0), threeWayDivvy.getValue(1));

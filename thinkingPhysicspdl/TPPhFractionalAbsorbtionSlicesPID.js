@@ -44,12 +44,12 @@ function draw() {
   push();
   translate(180, 200);
   for (i = 1; i <= numberofabsorbers; i++) {
-    drawdrawAbsorber(quality, 30, 80);
+    drawAbsorber(quality, 30, 80);
     translate(60, 0);
   }
   translate(0, -80);
   for (i = 0; i < 7 - numberofabsorbers; i++) {
-    drawdrawAbsorber(quality, 30, 80);
+    drawAbsorber(quality, 30, 80);
     translate(60, 0);
   }
   pop();

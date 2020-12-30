@@ -44,7 +44,7 @@ function draw() {
   push();
   translate(150, 200);
   for (i = 1; i <= numberofabsorbers; i++) {
-    drawdrawAbsorber(quality, 60, 80);
+    drawAbsorber(quality, 60, 80);
     translate(120, 0);
     push();
     translate(-30, 180);
@@ -63,7 +63,7 @@ function draw() {
   }
   translate(0, -80);
   for (i = 0; i < 5 - numberofabsorbers; i++) {
-    drawdrawAbsorber(quality, 60, 80);
+    drawAbsorber(quality, 60, 80);
     translate(120, 0);
     push();
     translate(-30, 260);

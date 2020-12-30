@@ -10,9 +10,10 @@ var angleforStep;
 var mouseDisplacement;
 
 function preload() {
-  chatterFont = loadFont("../__support/SF_Cartoonist_Hand.ttf");
-  romanFont = loadFont("../__support/Jost-300-Light.ttf");
-  italicFont = loadFont("../__support/Jost-300-LightItalic.ttf");
+  chatterFont= loadFont("../__support/SF_Cartoonist_Hand.ttf");
+  romanFont= loadFont("../__support/Jost-300-Light.ttf");
+  italicFont= loadFont("../__support/Jost-300-LightItalic.ttf");
+  titleFont = loadFont("../__support/Jost-700-Bold.ttf");
   thedisplaced = loadImage("../__PDLgraphics/KazBike/KazAveTop06.svg");
 }
 function setup() {

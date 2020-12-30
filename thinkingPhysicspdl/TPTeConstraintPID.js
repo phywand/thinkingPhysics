@@ -29,12 +29,12 @@ function draw() {
   translate(locX, locY);
   placeIndicator(value1 / 5 / (value2 / 5), cindicator, "current", "÷");
   push();
-  contributionlinkbackup();
-  indicator(value1, cindicator, "potential difference", "");
-  contributionlinkbackdown();
-  indicator(value2, cindicator, "resistance", "");
+  placeContributionLinkBackUp();
+  placeIndicator(value1, cindicator, "potential difference", "");
+  placeContributionLinkBackDown();
+  placeIndicator(value2, cindicator, "resistance", "");
   pop();
   pop();
 
-  titleBold("Constraint relationships set possibilities");
+  placeTitleBold("Constraint relationships set possibilities");
 }

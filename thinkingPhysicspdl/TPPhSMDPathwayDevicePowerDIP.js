@@ -28,7 +28,7 @@ function draw() {
   translate(480, 0);
   drawTransducer(CBLACK, 180);
   translate(-170 - 108, 0);
-  drawdrawAbsorber("good", 60, 80);
+  drawAbsorber("good", 60, 80);
   pop();
 
   if (deviceshow.buttonisChecked) {

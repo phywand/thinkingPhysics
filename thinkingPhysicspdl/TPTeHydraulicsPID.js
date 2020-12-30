@@ -39,7 +39,7 @@ function draw() {
 }
 function supporthand() {
   noFill();
-  stroke(cplaceTiFo);
+  stroke(cdrawTiFo);
   strokeWeight(1);
   beginShape();
   vertex(216.26, 211.22);

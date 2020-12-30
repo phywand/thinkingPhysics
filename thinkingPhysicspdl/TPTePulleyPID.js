@@ -148,7 +148,7 @@ function pulleysetY(numberofpulleys, heightlifted) {
       scale(-1, -1);
       translate(74, -85);
       // 		thehand
-      stroke(cplaceTiFo);
+      stroke(cdrawTiFo);
       strokeWeight(1);
       noFill();
 
